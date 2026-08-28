@@ -1,4 +1,7 @@
-name: Scrape and Deployon:schedule:# 毎日 0, 4, 8, 12, 16, 20 時 (JST) に自動実行 (UTC時間で指定)- cron: '0 15,19,23,3,7,11 * * *'workflow_dispatch:jobs:scrape-and-deploy:runs-on: ubuntu-latestpermissions:contents: writesteps:
+name: Scrape and Deploy
+on: schedule: # 毎日 0, 4, 8, 12, 16, 20 時 (JST) に自動実行 (UTC時間で指定) - cron: '0 15,19,23,3,7,11 * * *' workflow_dispatch:
+jobs: scrape-and-deploy: runs-on: ubuntu-latest permissions: contents: write
+steps:
   - name: Checkout Repository
     uses: actions/checkout@v4
 
@@ -21,3 +24,5 @@ name: Scrape and Deployon:schedule:# 毎日 0, 4, 8, 12, 16, 20 時 (JST) に自
       git config --local user.name "github-actions[bot]"
       git add docs/data.json
       git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto update data.json" && git push)
+
+
