@@ -1,0 +1,12 @@
+{
+"name": "anshin-oyado-checker",
+"version": "1.0.0",
+"description": "空室自動チェッカー",
+"main": "scraper.js",
+"scripts": {
+"scrape": "node scraper.js"
+},
+"dependencies": {
+"playwright": "^1.41.0"
+}
+}

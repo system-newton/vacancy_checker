@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安心お宿 空室情報 チェッカー</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --bg:#f5f6f8; --card:#fff; --line:#e2e5ea; --txt:#222; --muted:#888; }
+  * { box-sizing: border-box; }
+  body { font-family: "Inter", "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; margin:0; background:var(--bg); color:var(--txt); }
+  
+  .tblwrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 0.5rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { border: 1px solid var(--line); padding: 8px; text-align: center; white-space: nowrap; }
+  thead th { position: sticky; top: 0; background: #f0f2f6; z-index: 2; font-weight: 600; }
+  tbody th { position: sticky; left: 0; background: #f7f8fa; text-align: left; z-index: 1; min-width: 150px; font-size: 12px; }
+  
+  td.circle { background: #e7f8ee; }
+  td.tri { background: #fff8e8; }
+  td.cross { background: #fceaea; color: #b33; }
+  td.none { background: #eef0f3; color: #aab; }
+  td .stock { font-size: 10px; color: #789; display: block; margin-top: 2px; }
+  
+  th.sat { color: #2b6cff; } 
+  th.sun { color: #e0554e; }
+
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 11px; font-weight: bold; }
+  .badge.ok { background: #d6f5df; color: #256b45; }
+  .badge.warn { background: #fff3d6; color: #8a6414; }
+  .badge.bad { background: #f9dcdc; color: #a33; }
+
+  .dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
+  .dot.circle{background:#d6f5df;border:1px solid #4caf7d}
+  .dot.tri{background:#fff3d6;border:1px solid #e0a53a}
+  .dot.cross{background:#f9dcdc;border:1px solid #d66}
+  .dot.none{background:#e9ebef;border:1px solid #c4c8d0}
+
+  .tab { padding: 10px 16px; border-radius: 8px 8px 0 0; background: #e2e8f0; cursor: pointer; font-size: 14px; color: #475569; transition: all 0.2s; }
+  .tab:hover { background: #cbd5e1; }
+  .tab.active { background: var(--card); border: 1px solid var(--line); border-bottom: none; font-weight: bold; color: #0f172a; }
+</style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+<header class="bg-slate-800 text-white p-4 sm:p-6 shadow-md">
+  <h1 class="text-xl sm:text-2xl font-bold m-0">安心お宿 空室情報 チェッカー</h1>
+  <p class="text-slate-300 text-xs sm:text-sm mt-1">このデータは定期的に自動取得されています。</p>
+</header>
+
+<div class="sticky top-0 z-10 bg-white border-b border-slate-200 shadow-sm p-4 flex flex-wrap gap-4 items-center">
+  <div class="flex items-center gap-2">
+    <span class="text-sm font-bold text-slate-700" id="current-month">--年--月</span>
+  </div>
+  <span id="status" class="text-sm text-slate-500 ml-auto font-medium">データ読み込み中...</span>
+</div>
+
+<main class="flex-1 p-4 sm:p-6">
+  <div class="flex gap-1 border-b border-slate-200 mb-4 overflow-x-auto">
+    <div class="tab active" data-site="official">公式HP (全日表示)</div>
+    <div class="tab" data-site="jalan">じゃらん</div>
+    <div class="tab" data-site="rakuten">楽天</div>
+    <div class="tab" data-site="yahoo">一休(Yahoo)</div>
+    <div class="tab" data-site="rurubu">るるぶ</div>
+    <div class="tab" data-site="booking">Booking</div>
+  </div>
+
+  <div class="flex gap-4 flex-wrap text-sm mb-4 text-slate-700">
+    <span class="flex items-center"><i class="dot circle"></i>○ 空室あり</span>
+    <span class="flex items-center"><i class="dot tri"></i>△ 残りわずか</span>
+    <span class="flex items-center"><i class="dot cross"></i>× 満室</span>
+    <span class="flex items-center"><i class="dot none"></i>－ 設定なし/対象外</span>
+  </div>
+
+  <div id="result" class="transition-opacity duration-300">
+    <div class="animate-pulse flex space-x-4"><div class="flex-1 space-y-4 py-1"><div class="h-4 bg-slate-200 rounded w-3/4"></div></div></div>
+  </div>
+</main>
+
+<script>
+const WEEK = ['日','月','火','水','木','金','土'];
+const SITE_LABEL = { jalan:'じゃらん', rakuten:'楽天', yahoo:'一休(Yahoo)', rurubu:'るるぶ', booking:'Booking' };
+
+let globalData = null;
+let currentSite = 'official';
+
+function renderOfficial(data) {
+  let html = '<div class="tblwrap"><table><thead><tr><th>店舗＼日付</th><th class="min-w-[100px]">判定</th>';
+  for (const d of data.dates) {
+    const dd = new Date(d + 'T00:00:00');
+    const w = dd.getDay();
+    const cls = w===0?'sun':(w===6?'sat':'');
+    html += `<th class="${cls}">${dd.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
+  }
+  html += '</tr></thead><tbody>';
+
+  for (const row of data.rows) {
+    let badge;
+    if (row.noneCount === row.cells.length) badge = '<span class="badge bad">全日 設定なし</span>';
+    else if (row.noneCount > 0) badge = `<span class="badge warn">${row.noneCount}日 設定なし</span>`;
+    else badge = '<span class="badge ok">全日 設定あり</span>';
+
+    html += `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th>
+             <td class="text-xs text-left">${badge}</td>`;
+    for (const c of row.cells) {
+      const label = c.symbol + (c.stock!=null && c.cls!=='none' && c.cls!=='cross' ? `<span class="stock">${c.stock}室</span>` : '');
+      const title = `${c.date} : ${c.text}` + (c.stock!=null?` (残${c.stock}室)`:'');
+      html += `<td class="${c.cls}" title="${title}">${label}</td>`;
+    }
+    html += '</tr>';
+  }
+  html += '</tbody></table></div>';
+  document.getElementById('result').innerHTML = html;
+}
+
+function renderSite(siteKey) {
+  const data = globalData.sites[siteKey];
+  if (!data) {
+    document.getElementById('result').innerHTML = '<p class="text-red-500">データがありません</p>';
+    return;
+  }
+  
+  const OVERALL = {
+    available:    { badge:'<span class="badge ok">予約可能な日あり</span>' },
+    mostlysoldout:{ badge:'<span class="badge warn">大半が満室</span>' },
+    allsoldout:   { badge:'<span class="badge bad">全サンプル満室 (疑)</span>' },
+    unknown:      { badge:'<span class="badge warn">判定できず</span>' },
+  };
+
+  let html = `<p class="text-sm text-slate-500 mb-2">判定サンプル日: ${data.dates.join(', ')}</p>`;
+  html += '<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[120px]">総合判定</th>';
+  for (const d of data.dates){
+    const dd = new Date(d+'T00:00:00'); const w = dd.getDay();
+    const cls = w===0?'sun':(w===6?'sat':'');
+    html += `<th class="${cls}">${dd.getMonth()+1}/${dd.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
+  }
+  html += '</tr></thead><tbody>';
+
+  for (const row of data.results){
+    const ov = OVERALL[row.overall] || OVERALL.unknown;
+    html += `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th>
+             <td class="text-xs text-left">${ov.badge}</td>`;
+    for (const s of row.samples){
+      let sym='?', cls='none';
+      if (s.status==='available'){ sym='○'; cls='circle'; }
+      else if (s.status==='soldout'){ sym='×'; cls='cross'; }
+      else if (s.status==='error'){ sym='!'; cls='none'; }
+      else { sym='－'; cls='none'; }
+      html += `<td class="${cls}" title="${s.date} : ${s.status}">${sym}</td>`;
+    }
+    html += '</tr>';
+  }
+  html += '</tbody></table></div>';
+  document.getElementById('result').innerHTML = html;
+}
+
+// データ読み込み
+fetch('data.json?v=' + new Date().getTime())
+  .then(r => r.json())
+  .then(data => {
+    globalData = data;
+    document.getElementById('current-month').textContent = `${data.year}年${data.month}月 (当月)`;
+    
+    // 更新日時のフォーマット
+    const ud = new Date(data.updatedAt);
+    const dateStr = ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
+    document.getElementById('status').innerHTML = `🔄 最終更新: <span class="text-blue-600 font-bold">${dateStr}</span>`;
+    
+    renderOfficial(data.official);
+  })
+  .catch(e => {
+    document.getElementById('result').innerHTML = '<div class="text-red-500">データの読み込みに失敗しました。まだデータが生成されていない可能性があります。</div>';
+    document.getElementById('status').textContent = 'エラー';
+  });
+
+// タブ制御
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (!globalData) return;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentSite = tab.dataset.site;
+    if (currentSite === 'official') renderOfficial(globalData.official);
+    else renderSite(currentSite);
+  });
+});
+</script>
+</body>
+</html>
