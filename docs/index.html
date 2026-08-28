@@ -45,12 +45,13 @@
 
 <header class="bg-slate-800 text-white p-4 sm:p-6 shadow-md">
   <h1 class="text-xl sm:text-2xl font-bold m-0">安心お宿 空室情報 チェッカー</h1>
-  <p class="text-slate-300 text-xs sm:text-sm mt-1">このデータは定期的に自動取得されています。</p>
+  <p class="text-slate-300 text-xs sm:text-sm mt-1">当月〜来年同月までの空室データを定期自動巡回しています。</p>
 </header>
 
 <div class="sticky top-0 z-10 bg-white border-b border-slate-200 shadow-sm p-4 flex flex-wrap gap-4 items-center">
   <div class="flex items-center gap-2">
-    <span class="text-sm font-bold text-slate-700" id="current-month">--年--月</span>
+    <label for="month-select" class="text-sm font-bold text-slate-700">対象月:</label>
+    <select id="month-select" class="bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-semibold"></select>
   </div>
   <span id="status" class="text-sm text-slate-500 ml-auto font-medium">データ読み込み中...</span>
 </div>
@@ -79,12 +80,15 @@
 
 <script>
 const WEEK = ['日','月','火','水','木','金','土'];
-const SITE_LABEL = { jalan:'じゃらん', rakuten:'楽天', yahoo:'一休(Yahoo)', rurubu:'るるぶ', booking:'Booking' };
-
 let globalData = null;
 let currentSite = 'official';
+let selectedMonthIdx = 0;
 
 function renderOfficial(data) {
+  if (!data) {
+    document.getElementById('result').innerHTML = '<p class="text-slate-500 p-4">この月のデータはありません。</p>';
+    return;
+  }
   let html = '<div class="tblwrap"><table><thead><tr><th>店舗＼日付</th><th class="min-w-[100px]">判定</th>';
   for (const d of data.dates) {
     const dd = new Date(d + 'T00:00:00');
@@ -113,12 +117,12 @@ function renderOfficial(data) {
   document.getElementById('result').innerHTML = html;
 }
 
-function renderSite(siteKey) {
-  const data = globalData.sites[siteKey];
-  if (!data) {
-    document.getElementById('result').innerHTML = '<p class="text-red-500">データがありません</p>';
+function renderSite(siteKey, monthData) {
+  if (!monthData || !monthData.sites || !monthData.sites[siteKey]) {
+    document.getElementById('result').innerHTML = '<p class="text-slate-500 p-4">このサイトのデータはありません。</p>';
     return;
   }
+  const data = monthData.sites[siteKey];
   
   const OVERALL = {
     available:    { badge:'<span class="badge ok">予約可能な日あり</span>' },
@@ -154,22 +158,46 @@ function renderSite(siteKey) {
   document.getElementById('result').innerHTML = html;
 }
 
+function updateView() {
+  if (!globalData || !globalData.months || globalData.months.length === 0) return;
+  const monthData = globalData.months[selectedMonthIdx];
+  if (currentSite === 'official') {
+    renderOfficial(monthData.official);
+  } else {
+    renderSite(currentSite, monthData);
+  }
+}
+
 // データ読み込み
 fetch('data.json?v=' + new Date().getTime())
   .then(r => r.json())
   .then(data => {
     globalData = data;
-    document.getElementById('current-month').textContent = `${data.year}年${data.month}月 (当月)`;
     
     // 更新日時のフォーマット
     const ud = new Date(data.updatedAt);
     const dateStr = ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
     document.getElementById('status').innerHTML = `🔄 最終更新: <span class="text-blue-600 font-bold">${dateStr}</span>`;
     
-    renderOfficial(data.official);
+    // ドロップダウン生成
+    const selectEl = document.getElementById('month-select');
+    selectEl.innerHTML = '';
+    data.months.forEach((m, idx) => {
+      const opt = document.createElement('option');
+      opt.value = idx;
+      opt.textContent = `${m.year}年${m.month}月` + (idx === 0 ? '（当月）' : '');
+      selectEl.appendChild(opt);
+    });
+
+    selectEl.addEventListener('change', (e) => {
+      selectedMonthIdx = Number(e.target.value);
+      updateView();
+    });
+
+    updateView();
   })
   .catch(e => {
-    document.getElementById('result').innerHTML = '<div class="text-red-500">データの読み込みに失敗しました。まだデータが生成されていない可能性があります。</div>';
+    document.getElementById('result').innerHTML = '<div class="text-red-500 p-4">データの読み込みに失敗しました。まだデータが更新完了していない可能性があります。</div>';
     document.getElementById('status').textContent = 'エラー';
   });
 
@@ -180,8 +208,7 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     currentSite = tab.dataset.site;
-    if (currentSite === 'official') renderOfficial(globalData.official);
-    else renderSite(currentSite);
+    updateView();
   });
 });
 </script>
