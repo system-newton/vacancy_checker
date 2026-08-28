@@ -1,5 +1,5 @@
 // GitHub Actions等で定期実行されるスクレイピング処理
-// 結果を docs/data.json に保存します。
+// 当月から来年の同月（計13ヶ月分）のデータを取得し docs/data.json に保存します。
 
 const { chromium } = require('playwright');
 const https = require('https');
@@ -59,7 +59,7 @@ const SITE_RULES = {
   rakuten: { soldOut: ['空室が見つかりませんでした', '空室が見つかりません', 'ご指定の条件に一致する', '満室です'], avail: ['このプランの詳細', '予約する', 'を選択', '詳細・予約', '残り'] },
   jalan: { soldOut: ['0件の宿泊プラン', '宿泊プランがありませんでした', '条件に合う宿泊プランが見つかりません', '満室', '予約できるプランがありません'], avail: ['件の宿泊プランがありました', '空室わずか', 'このプランを見ています', '部屋タイプ・詳細'] },
   yahoo: { soldOut: ['空室が見つかりませんでした', '空室が見つかりません', '満室', 'ご希望の条件に合う', '予約できるプランがありません', '別の日程'], avail: ['予約する', 'このプラン', '残り', 'ポイント', 'プランを見る', '部屋・プランを見る'] },
-  rurubu: { soldOut: ['空室は見つかりませんでした', '空室が見つかりませんでした', '選択された日付で空室', '別の日付で検索', 'この宿泊施設は満室です', '現在予約を受け付けていません'], avail: ['この料金を見る', '予約できる料金プラン', '最安値', '種類のルームタイプ', 'るるぶトラベルでの最安値'] },
+  rurubu: { soldOut: ['空室は見つかりませんでした', '空室は見つかりませんでした', '選択された日付で空室', '別の日付で検索', 'この宿泊施設は満室です', '現在予約を受け付けていません'], avail: ['この料金を見る', '予約できる料金プラン', '最安値', '種類のルームタイプ', 'るるぶトラベルでの最安値'] },
   booking: { soldOut: ['選択された日程に空室がありません', '空室がありません', '満室です', 'この宿泊施設は現在ご利用いただけません', '別の日程で検索', '空室状況を検索してください'], avail: ['予約可能なお部屋', '残り', '空室を確認', 'この料金で予約', '1泊あたり', '合計金額', '予約する'] },
 };
 
@@ -67,7 +67,7 @@ async function judgeOne(page, site, url) {
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 35000 });
     const rule = SITE_RULES[site];
-    const MAX_WAIT = 5000, STEP = 400;
+    const MAX_WAIT = 4000, STEP = 400;
     let text = '', elapsed = 0;
     while (true) {
       text = await page.evaluate(() => document.body.innerText || '');
@@ -85,7 +85,7 @@ async function judgeOne(page, site, url) {
   }
 }
 
-function sampleDates(year, month, count = 4) {
+function sampleDates(year, month, count = 3) {
   const last = new Date(year, month, 0).getDate();
   const today = new Date();
   const isCurrentMonth = (today.getFullYear() === year && (today.getMonth() + 1) === month);
@@ -101,8 +101,8 @@ function sampleDates(year, month, count = 4) {
 }
 
 async function checkSite(site, year, month, browser) {
-  console.log(`[Scrape] ${site} を巡回中...`);
-  const dates = sampleDates(year, month, 4);
+  console.log(`[Scrape] ${site} (${year}年${month}月) を巡回中...`);
+  const dates = sampleDates(year, month, 3);
   const ctx = await browser.newContext({ userAgent: UA, locale: 'ja-JP' });
   const page = await ctx.newPage();
   const results = [];
@@ -113,7 +113,7 @@ async function checkSite(site, year, month, browser) {
       const url = urlBuilders[site](shop, ci);
       const r = await judgeOne(page, site, url);
       perDay.push({ date: ci, status: r.status, hit: r.hit, url });
-      await page.waitForTimeout(1000); 
+      await page.waitForTimeout(600); 
     }
     const availCount = perDay.filter(x => x.status === 'available').length;
     const soldCount = perDay.filter(x => x.status === 'soldout').length;
@@ -131,7 +131,7 @@ async function checkSite(site, year, month, browser) {
 }
 
 function fetchJson(url) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const req = https.get(url, { headers: { 'User-Agent': UA } }, (res) => {
       let data = '';
       res.on('data', (c) => data += c);
@@ -159,7 +159,7 @@ function salesTypeToSymbol(t) {
 }
 
 async function fetchOfficialMonth(year, month) {
-  console.log(`[Scrape] 公式APIを取得中...`);
+  console.log(`[Scrape] 公式API (${year}年${month}月) を取得中...`);
   const daysInMonth = new Date(year, month, 0).getDate();
   const froms = [];
   for (let d = 1; d <= daysInMonth; d += 7) froms.push(fmt(new Date(year, month - 1, d)));
@@ -181,7 +181,7 @@ async function fetchOfficialMonth(year, month) {
         }
       }
     });
-    await new Promise(r => setTimeout(r, 500));
+    await new Promise(r => setTimeout(r, 200));
   }
 
   const dates = [];
@@ -203,35 +203,54 @@ async function fetchOfficialMonth(year, month) {
   return { year, month, dates, rows };
 }
 
-async function main() {
+// 当月から来年の同月までの年月リストを取得（13ヶ月分）
+function getTargetMonths() {
   const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1; // 当月のみ対象とする
+  const targetMonths = [];
+  for (let i = 0; i <= 12; i++) {
+    const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    targetMonths.push({ year: d.getFullYear(), month: d.getMonth() + 1 });
+  }
+  return targetMonths;
+}
+
+async function main() {
+  const targetMonths = getTargetMonths();
+  console.log(`🚀 合計 ${targetMonths.length} ヶ月分（${targetMonths[0].year}/${targetMonths[0].month} 〜 ${targetMonths[targetMonths.length-1].year}/${targetMonths[targetMonths.length-1].month}）のデータを取得します。`);
 
   const browser = await chromium.launch({ headless: true });
-  
+  const monthsData = [];
+  const sites = ['rakuten', 'jalan', 'yahoo', 'rurubu', 'booking'];
+
   try {
-    const officialData = await fetchOfficialMonth(year, month);
-    const sitesData = {};
-    const sites = ['rakuten', 'jalan', 'yahoo', 'rurubu', 'booking'];
-    
-    for (const site of sites) {
-      sitesData[site] = await checkSite(site, year, month, browser);
+    for (const { year, month } of targetMonths) {
+      console.log(`\n-----------------------------------`);
+      console.log(`📅 【${year}年${month}月】処理開始`);
+      
+      const officialData = await fetchOfficialMonth(year, month);
+      const sitesData = {};
+      
+      for (const site of sites) {
+        sitesData[site] = await checkSite(site, year, month, browser);
+      }
+
+      monthsData.push({
+        year,
+        month,
+        official: officialData,
+        sites: sitesData
+      });
     }
 
     const finalData = {
       updatedAt: new Date().toISOString(),
-      year,
-      month,
-      official: officialData,
-      sites: sitesData
+      months: monthsData
     };
 
-    // docsフォルダ（公開用）がなければ作成して保存
     if (!fs.existsSync('docs')) fs.mkdirSync('docs');
     fs.writeFileSync(path.join('docs', 'data.json'), JSON.stringify(finalData, null, 2));
     
-    console.log('✅ データ取得完了: docs/data.json を生成しました。');
+    console.log('\n✅ 全月データの取得・保存が完了しました: docs/data.json');
   } catch(e) {
     console.error('❌ エラー発生:', e);
     process.exit(1);
