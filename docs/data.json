@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T02:23:32.711Z",
+  "updatedAt": "2026-08-30T10:01:31.148Z",
   "months": [
     {
       "year": 2026,
@@ -4176,8 +4176,8 @@
               "shop": "名古屋栄店",
               "kind": "男女別専用",
               "overall": "available",
-              "availCount": 4,
-              "soldCount": 0,
+              "availCount": 3,
+              "soldCount": 1,
               "samples": [
                 {
                   "date": "2026-09-01",
@@ -4199,8 +4199,8 @@
                 },
                 {
                   "date": "2026-09-30",
-                  "status": "available",
-                  "hit": "件の宿泊プランがありました",
+                  "status": "soldout",
+                  "hit": "0件の宿泊プラン",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=9&stayDay=30&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -6806,8 +6806,8 @@
               "shop": "名古屋栄店",
               "kind": "男女別専用",
               "overall": "available",
-              "availCount": 1,
-              "soldCount": 3,
+              "availCount": 4,
+              "soldCount": 0,
               "samples": [
                 {
                   "date": "2026-10-01",
@@ -6817,20 +6817,20 @@
                 },
                 {
                   "date": "2026-10-11",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-10-21",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=21&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-10-31",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -9387,8 +9387,8 @@
               "shop": "名古屋栄店",
               "kind": "男女別専用",
               "overall": "available",
-              "availCount": 3,
-              "soldCount": 1,
+              "availCount": 4,
+              "soldCount": 0,
               "samples": [
                 {
                   "date": "2026-11-01",
@@ -9404,8 +9404,8 @@
                 },
                 {
                   "date": "2026-11-21",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=11&stayDay=21&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -9855,7 +9855,7 @@
               "shop": "新橋駅前店",
               "kind": "男性専用",
               "overall": "available",
-              "availCount": 2,
+              "availCount": 3,
               "soldCount": 0,
               "samples": [
                 {
@@ -9878,8 +9878,8 @@
                 },
                 {
                   "date": "2026-11-30",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-30&checkout=2026-12-01&group_adults=1&no_rooms=1&group_children=0"
                 }
               ]
@@ -9921,7 +9921,7 @@
               "shop": "新宿駅南口店",
               "kind": "男性専用",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -9932,8 +9932,8 @@
                 },
                 {
                   "date": "2026-11-11",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-11&checkout=2026-11-12&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -9987,7 +9987,7 @@
               "shop": "銀座汐留店",
               "kind": "女性専用",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -10004,8 +10004,8 @@
                 },
                 {
                   "date": "2026-11-21",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "1泊あたり",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-21&checkout=2026-11-22&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -12017,8 +12017,8 @@
               "shop": "名古屋栄店",
               "kind": "男女別専用",
               "overall": "available",
-              "availCount": 3,
-              "soldCount": 1,
+              "availCount": 4,
+              "soldCount": 0,
               "samples": [
                 {
                   "date": "2026-12-01",
@@ -12040,8 +12040,8 @@
                 },
                 {
                   "date": "2026-12-31",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=12&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -12584,7 +12584,7 @@
               "shop": "新宿荻窪店",
               "kind": "女性専用",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -12595,8 +12595,8 @@
                 },
                 {
                   "date": "2026-12-11",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-12-11&checkout=2026-12-12&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -12617,13 +12617,13 @@
               "shop": "銀座汐留店",
               "kind": "女性専用",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
                   "date": "2026-12-01",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "1泊あたり",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-12-01&checkout=2026-12-02&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -14647,8 +14647,8 @@
               "shop": "名古屋栄店",
               "kind": "男女別専用",
               "overall": "available",
-              "availCount": 2,
-              "soldCount": 2,
+              "availCount": 4,
+              "soldCount": 0,
               "samples": [
                 {
                   "date": "2027-01-01",
@@ -14658,8 +14658,8 @@
                 },
                 {
                   "date": "2027-01-11",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2027&stayMonth=1&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -14670,8 +14670,8 @@
                 },
                 {
                   "date": "2027-01-31",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2027&stayMonth=1&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -14903,14 +14903,14 @@
             {
               "shop": "新橋駅前店",
               "kind": "男性専用",
-              "overall": "available",
-              "availCount": 1,
+              "overall": "unknown",
+              "availCount": 0,
               "soldCount": 0,
               "samples": [
                 {
                   "date": "2027-01-01",
-                  "status": "available",
-                  "hit": "この料金を見る",
+                  "status": "unknown",
+                  "hit": null,
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-01-01&los=1&currencyCode=JPY"
                 },
                 {
@@ -15003,7 +15003,7 @@
               "shop": "新宿荻窪店",
               "kind": "女性専用",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 3,
               "soldCount": 0,
               "samples": [
                 {
@@ -15020,8 +15020,8 @@
                 },
                 {
                   "date": "2027-01-21",
-                  "status": "available",
-                  "hit": "この料金を見る",
+                  "status": "unknown",
+                  "hit": null,
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-01-21&los=1&currencyCode=JPY"
                 },
                 {
@@ -15069,7 +15069,7 @@
               "shop": "名古屋栄店",
               "kind": "男女別専用",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 3,
               "soldCount": 0,
               "samples": [
                 {
@@ -15080,8 +15080,8 @@
                 },
                 {
                   "date": "2027-01-11",
-                  "status": "available",
-                  "hit": "この料金を見る",
+                  "status": "unknown",
+                  "hit": null,
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-01-11&los=1&currencyCode=JPY"
                 },
                 {
@@ -22603,8 +22603,8 @@
               "samples": [
                 {
                   "date": "2027-04-01",
-                  "status": "available",
-                  "hit": "この料金を見る",
+                  "status": "unknown",
+                  "hit": null,
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-04-01&los=1&currencyCode=JPY"
                 },
                 {
@@ -22615,8 +22615,8 @@
                 },
                 {
                   "date": "2027-04-21",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-04-21&los=1&currencyCode=JPY"
                 },
                 {
@@ -27419,32 +27419,32 @@
             {
               "shop": "秋葉原電気街店",
               "kind": "男性専用",
-              "overall": "allsoldout",
-              "availCount": 0,
-              "soldCount": 4,
+              "overall": "available",
+              "availCount": 4,
+              "soldCount": 0,
               "samples": [
                 {
                   "date": "2027-06-01",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=6&stayDay=1&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2027-06-11",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=6&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2027-06-21",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=6&stayDay=21&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2027-06-30",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=6&stayDay=30&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -30049,32 +30049,32 @@
             {
               "shop": "秋葉原電気街店",
               "kind": "男性専用",
-              "overall": "allsoldout",
-              "availCount": 0,
-              "soldCount": 4,
+              "overall": "available",
+              "availCount": 4,
+              "soldCount": 0,
               "samples": [
                 {
                   "date": "2027-07-01",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=7&stayDay=1&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2027-07-11",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=7&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2027-07-21",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=7&stayDay=21&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2027-07-31",
-                  "status": "soldout",
-                  "hit": "0件の宿泊プラン",
+                  "status": "available",
+                  "hit": "件の宿泊プランがありました",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=7&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
