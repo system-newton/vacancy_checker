@@ -1,3 +1,7 @@
+<!-- Chosen Palette: Slate & Emerald/Amber/Rose Status Colors -->
+<!-- Application Structure Plan: Interactive availability table for official API and external booking channels with dynamic direct search links and fallbacks -->
+<!-- Visualization & Content Choices: Semantic HTML tables, CSS badges for status badges, direct URL generation for jump-to-OTA, fallback handling for unknown statuses -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,58 +10,50 @@
 <title>安心お宿 空室情報 チェッカー</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-  :root { --bg:#f5f6f8; --card:#fff; --line:#e2e5ea; --txt:#222; --muted:#888; }
-  * { box-sizing: border-box; }
-  body { font-family: "Inter", "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; margin:0; background:var(--bg); color:var(--txt); }
-  
+  :root { --bg:#f5f6f8; --card:#fff; --line:#e2e5ea; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); }
   .tblwrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 0.5rem; }
   table { border-collapse: collapse; width: 100%; font-size: 13px; }
   th, td { border: 1px solid var(--line); padding: 8px; text-align: center; white-space: nowrap; }
   thead th { position: sticky; top: 0; background: #f0f2f6; z-index: 2; font-weight: 600; }
   tbody th { position: sticky; left: 0; background: #f7f8fa; text-align: left; z-index: 1; min-width: 150px; font-size: 12px; }
-  
-  td.circle { background: #e7f8ee; }
-  td.tri { background: #fff8e8; }
-  td.cross { background: #fceaea; color: #b33; }
-  td.none { background: #eef0f3; color: #aab; }
-  td .stock { font-size: 10px; color: #789; display: block; margin-top: 2px; }
-  
-  th.sat { color: #2b6cff; } 
-  th.sun { color: #e0554e; }
-
+  .sat { color: #2b6cff; } .sun { color: #e0554e; }
+  .circle { background: #e7f8ee; } .tri { background: #fff8e8; } .cross { background: #fceaea; color: #b33; } .none { background: #eef0f3; color: #aab; }
+  .stock { font-size: 10px; color: #789; display: block; margin-top: 2px; }
   .badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 11px; font-weight: bold; }
-  .badge.ok { background: #d6f5df; color: #256b45; }
-  .badge.warn { background: #fff3d6; color: #8a6414; }
-  .badge.bad { background: #f9dcdc; color: #a33; }
-
+  .badge-ok { background: #d6f5df; color: #256b45; } .badge-warn { background: #fff3d6; color: #8a6414; } .badge-bad { background: #f9dcdc; color: #a33; }
   .dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
-  .dot.circle{background:#d6f5df;border:1px solid #4caf7d}
-  .dot.tri{background:#fff3d6;border:1px solid #e0a53a}
-  .dot.cross{background:#f9dcdc;border:1px solid #d66}
-  .dot.none{background:#e9ebef;border:1px solid #c4c8d0}
-
   .tab { padding: 10px 16px; border-radius: 8px 8px 0 0; background: #e2e8f0; cursor: pointer; font-size: 14px; color: #475569; transition: all 0.2s; }
   .tab:hover { background: #cbd5e1; }
   .tab.active { background: var(--card); border: 1px solid var(--line); border-bottom: none; font-weight: bold; color: #0f172a; }
+  .clickable-cell { cursor: pointer; transition: filter 0.15s; }
+  .clickable-cell:hover { filter: brightness(0.92); text-decoration: underline; }
 </style>
 </head>
 <body class="flex flex-col min-h-screen">
 
 <header class="bg-slate-800 text-white p-4 sm:p-6 shadow-md">
-  <h1 class="text-xl sm:text-2xl font-bold m-0">安心お宿 空室情報 チェッカー</h1>
-  <p class="text-slate-300 text-xs sm:text-sm mt-1">当月〜来年同月までの空室データを定期自動巡回しています。</p>
+  <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+    <div>
+      <h1 class="text-xl sm:text-2xl font-bold m-0">安心お宿 空室情報 チェッカー</h1>
+      <p class="text-slate-300 text-xs sm:text-sm mt-1">当月〜来年同月までの空室データを自動巡回・一括確認できます。</p>
+    </div>
+    <div id="status" class="text-xs sm:text-sm bg-slate-700 px-3 py-1.5 rounded text-slate-200">データ読み込み中...</div>
+  </div>
 </header>
 
 <div class="sticky top-0 z-10 bg-white border-b border-slate-200 shadow-sm p-4 flex flex-wrap gap-4 items-center">
   <div class="flex items-center gap-2">
     <label for="month-select" class="text-sm font-bold text-slate-700">対象月:</label>
-    <select id="month-select" class="bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 font-semibold"></select>
+    <select id="month-select" class="bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-lg p-2 font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
   </div>
-  <span id="status" class="text-sm text-slate-500 ml-auto font-medium">データ読み込み中...</span>
+  <div class="text-xs text-slate-500 ml-auto hidden sm:block">
+    💡 各セルをクリックすると、該当サイトの予約・検索ページへ直接移動できます。
+  </div>
 </div>
 
-<main class="flex-1 p-4 sm:p-6">
-  <div class="flex gap-1 border-b border-slate-200 mb-4 overflow-x-auto">
+<main class="flex-1 p-4 sm:p-6 max-w-7xl mx-auto w-full">
+  <div class="flex gap-1 border-b border-slate-200 mb-4 overflow-x-auto" id="tabs">
     <div class="tab active" data-site="official">公式HP (全日表示)</div>
     <div class="tab" data-site="jalan">じゃらん</div>
     <div class="tab" data-site="rakuten">楽天</div>
@@ -66,150 +62,173 @@
     <div class="tab" data-site="booking">Booking</div>
   </div>
 
-  <div class="flex gap-4 flex-wrap text-sm mb-4 text-slate-700">
+  <div class="flex gap-4 flex-wrap text-sm mb-4 text-slate-700 bg-white p-3 rounded border border-slate-200">
     <span class="flex items-center"><i class="dot circle"></i>○ 空室あり</span>
     <span class="flex items-center"><i class="dot tri"></i>△ 残りわずか</span>
     <span class="flex items-center"><i class="dot cross"></i>× 満室</span>
-    <span class="flex items-center"><i class="dot none"></i>－ 設定なし/対象外</span>
+    <span class="flex items-center"><i class="dot none"></i>－ 設定なし / 判定中・未確認</span>
   </div>
 
-  <div id="result" class="transition-opacity duration-300">
+  <div id="result">
     <div class="animate-pulse flex space-x-4"><div class="flex-1 space-y-4 py-1"><div class="h-4 bg-slate-200 rounded w-3/4"></div></div></div>
   </div>
 </main>
 
 <script>
-const WEEK = ['日','月','火','水','木','金','土'];
-let globalData = null;
-let currentSite = 'official';
-let selectedMonthIdx = 0;
+const SHOPS_MASTER = [
+  { key: 'shimbashi', label: '新橋駅前店',     kind: '男性専用',
+    rakuten: '128267', jalan: '368296', yahoo: '00901085', rurubu: 'tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station', booking: 'capsule-anshin-oyado-shinbashi' },
+  { key: 'akihabara', label: '秋葉原電気街店', kind: '男性専用',
+    rakuten: '142653', jalan: '386755', yahoo: '00901086', rurubu: 'tokyo/anshin-oyado-tokyo-man-akihabara', booking: 'capsule-anshin-oyado-akihabara' },
+  { key: 'shinjuku',  label: '新宿駅南口店',   kind: '男性専用',
+    rakuten: '147662', jalan: '319308', yahoo: '00901087', rurubu: 'tokyo/anshin-oyado-tokyo-man-shinjuku', booking: 'capsule-anshin-oyado-shinjuku-tokyo' },
+  { key: 'ogikubo',   label: '新宿荻窪店',     kind: '女性専用',
+    rakuten: '153603', jalan: '345855', yahoo: '00901088', rurubu: 'musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo', booking: 'capsule-anshin-oyado-ogikubo' },
+  { key: 'shiodome',  label: '銀座汐留店',     kind: '女性専用',
+    rakuten: '158890', jalan: '301118', yahoo: '00901089', rurubu: 'tokyo/anshin-oyado-tokyo-woman-ginza-shiodome', booking: 'capsule-anshin-oyado-shinbashi-shiodome' },
+  { key: 'nagoya',    label: '名古屋栄店',     kind: '男女別専用',
+    rakuten: '178541', jalan: '378358', yahoo: '00910525', rurubu: 'nagoya/anshin-oyado-nagoya-man-woman-nagoya', booking: 'capsule-hotel-anshin-oyado-premium-nagoya-sakae' },
+];
 
-function renderOfficial(data) {
-  if (!data) {
-    document.getElementById('result').innerHTML = '<p class="text-slate-500 p-4">この月のデータはありません。</p>';
-    return;
-  }
-  let html = '<div class="tblwrap"><table><thead><tr><th>店舗＼日付</th><th class="min-w-[100px]">判定</th>';
-  for (const d of data.dates) {
-    const dd = new Date(d + 'T00:00:00');
-    const w = dd.getDay();
-    const cls = w===0?'sun':(w===6?'sat':'');
-    html += `<th class="${cls}">${dd.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
-  }
-  html += '</tr></thead><tbody>';
-
-  for (const row of data.rows) {
-    let badge;
-    if (row.noneCount === row.cells.length) badge = '<span class="badge bad">全日 設定なし</span>';
-    else if (row.noneCount > 0) badge = `<span class="badge warn">${row.noneCount}日 設定なし</span>`;
-    else badge = '<span class="badge ok">全日 設定あり</span>';
-
-    html += `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th>
-             <td class="text-xs text-left">${badge}</td>`;
-    for (const c of row.cells) {
-      const label = c.symbol + (c.stock!=null && c.cls!=='none' && c.cls!=='cross' ? `<span class="stock">${c.stock}室</span>` : '');
-      const title = `${c.date} : ${c.text}` + (c.stock!=null?` (残${c.stock}室)`:'');
-      html += `<td class="${c.cls}" title="${title}">${label}</td>`;
-    }
-    html += '</tr>';
-  }
-  html += '</tbody></table></div>';
-  document.getElementById('result').innerHTML = html;
+function addDays(iso, n) {
+  const d = new Date(iso + 'T00:00:00');
+  d.setDate(d.getDate() + n);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${dd}`;
 }
 
-function renderSite(siteKey, monthData) {
-  if (!monthData || !monthData.sites || !monthData.sites[siteKey]) {
-    document.getElementById('result').innerHTML = '<p class="text-slate-500 p-4">このサイトのデータはありません。</p>';
-    return;
+const urlBuilders = {
+  official: (shopLabel, ci) => `https://www.anshinoyado.jp/`,
+  rakuten: (shopLabel, ci) => {
+    const s = SHOPS_MASTER.find(x => shopLabel.includes(x.label.replace(/店$/,'')) || x.label.includes(shopLabel));
+    if (!s) return 'https://travel.rakuten.co.jp/';
+    const co = addDays(ci, 1);
+    const [y1, m1, d1] = ci.split('-'); const [y2, m2, d2] = co.split('-');
+    return `https://hotel.travel.rakuten.co.jp/hotelinfo/plan/${s.rakuten}?f_nen1=${y1}&f_tuki1=${+m1}&f_hi1=${+d1}&f_nen2=${y2}&f_tuki2=${+m2}&f_hi2=${+d2}&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1`;
+  },
+  jalan: (shopLabel, ci) => {
+    const s = SHOPS_MASTER.find(x => shopLabel.includes(x.label.replace(/店$/,'')) || x.label.includes(shopLabel));
+    if (!s) return 'https://www.jalan.net/';
+    const [y, m, d] = ci.split('-');
+    return `https://www.jalan.net/yad${s.jalan}/plan/?stayYear=${y}&stayMonth=${+m}&stayDay=${+d}&stayCount=1&roomCount=1&adultNum=1`;
+  },
+  yahoo: (shopLabel, ci) => {
+    const s = SHOPS_MASTER.find(x => shopLabel.includes(x.label.replace(/店$/,'')) || x.label.includes(shopLabel));
+    if (!s) return 'https://travel.yahoo.co.jp/';
+    const co = addDays(ci, 1);
+    return `https://travel.yahoo.co.jp/${s.yahoo}/?ppc=2&rc=1&checkinDate=${ci.replace(/-/g, '')}&checkoutDate=${co.replace(/-/g, '')}`;
+  },
+  rurubu: (shopLabel, ci) => {
+    const s = SHOPS_MASTER.find(x => shopLabel.includes(x.label.replace(/店$/,'')) || x.label.includes(shopLabel));
+    if (!s) return 'https://www.rurubu.travel/';
+    return `https://www.rurubu.travel/hotel/japan/${s.rurubu}?adults=1&children=0&rooms=1&checkin=${ci}&los=1&currencyCode=JPY`;
+  },
+  booking: (shopLabel, ci) => {
+    const s = SHOPS_MASTER.find(x => shopLabel.includes(x.label.replace(/店$/,'')) || x.label.includes(shopLabel));
+    if (!s) return 'https://www.booking.com/';
+    const co = addDays(ci, 1);
+    return `https://www.booking.com/hotel/jp/${s.booking}.ja.html?checkin=${ci}&checkout=${co}&group_adults=1&no_rooms=1&group_children=0`;
   }
-  const data = monthData.sites[siteKey];
-  
-  const OVERALL = {
-    available:    { badge:'<span class="badge ok">予約可能な日あり</span>' },
-    mostlysoldout:{ badge:'<span class="badge warn">大半が満室</span>' },
-    allsoldout:   { badge:'<span class="badge bad">全サンプル満室 (疑)</span>' },
-    unknown:      { badge:'<span class="badge warn">判定できず</span>' },
-  };
+};
 
-  let html = `<p class="text-sm text-slate-500 mb-2">判定サンプル日: ${data.dates.join(', ')}</p>`;
-  html += '<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[120px]">総合判定</th>';
-  for (const d of data.dates){
-    const dd = new Date(d+'T00:00:00'); const w = dd.getDay();
-    const cls = w===0?'sun':(w===6?'sat':'');
-    html += `<th class="${cls}">${dd.getMonth()+1}/${dd.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
-  }
-  html += '</tr></thead><tbody>';
+const WEEK = ['日','月','火','水','木','金','土'];
+let globalData = null, currentSite = 'official', selectedMonthIdx = 0;
 
-  for (const row of data.results){
-    const ov = OVERALL[row.overall] || OVERALL.unknown;
-    html += `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th>
-             <td class="text-xs text-left">${ov.badge}</td>`;
-    for (const s of row.samples){
-      let sym='?', cls='none';
-      if (s.status==='available'){ sym='○'; cls='circle'; }
-      else if (s.status==='soldout'){ sym='×'; cls='cross'; }
-      else if (s.status==='error'){ sym='!'; cls='none'; }
-      else { sym='－'; cls='none'; }
-      html += `<td class="${cls}" title="${s.date} : ${s.status}">${sym}</td>`;
-    }
-    html += '</tr>';
-  }
-  html += '</tbody></table></div>';
-  document.getElementById('result').innerHTML = html;
+const getHeaderTh = dStr => {
+  const d = new Date(dStr + (dStr.includes('T') ? '' : 'T00:00:00'));
+  const w = d.getDay();
+  return `<th class="${w===0?'sun':(w===6?'sat':'')}">${d.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
+};
+
+function renderTable(dates, rowsHtml, subHeader = '') {
+  return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(getHeaderTh).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
 }
 
 function updateView() {
-  if (!globalData || !globalData.months || globalData.months.length === 0) return;
-  const monthData = globalData.months[selectedMonthIdx];
+  if (!globalData?.months?.length) return;
+  const mData = globalData.months[selectedMonthIdx];
+  const $res = document.getElementById('result');
+
   if (currentSite === 'official') {
-    renderOfficial(monthData.official);
+    const data = mData.official;
+    if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">この月のデータはありません。</p>';
+    
+    const rows = data.rows.map(row => {
+      const badge = row.noneCount === row.cells.length ? '<span class="badge badge-bad">全日 設定なし/未取得</span>'
+        : row.noneCount > 0 ? `<span class="badge badge-warn">${row.noneCount}日 設定なし</span>`
+        : '<span class="badge badge-ok">全日 設定あり</span>';
+      
+      const cells = row.cells.map(c => {
+        const stock = (c.stock != null && c.cls !== 'none' && c.cls !== 'cross') ? `<span class="stock">${c.stock}室</span>` : '';
+        const jumpUrl = urlBuilders.official(row.shop, c.date);
+        return `<td class="${c.cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${c.date} : ${c.text}${c.stock!=null?` (残${c.stock}室)`:''} (クリックで公式HPを開く)">${c.symbol}${stock}</td>`;
+      }).join('');
+
+      return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badge}</td>${cells}</tr>`;
+    }).join('');
+
+    $res.innerHTML = renderTable(data.dates, rows);
   } else {
-    renderSite(currentSite, monthData);
+    const data = mData.sites?.[currentSite];
+    if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">このサイトのデータはありません。</p>';
+
+    const OVERALL = {
+      available: '<span class="badge badge-ok">予約可能日あり</span>',
+      mostlysoldout: '<span class="badge badge-warn">大半が満室</span>',
+      allsoldout: '<span class="badge badge-bad">全サンプル満室</span>',
+      unknown: '<span class="badge badge-warn">判定できず</span>'
+    };
+
+    const rows = data.results.map(row => {
+      const badge = OVERALL[row.overall] || OVERALL.unknown;
+      const cells = row.samples.map(s => {
+        const map = { available: ['○', 'circle'], soldout: ['×', 'cross'], error: ['！', 'none'] };
+        const [sym, cls] = map[s.status] || ['－', 'none'];
+        const jumpUrl = s.url || urlBuilders[currentSite](row.shop, s.date);
+        return `<td class="${cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${s.date} : ${s.status} (クリックで検索結果を開く)">${sym}</td>`;
+      }).join('');
+
+      return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badge}</td>${cells}</tr>`;
+    }).join('');
+
+    const siteLabelMap = { jalan:'じゃらん', rakuten:'楽天', yahoo:'一休(Yahoo)', rurubu:'るるぶ', booking:'Booking' };
+    const siteTitle = siteLabelMap[currentSite] || currentSite;
+    const subHeaderHtml = `<div class="text-xs text-slate-600 mb-2 flex items-center justify-between flex-wrap gap-2 bg-blue-50 p-2.5 rounded border border-blue-100">
+      <span>🔍 <b>${siteTitle}</b> 判定サンプル日: ${data.dates.join(', ')}</span>
+      <span class="text-blue-600 font-semibold">💡 セルをクリックすると${siteTitle}の指定日検索ページが直通で開きます</span>
+    </div>`;
+
+    $res.innerHTML = renderTable(data.dates, rows, subHeaderHtml);
   }
 }
 
-// データ読み込み
-fetch('data.json?v=' + new Date().getTime())
+fetch('data.json?v=' + Date.now())
   .then(r => r.json())
   .then(data => {
     globalData = data;
-    
-    // 更新日時のフォーマット
     const ud = new Date(data.updatedAt);
-    const dateStr = ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' });
-    document.getElementById('status').innerHTML = `🔄 最終更新: <span class="text-blue-600 font-bold">${dateStr}</span>`;
+    document.getElementById('status').innerHTML = `🔄 最終更新: <span class="text-blue-300 font-bold">${ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}</span>`;
     
-    // ドロップダウン生成
     const selectEl = document.getElementById('month-select');
-    selectEl.innerHTML = '';
-    data.months.forEach((m, idx) => {
-      const opt = document.createElement('option');
-      opt.value = idx;
-      opt.textContent = `${m.year}年${m.month}月` + (idx === 0 ? '（当月）' : '');
-      selectEl.appendChild(opt);
-    });
-
-    selectEl.addEventListener('change', (e) => {
-      selectedMonthIdx = Number(e.target.value);
-      updateView();
-    });
+    selectEl.innerHTML = data.months.map((m, i) => `<option value="${i}">${m.year}年${m.month}月${i === 0 ? '（当月）' : ''}</option>`).join('');
+    selectEl.addEventListener('change', e => { selectedMonthIdx = +e.target.value; updateView(); });
 
     updateView();
   })
-  .catch(e => {
-    document.getElementById('result').innerHTML = '<div class="text-red-500 p-4">データの読み込みに失敗しました。まだデータが更新完了していない可能性があります。</div>';
+  .catch(() => {
+    document.getElementById('result').innerHTML = '<div class="text-red-500 p-4 bg-red-50 rounded border border-red-200">データの読み込みに失敗しました。自動巡回バッチの実行状況をご確認ください。</div>';
     document.getElementById('status').textContent = 'エラー';
   });
 
-// タブ制御
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    if (!globalData) return;
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    currentSite = tab.dataset.site;
-    updateView();
-  });
+document.getElementById('tabs').addEventListener('click', e => {
+  const tab = e.target.closest('.tab');
+  if (!tab || !globalData) return;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  currentSite = tab.dataset.site;
+  updateView();
 });
 </script>
 </body>
