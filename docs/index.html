@@ -150,24 +150,47 @@ function renderTable(dates, rowsHtml, subHeader = '', showMonth = false) {
   return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(d => getHeaderTh(d, showMonth)).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
 }
 
-// CORS回避用プロキシフェッチ関数
+// エラー詳細を記録・表示するためのログ用配列
+let proxyErrorLogs = [];
+
+// CORS回避用プロキシフェッチ関数（タイムアウトとエラーログ追加）
 async function fetchWithProxy(targetUrl) {
+  proxyErrorLogs = []; // 初期化
   const proxies = [
-    { url: `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`, parse: async (res) => { const d = await res.json(); return JSON.parse(d.contents); } },
-    { url: `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`, parse: (res) => res.json() },
-    { url: `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`, parse: (res) => res.json() }
+    { name: 'AllOrigins', url: `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`, parse: async (res) => { const d = await res.json(); return JSON.parse(d.contents); } },
+    { name: 'Thingproxy', url: `https://thingproxy.freeboard.io/fetch/${targetUrl}`, parse: (res) => res.json() },
+    { name: 'Corsproxy.io', url: `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`, parse: (res) => res.json() },
+    { name: 'Codetabs', url: `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`, parse: (res) => res.json() }
   ];
+  
+  const fetchWithTimeout = async (url, timeoutMs = 8000) => {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeoutMs);
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(id);
+    return res;
+  };
+
   for (const p of proxies) {
     try {
-      const res = await fetch(p.url);
-      if (!res.ok) continue;
+      const res = await fetchWithTimeout(p.url);
+      if (!res.ok) {
+        proxyErrorLogs.push(`[${p.name}] HTTP ${res.status} ${res.statusText}`);
+        continue;
+      }
       const data = await p.parse(res);
       if (data && typeof data === 'object') return data;
+      proxyErrorLogs.push(`[${p.name}] パース失敗または空データ`);
     } catch (e) {
-      console.warn(`[Proxy] ${p.url} failed.`);
+      if (e.name === 'AbortError') {
+        proxyErrorLogs.push(`[${p.name}] タイムアウト`);
+      } else {
+        proxyErrorLogs.push(`[${p.name}] 接続エラー: ${e.message}`);
+      }
     }
   }
-  throw new Error("プロキシ経由のデータ取得にすべて失敗しました。");
+  const logStr = proxyErrorLogs.join('<br>');
+  throw new Error(`すべてのプロキシサーバーで取得に失敗しました。<br><br>【エラーログ詳細】<br><small>${logStr}</small>`);
 }
 
 // 公式APIから1ヶ月分を一括取得する関数 (num=5 に最適化済み)
@@ -254,7 +277,10 @@ function updateView() {
       $res.innerHTML = renderTable(data.dates, rows, `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-green-50 border border-green-200">✅ <b>公式HPの最新データをリアルタイムで取得しました。</b></div>`);
     }).catch(e => {
       console.error(e);
-      $res.innerHTML = `<div class="text-red-500 p-4 bg-red-50 rounded border border-red-200">公式データの取得に失敗しました。<br><small>${e.message}</small></div>`;
+      $res.innerHTML = `<div class="text-red-700 p-4 bg-red-50 rounded border border-red-200">
+        <strong class="block mb-2">公式データの取得に失敗しました。</strong>
+        ${e.message}
+      </div>`;
     });
 
   } else {
