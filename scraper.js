@@ -104,21 +104,18 @@ const SITE_RULES = {
 async function judgeOne(page, site, url) {
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 35000 });
-    await page.waitForTimeout(3000); // ページの動的コンテンツ生成を待機
+    await page.waitForTimeout(3000);
 
     const rule = SITE_RULES[site];
     const MAX_WAIT = 10000, STEP = 500;
     let elapsed = 0;
     
     while (true) {
-      // 1. 特有のDOM要素（じゃらんのカレンダー在庫要素等）を直接判定
       if (site === 'jalan') {
         const domAvail = await page.evaluate(() => {
-          // カレンダーセルに .in-stock や .has-stock があるか
           const hasStockCell = document.querySelector('.calendar-cell.has-stock, .calendar-stock.in-stock');
           if (hasStockCell) return 'dom:has-stock';
 
-          // em.calendar-icon の中に ◯ や △ や 数字 が入っているか
           const icons = Array.from(document.querySelectorAll('em.calendar-icon'));
           for (const icon of icons) {
             const txt = (icon.innerText || '').trim();
@@ -134,7 +131,6 @@ async function judgeOne(page, site, url) {
         }
       }
 
-      // 2. body全体のテキストからキーワード判定
       const text = await page.evaluate(() => document.body ? document.body.innerText || '' : '');
       
       const availHit = rule.avail.find(p => {
@@ -170,7 +166,6 @@ function sampleDates(year, month, count = 3) {
   if (isCurrentMonth) {
     const startDay = today.getDate();
     for (let d = startDay; d <= last; d++) pool.push(d);
-    // 当月の残り日数が少ない場合（例: 3日未満）、月の前半も含めて少なくとも3日分確保する
     if (pool.length < count) {
       for (let d = 1; d < startDay && pool.length < Math.min(count, last); d++) {
         if (!pool.includes(d)) pool.unshift(d);
@@ -220,11 +215,11 @@ async function checkSite(site, year, month, browser) {
     
     let overall;
     if (availCount > 0) {
-      overall = 'available'; // 空室/▲/○あり
+      overall = 'available';
     } else if (soldCount === perDay.length) {
-      overall = 'nosetting'; // すべて×の場合は設定なし・満室判定
+      overall = 'nosetting';
     } else {
-      overall = 'mostlysoldout'; // それ以外の場合は満室扱い
+      overall = 'mostlysoldout';
     }
     
     results.push({ shop: shop.label, kind: shop.kind, overall, availCount, soldCount, samples: perDay });
@@ -240,7 +235,8 @@ function fetchJson(url, redirectCount = 0) {
       headers: {
         'User-Agent': UA,
         'Accept': 'application/json, text/plain, */*',
-        'Referer': 'https://www.anshinoyado.jp/'
+        'Referer': 'https://www.anshinoyado.jp/',
+        'Origin': 'https://www.anshinoyado.jp'
       }
     }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
@@ -296,29 +292,25 @@ function salesTypeToSymbol(t) {
   return { sym: '△', cls: 'tri', text: '残りわずか' };
 }
 
+// 公式APIから1ヶ月分のデータを一括取得（num=5 で5週間＝35日分を1リクエストで高速取得）
 async function fetchOfficialMonth(year, month) {
-  console.log(`[Scrape] 公式API (${year}年${month}月) を取得中...`);
+  console.log(`[Scrape] 公式API (${year}年${month}月) を一括取得中...`);
   const daysInMonth = new Date(year, month, 0).getDate();
-  const froms = [];
-  for (let d = 1; d <= daysInMonth; d += 7) froms.push(fmt(new Date(year, month - 1, d)));
+  const fromDate = fmt(new Date(year, month - 1, 1)); // 月初日
 
   const byShop = SHOPS.map(() => ({}));
   let shopNames = SHOPS.map(s => s.label);
 
-  for (const from of froms) {
-    const primaryUrl = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${from}&num=1`;
-    let j = await fetchJson(primaryUrl);
-    
-    if (!j || !j.res || !j.res.facility_list) {
-      const backupUrl = `https://api.489pro.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${from}&num=1`;
-      j = await fetchJson(backupUrl);
-    }
+  // num=5 を指定すると 35日分（1ヶ月分）のデータを1回で取得可能
+  const primaryUrl = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=5`;
+  let j = await fetchJson(primaryUrl);
+  
+  if (!j || !j.res || !j.res.facility_list) {
+    const backupUrl = `https://api.489pro.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=5`;
+    j = await fetchJson(backupUrl);
+  }
 
-    if (!j || !j.res || !j.res.facility_list) {
-      console.warn(`[Official API] Data missing for ${from}`);
-      continue;
-    }
-    
+  if (j && j.res && j.res.facility_list) {
     j.res.facility_list.forEach((f, idx) => {
       if (idx >= SHOPS.length) return;
       if (f.name) shopNames[idx] = f.name;
@@ -328,7 +320,8 @@ async function fetchOfficialMonth(year, month) {
         }
       }
     });
-    await new Promise(r => setTimeout(r, 150));
+  } else {
+    console.warn(`[Official API] Data missing for ${year}年${month}月`);
   }
 
   const dates = [];
