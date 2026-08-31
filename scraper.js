@@ -57,11 +57,18 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 const SITE_RULES = {
   rakuten: {
-    soldOut: ['空室が見つかりませんでした', '空室が見つかりません', 'ご指定の条件に一致する', '満室です', '該当するプランがありません', '予約可能なプランがありません'],
+    soldOut: [
+      '空室が見つかりませんでした', '空室が見つかりません', 'ご指定の条件に一致する', '満室です', 
+      '該当するプランがありません', '予約可能なプランがありません', '販売終了', '受付終了', 'プランがありません'
+    ],
     avail: ['このプランの詳細', '予約する', 'を選択', '詳細・予約', '残り', '空室あり', 'プラン一覧', '空室カレンダー', '円', 'プラン']
   },
   jalan: {
-    soldOut: ['0件の宿泊プラン', '宿泊プランがありませんでした', '条件に合う宿泊プランが見つかりません', '満室', '予約できるプランがありません', '空室がありません', '該当するプランがありません', 'ご指定の検索条件に該当する'],
+    soldOut: [
+      '0件の宿泊プラン', '宿泊プランがありませんでした', '条件に合う宿泊プランが見つかりません', '満室', 
+      '予約できるプランがありません', '空室がありません', '該当するプランがありません', 'ご指定の検索条件に該当する', 
+      '受付を終了', '販売を終了', '販売プランがありません'
+    ],
     avail: [
       '件の宿泊プランがありました', '空室わずか', '残室わずか', 'このプランを見ています', '部屋タイプ・詳細', 'プランを見る', '予約へ進む', '部屋', 'プラン', '残り', '残室', '空室', '予約', '円', 'プラン詳細',
       '▲', '△', '○', '◯', '〇', '⭕', '◎', '空きあり', '空室あり',
@@ -72,15 +79,24 @@ const SITE_RULES = {
     ]
   },
   yahoo: {
-    soldOut: ['空室が見つかりませんでした', '空室が見つかりません', '満室', 'ご希望の条件に合う', '予約できるプランがありません', '別の日程', '該当するプランがありません', 'お探しの条件に該当する'],
+    soldOut: [
+      '空室が見つかりませんでした', '空室が見つかりません', '満室', 'ご希望の条件に合う', '予約できるプランがありません', 
+      '別の日程', '該当するプランがありません', 'お探しの条件に該当する', '販売終了', '受付を終了'
+    ],
     avail: ['予約する', 'このプラン', '残り', 'ポイント', 'プランを見る', '部屋・プランを見る', '選択する', '料金プラン', 'PayPay', '予約手続きへ', '円', '空室']
   },
   rurubu: {
-    soldOut: ['空室は見つかりませんでした', '選択された日付で空室', '別の日付で検索', 'この宿泊施設は満室です', '現在予約を受け付けていません', 'お探しの条件に該当するプラン'],
+    soldOut: [
+      '空室は見つかりませんでした', '選択された日付で空室', '別の日付で検索', 'この宿泊施設は満室です', 
+      '現在予約を受け付けていません', 'お探しの条件に該当するプラン', '該当するプランはありません', '販売終了'
+    ],
     avail: ['この料金を見る', '予約できる料金プラン', '最安値', '種類のルームタイプ', 'るるぶトラベルでの最安値', '選択する', '円', 'プラン']
   },
   booking: {
-    soldOut: ['選択された日程に空室がありません', '空室がありません', '満室です', 'この宿泊施設は現在ご利用いただけません', '別の日程で検索', '空室状況を検索してください', '予約できません'],
+    soldOut: [
+      '選択された日程に空室がありません', '空室がありません', '満室です', 'この宿泊施設は現在ご利用いただけません', 
+      '別の日程で検索', '空室状況を検索してください', '予約できません', 'ご利用になれません'
+    ],
     avail: ['予約可能なお部屋', '残り', '空室を確認', 'この料金で予約', '1泊あたり', '合計金額', '予約する', '空室状況を表示', '部屋']
   },
 };
@@ -88,14 +104,38 @@ const SITE_RULES = {
 async function judgeOne(page, site, url) {
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 35000 });
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000); // ページの動的コンテンツ生成を待機
 
     const rule = SITE_RULES[site];
-    const MAX_WAIT = 8000, STEP = 500;
-    let text = '', elapsed = 0;
+    const MAX_WAIT = 10000, STEP = 500;
+    let elapsed = 0;
     
     while (true) {
-      text = await page.evaluate(() => document.body ? document.body.innerText || '' : '');
+      // 1. 特有のDOM要素（じゃらんのカレンダー在庫要素等）を直接判定
+      if (site === 'jalan') {
+        const domAvail = await page.evaluate(() => {
+          // カレンダーセルに .in-stock や .has-stock があるか
+          const hasStockCell = document.querySelector('.calendar-cell.has-stock, .calendar-stock.in-stock');
+          if (hasStockCell) return 'dom:has-stock';
+
+          // em.calendar-icon の中に ◯ や △ や 数字 が入っているか
+          const icons = Array.from(document.querySelectorAll('em.calendar-icon'));
+          for (const icon of icons) {
+            const txt = (icon.innerText || '').trim();
+            if (['◯', '○', '▲', '△', '〇', '⭕', '◎'].includes(txt) || /^[1-9][0-9]*$/.test(txt)) {
+              return `dom:icon-${txt}`;
+            }
+          }
+          return null;
+        });
+
+        if (domAvail) {
+          return { status: 'available', hit: domAvail };
+        }
+      }
+
+      // 2. body全体のテキストからキーワード判定
+      const text = await page.evaluate(() => document.body ? document.body.innerText || '' : '');
       
       const availHit = rule.avail.find(p => {
         if (typeof p === 'string') return text.includes(p);
@@ -125,14 +165,34 @@ function sampleDates(year, month, count = 3) {
   const last = new Date(year, month, 0).getDate();
   const today = new Date();
   const isCurrentMonth = (today.getFullYear() === year && (today.getMonth() + 1) === month);
-  const startDay = isCurrentMonth ? Math.max(1, today.getDate()) : 1;
-  const pool = [];
-  for (let d = startDay; d <= last; d++) pool.push(d);
+  
+  let pool = [];
+  if (isCurrentMonth) {
+    const startDay = today.getDate();
+    for (let d = startDay; d <= last; d++) pool.push(d);
+    // 当月の残り日数が少ない場合（例: 3日未満）、月の前半も含めて少なくとも3日分確保する
+    if (pool.length < count) {
+      for (let d = 1; d < startDay && pool.length < Math.min(count, last); d++) {
+        if (!pool.includes(d)) pool.unshift(d);
+      }
+    }
+  } else {
+    for (let d = 1; d <= last; d++) pool.push(d);
+  }
+  
   if (pool.length === 0) return [];
+  
   const picks = [];
   const step = Math.max(1, Math.floor(pool.length / count));
-  for (let i = 0; i < pool.length && picks.length < count; i += step) picks.push(pool[i]);
-  if (!picks.includes(pool[pool.length - 1])) picks.push(pool[pool.length - 1]);
+  for (let i = 0; i < pool.length && picks.length < count; i += step) {
+    picks.push(pool[i]);
+  }
+  if (picks.length < count && pool.length >= count) {
+    const lastElem = pool[pool.length - 1];
+    if (!picks.includes(lastElem)) picks.push(lastElem);
+  }
+  
+  picks.sort((a, b) => a - b);
   return picks.map(d => `${year}-${String(month).padStart(2, '0')}-${String(d).padStart(2, '0')}`);
 }
 
@@ -162,7 +222,7 @@ async function checkSite(site, year, month, browser) {
     if (availCount > 0) {
       overall = 'available'; // 空室/▲/○あり
     } else if (soldCount === perDay.length) {
-      overall = 'nosetting'; // すべて×の場合は設定なし判定
+      overall = 'nosetting'; // すべて×の場合は設定なし・満室判定
     } else {
       overall = 'mostlysoldout'; // それ以外の場合は満室扱い
     }
