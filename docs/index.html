@@ -1,5 +1,5 @@
 <!-- Chosen Palette: Slate & Emerald/Amber/Rose Status Colors -->
-<!-- Application Structure Plan: Interactive availability table for official API and external booking channels with dynamic direct search links and fallbacks -->
+<!-- Application Structure Plan: Hybrid application using static JSON for OTA data and live fetch via CORS proxy for Official API -->
 <!-- Visualization & Content Choices: Semantic HTML tables, CSS badges for status badges, direct URL generation for jump-to-OTA, fallback handling for unknown statuses -->
 <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 <!DOCTYPE html>
@@ -36,7 +36,9 @@
   <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
     <div>
       <h1 class="text-xl sm:text-2xl font-bold m-0">安心お宿 空室情報 チェッカー</h1>
-      <p class="text-slate-300 text-xs sm:text-sm mt-1">当月〜来年同月までの空室データを自動巡回・一括確認できます。</p>
+      <p class="text-slate-300 text-xs sm:text-sm mt-1">
+        公式HPはリアルタイム取得、その他サイトは自動巡回バッチの結果を表示します。
+      </p>
     </div>
     <div id="status" class="text-xs sm:text-sm bg-slate-700 px-3 py-1.5 rounded text-slate-200">データ読み込み中...</div>
   </div>
@@ -54,7 +56,7 @@
 
 <main class="flex-1 p-4 sm:p-6 max-w-7xl mx-auto w-full">
   <div class="flex gap-1 border-b border-slate-200 mb-4 overflow-x-auto" id="tabs">
-    <div class="tab active" data-site="official">公式HP (全日表示)</div>
+    <div class="tab active" data-site="official">公式HP (都度取得)</div>
     <div class="tab" data-site="jalan">じゃらん</div>
     <div class="tab" data-site="rakuten">楽天</div>
     <div class="tab" data-site="yahoo">一休(Yahoo)</div>
@@ -65,8 +67,8 @@
   <div class="flex gap-4 flex-wrap text-sm mb-4 text-slate-700 bg-white p-3 rounded border border-slate-200">
     <span class="flex items-center"><i class="dot circle"></i>○ 空室あり</span>
     <span class="flex items-center"><i class="dot tri"></i>△ 残りわずか</span>
-    <span class="flex items-center"><i class="dot cross"></i>× 満室</span>
-    <span class="flex items-center"><i class="dot none"></i>－ 設定なし / 判定中・未確認</span>
+    <span class="flex items-center"><i class="dot cross"></i>× 満室・受付終了</span>
+    <span class="flex items-center"><i class="dot none"></i>－ 設定なし / 判定不能</span>
   </div>
 
   <div id="result">
@@ -135,15 +137,94 @@ const urlBuilders = {
 
 const WEEK = ['日','月','火','水','木','金','土'];
 let globalData = null, currentSite = 'official', selectedMonthIdx = 0;
+let officialDataCache = {}; // 都度取得した公式データのキャッシュ
 
-const getHeaderTh = dStr => {
+const getHeaderTh = (dStr, showMonth = false) => {
   const d = new Date(dStr + (dStr.includes('T') ? '' : 'T00:00:00'));
   const w = d.getDay();
-  return `<th class="${w===0?'sun':(w===6?'sat':'')}">${d.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
+  const label = showMonth ? `${d.getMonth()+1}/${d.getDate()}` : `${d.getDate()}`;
+  return `<th class="min-w-[60px] ${w===0?'sun':(w===6?'sat':'')}">${label}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
 };
 
-function renderTable(dates, rowsHtml, subHeader = '') {
-  return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(getHeaderTh).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
+function renderTable(dates, rowsHtml, subHeader = '', showMonth = false) {
+  return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(d => getHeaderTh(d, showMonth)).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
+}
+
+// CORS回避用プロキシフェッチ関数
+async function fetchWithProxy(targetUrl) {
+  const proxies = [
+    { url: `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`, parse: async (res) => { const d = await res.json(); return JSON.parse(d.contents); } },
+    { url: `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`, parse: (res) => res.json() },
+    { url: `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`, parse: (res) => res.json() }
+  ];
+  for (const p of proxies) {
+    try {
+      const res = await fetch(p.url);
+      if (!res.ok) continue;
+      const data = await p.parse(res);
+      if (data && typeof data === 'object') return data;
+    } catch (e) {
+      console.warn(`[Proxy] ${p.url} failed.`);
+    }
+  }
+  throw new Error("プロキシ経由のデータ取得にすべて失敗しました。");
+}
+
+// 公式APIから1ヶ月分を一括取得する関数 (num=5 に最適化済み)
+async function fetchOfficialAPI(year, month) {
+  const cacheKey = `${year}-${month}`;
+  if (officialDataCache[cacheKey]) return officialDataCache[cacheKey];
+
+  const daysInMonth = new Date(year, month, 0).getDate();
+  const fromDate = `${year}-${String(month).padStart(2, '0')}-01`;
+  const ym = `${year}-${String(month).padStart(2, '0')}`;
+  
+  // num=5 を指定して1ヶ月分を一括で取得
+  const targetUrl = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=5`;
+  const j = await fetchWithProxy(targetUrl);
+  
+  if (!j || !j.res || !j.res.facility_list) throw new Error("APIレスポンスエラー");
+
+  const byShop = SHOPS_MASTER.map(() => ({}));
+  let shopNames = SHOPS_MASTER.map(s => s.label);
+
+  j.res.facility_list.forEach((f, idx) => {
+    if (idx >= SHOPS_MASTER.length) return;
+    if (f.name) shopNames[idx] = f.name;
+    for (const x of (f.date_list || [])) {
+      if (x.date && x.date.startsWith(ym)) {
+        byShop[idx][x.date] = { sales_type: x.sales_type, stock_num: x.stock_num };
+      }
+    }
+  });
+
+  const dates = [];
+  for (let d = 1; d <= daysInMonth; d++) dates.push(`${ym}-${String(d).padStart(2, '0')}`);
+
+  function salesTypeToSymbol(t) {
+    if (t === null || t === undefined) return { sym: '－', cls: 'none', text: '設定なし' };
+    const n = Number(t);
+    if (n === 0 || n === 9) return { sym: '×', cls: 'cross', text: '満室' };
+    if (n === 1) return { sym: '○', cls: 'circle', text: '空室あり' };
+    return { sym: '△', cls: 'tri', text: '残りわずか' };
+  }
+
+  const rows = SHOPS_MASTER.map((s, idx) => {
+    const cells = dates.map(date => {
+      const rec = byShop[idx][date];
+      const sym = salesTypeToSymbol(rec ? rec.sales_type : null);
+      return {
+        date, symbol: sym.sym, cls: sym.cls, text: sym.text, 
+        isNone: (!rec || rec.sales_type == null), stock: rec ? rec.stock_num : null,
+      };
+    });
+    const noneCount = cells.filter(c => c.isNone).length;
+    return { shop: shopNames[idx] || s.label, kind: s.kind, cells, noneCount };
+  });
+
+  const result = { dates, rows };
+  officialDataCache[cacheKey] = result; // キャッシュに保存
+  return result;
 }
 
 function updateView() {
@@ -152,33 +233,40 @@ function updateView() {
   const $res = document.getElementById('result');
 
   if (currentSite === 'official') {
-    const data = mData.official;
-    if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">この月のデータはありません。</p>';
+    // 公式はブラウザから直接APIを叩く
+    $res.innerHTML = '<div class="text-blue-600 p-4 bg-blue-50 rounded border border-blue-200 animate-pulse">📡 公式APIから最新の空室状況を取得中...</div>';
     
-    const rows = data.rows.map(row => {
-      const badge = row.noneCount === row.cells.length ? '<span class="badge badge-bad">全日 設定なし/未取得</span>'
-        : row.noneCount > 0 ? `<span class="badge badge-warn">${row.noneCount}日 設定なし</span>`
-        : '<span class="badge badge-ok">全日 設定あり</span>';
-      
-      const cells = row.cells.map(c => {
-        const stock = (c.stock != null && c.cls !== 'none' && c.cls !== 'cross') ? `<span class="stock">${c.stock}室</span>` : '';
-        const jumpUrl = urlBuilders.official(row.shop, c.date);
-        return `<td class="${c.cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${c.date} : ${c.text}${c.stock!=null?` (残${c.stock}室)`:''} (クリックで公式HPを開く)">${c.symbol}${stock}</td>`;
+    fetchOfficialAPI(mData.year, mData.month).then(data => {
+      const rows = data.rows.map(row => {
+        const badge = row.noneCount === row.cells.length ? '<span class="badge badge-bad">全日 設定なし/未取得</span>'
+          : row.noneCount > 0 ? `<span class="badge badge-warn">${row.noneCount}日 設定なし</span>`
+          : '<span class="badge badge-ok">全日 設定あり</span>';
+        
+        const cells = row.cells.map(c => {
+          const stock = (c.stock != null && c.cls !== 'none' && c.cls !== 'cross') ? `<span class="stock">${c.stock}室</span>` : '';
+          const jumpUrl = urlBuilders.official(row.shop, c.date);
+          return `<td class="${c.cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${c.date} : ${c.text}${c.stock!=null?` (残${c.stock}室)`:''} (クリックで公式HPを開く)">${c.symbol}${stock}</td>`;
+        }).join('');
+
+        return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badge}</td>${cells}</tr>`;
       }).join('');
 
-      return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badge}</td>${cells}</tr>`;
-    }).join('');
+      $res.innerHTML = renderTable(data.dates, rows, `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-green-50 border border-green-200">✅ <b>公式HPの最新データをリアルタイムで取得しました。</b></div>`);
+    }).catch(e => {
+      console.error(e);
+      $res.innerHTML = `<div class="text-red-500 p-4 bg-red-50 rounded border border-red-200">公式データの取得に失敗しました。<br><small>${e.message}</small></div>`;
+    });
 
-    $res.innerHTML = renderTable(data.dates, rows);
   } else {
+    // OTAサイトはバッチ(data.json)のスクレイピング結果を表示
     const data = mData.sites?.[currentSite];
     if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">このサイトのデータはありません。</p>';
 
     const OVERALL = {
       available: '<span class="badge badge-ok">予約可能日あり</span>',
-      mostlysoldout: '<span class="badge badge-warn">満室扱い</span>',
-      nosetting: '<span class="badge badge-bad">設定なし</span>',
-      allsoldout: '<span class="badge badge-bad">設定なし</span>',
+      mostlysoldout: '<span class="badge badge-warn">満室/受付終了</span>',
+      nosetting: '<span class="badge badge-bad">設定なし/満室</span>',
+      allsoldout: '<span class="badge badge-bad">設定なし/満室</span>',
       unknown: '<span class="badge badge-warn">判定できず</span>'
     };
 
@@ -196,12 +284,18 @@ function updateView() {
 
     const siteLabelMap = { jalan:'じゃらん', rakuten:'楽天', yahoo:'一休(Yahoo)', rurubu:'るるぶ', booking:'Booking' };
     const siteTitle = siteLabelMap[currentSite] || currentSite;
+    
+    const formattedDates = data.dates.map(dStr => {
+      const d = new Date(dStr + 'T00:00:00');
+      return `${d.getMonth()+1}/${d.getDate()}(${WEEK[d.getDay()]})`;
+    });
+
     const subHeaderHtml = `<div class="text-xs text-slate-600 mb-2 flex items-center justify-between flex-wrap gap-2 bg-blue-50 p-2.5 rounded border border-blue-100">
-      <span>🔍 <b>${siteTitle}</b> 判定サンプル日: ${data.dates.join(', ')}</span>
+      <span>🔍 <b>${siteTitle}</b> 判定サンプル日: ${formattedDates.join(', ')} (自動バッチ結果)</span>
       <span class="text-blue-600 font-semibold">💡 セルをクリックすると${siteTitle}の指定日検索ページが直通で開きます</span>
     </div>`;
 
-    $res.innerHTML = renderTable(data.dates, rows, subHeaderHtml);
+    $res.innerHTML = renderTable(data.dates, rows, subHeaderHtml, true);
   }
 }
 
@@ -210,7 +304,7 @@ fetch('data.json?v=' + Date.now())
   .then(data => {
     globalData = data;
     const ud = new Date(data.updatedAt);
-    document.getElementById('status').innerHTML = `🔄 最終更新: <span class="text-blue-300 font-bold">${ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}</span>`;
+    document.getElementById('status').innerHTML = `🔄 OTA最終取得: <span class="text-blue-300 font-bold">${ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}</span>`;
     
     const selectEl = document.getElementById('month-select');
     selectEl.innerHTML = data.months.map((m, i) => `<option value="${i}">${m.year}年${m.month}月${i === 0 ? '（当月）' : ''}</option>`).join('');
@@ -219,7 +313,7 @@ fetch('data.json?v=' + Date.now())
     updateView();
   })
   .catch(() => {
-    document.getElementById('result').innerHTML = '<div class="text-red-500 p-4 bg-red-50 rounded border border-red-200">データの読み込みに失敗しました。自動巡回バッチの実行状況をご確認ください。</div>';
+    document.getElementById('result').innerHTML = '<div class="text-red-500 p-4 bg-red-50 rounded border border-red-200">基本データの読み込みに失敗しました。</div>';
     document.getElementById('status').textContent = 'エラー';
   });
 
