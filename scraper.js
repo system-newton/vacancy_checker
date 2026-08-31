@@ -32,7 +32,7 @@ function addDays(iso, n) {
 
 const urlBuilders = {
   official: (shop, ci) => {
-    return `https://www.anshinoyado.jp/`;
+    return `https://www.anshin-oyado.jp/`;
   },
   rakuten: (shop, ci) => {
     const co = addDays(ci, 1);
