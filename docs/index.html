@@ -100,7 +100,7 @@ function addDays(iso, n) {
 }
 
 const urlBuilders = {
-  official: (shopLabel, ci) => `https://www.anshinoyado.jp/`,
+  official: (shopLabel, ci) => `https://www.anshin-oyado.jp/`,
   rakuten: (shopLabel, ci) => {
     const s = SHOPS_MASTER.find(x => shopLabel.includes(x.label.replace(/店$/,'')) || x.label.includes(shopLabel));
     if (!s) return 'https://travel.rakuten.co.jp/';
