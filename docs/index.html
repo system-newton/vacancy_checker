@@ -1,7 +1,3 @@
-<!-- Chosen Palette: Slate & Emerald/Amber/Rose Status Colors -->
-<!-- Application Structure Plan: Hybrid application using static JSON for OTA data and live fetch via CORS proxy for Official API -->
-<!-- Visualization & Content Choices: Semantic HTML tables, CSS badges for status badges, direct URL generation for jump-to-OTA, fallback handling for unknown statuses -->
-<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -137,7 +133,7 @@ const urlBuilders = {
 
 const WEEK = ['日','月','火','水','木','金','土'];
 let globalData = null, currentSite = 'official', selectedMonthIdx = 0;
-let officialDataCache = {}; // 都度取得した公式データのキャッシュ
+let officialDataCache = {}; 
 
 const getHeaderTh = (dStr, showMonth = false) => {
   const d = new Date(dStr + (dStr.includes('T') ? '' : 'T00:00:00'));
@@ -150,50 +146,35 @@ function renderTable(dates, rowsHtml, subHeader = '', showMonth = false) {
   return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(d => getHeaderTh(d, showMonth)).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
 }
 
-// エラー詳細を記録・表示するためのログ用配列
-let proxyErrorLogs = [];
+// =========================================================================
+// Cloudflare Workers の URL 
+// =========================================================================
+const MY_PROXY_URL = 'https://dry-bush-4840.system-f87.workers.dev/?url='; 
+// =========================================================================
 
-// CORS回避用プロキシフェッチ関数（タイムアウトとエラーログ追加）
-async function fetchWithProxy(targetUrl) {
-  proxyErrorLogs = []; // 初期化
-  const proxies = [
-    { name: 'AllOrigins', url: `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`, parse: async (res) => { const d = await res.json(); return JSON.parse(d.contents); } },
-    { name: 'Thingproxy', url: `https://thingproxy.freeboard.io/fetch/${targetUrl}`, parse: (res) => res.json() },
-    { name: 'Corsproxy.io', url: `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`, parse: (res) => res.json() },
-    { name: 'Codetabs', url: `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`, parse: (res) => res.json() }
-  ];
-  
-  const fetchWithTimeout = async (url, timeoutMs = 8000) => {
-    const controller = new AbortController();
-    const id = setTimeout(() => controller.abort(), timeoutMs);
-    const res = await fetch(url, { signal: controller.signal });
-    clearTimeout(id);
-    return res;
-  };
 
-  for (const p of proxies) {
-    try {
-      const res = await fetchWithTimeout(p.url);
-      if (!res.ok) {
-        proxyErrorLogs.push(`[${p.name}] HTTP ${res.status} ${res.statusText}`);
-        continue;
-      }
-      const data = await p.parse(res);
-      if (data && typeof data === 'object') return data;
-      proxyErrorLogs.push(`[${p.name}] パース失敗または空データ`);
-    } catch (e) {
-      if (e.name === 'AbortError') {
-        proxyErrorLogs.push(`[${p.name}] タイムアウト`);
-      } else {
-        proxyErrorLogs.push(`[${p.name}] 接続エラー: ${e.message}`);
-      }
-    }
+async function fetchWithMyProxy(targetUrl) {
+  if (!MY_PROXY_URL || MY_PROXY_URL.includes('あなたのID')) {
+    throw new Error('専用プロキシのURLが設定されていません。コードを書き換えてください。');
   }
-  const logStr = proxyErrorLogs.join('<br>');
-  throw new Error(`すべてのプロキシサーバーで取得に失敗しました。<br><br>【エラーログ詳細】<br><small>${logStr}</small>`);
+
+  const fetchUrl = MY_PROXY_URL + encodeURIComponent(targetUrl);
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), 12000);
+
+  try {
+    const res = await fetch(fetchUrl, { signal: controller.signal });
+    clearTimeout(id);
+    if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+    const data = await res.json();
+    return data;
+  } catch (e) {
+    clearTimeout(id);
+    throw new Error(`プロキシ経由の取得に失敗: ${e.message}`);
+  }
 }
 
-// 公式APIから1ヶ月分を一括取得する関数 (num=5 に最適化済み)
+// 公式APIから1ヶ月分を一括取得する関数
 async function fetchOfficialAPI(year, month) {
   const cacheKey = `${year}-${month}`;
   if (officialDataCache[cacheKey]) return officialDataCache[cacheKey];
@@ -202,9 +183,10 @@ async function fetchOfficialAPI(year, month) {
   const fromDate = `${year}-${String(month).padStart(2, '0')}-01`;
   const ym = `${year}-${String(month).padStart(2, '0')}`;
   
-  // num=5 を指定して1ヶ月分を一括で取得
   const targetUrl = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=5`;
-  const j = await fetchWithProxy(targetUrl);
+  
+  // 専用プロキシを使って取得
+  const j = await fetchWithMyProxy(targetUrl);
   
   if (!j || !j.res || !j.res.facility_list) throw new Error("APIレスポンスエラー");
 
@@ -246,7 +228,7 @@ async function fetchOfficialAPI(year, month) {
   });
 
   const result = { dates, rows };
-  officialDataCache[cacheKey] = result; // キャッシュに保存
+  officialDataCache[cacheKey] = result; 
   return result;
 }
 
@@ -256,12 +238,11 @@ function updateView() {
   const $res = document.getElementById('result');
 
   if (currentSite === 'official') {
-    // 公式はブラウザから直接APIを叩く
-    $res.innerHTML = '<div class="text-blue-600 p-4 bg-blue-50 rounded border border-blue-200 animate-pulse">📡 公式APIから最新の空室状況を取得中...</div>';
+    $res.innerHTML = '<div class="text-blue-600 p-4 bg-blue-50 rounded border border-blue-200 animate-pulse">📡 あなたの専用プロキシを経由して公式APIから最新データを取得中...</div>';
     
     fetchOfficialAPI(mData.year, mData.month).then(data => {
       const rows = data.rows.map(row => {
-        const badge = row.noneCount === row.cells.length ? '<span class="badge badge-bad">全日 設定なし/未取得</span>'
+        const badge = row.noneCount === row.cells.length ? '<span class="badge badge-bad">全日 設定なし</span>'
           : row.noneCount > 0 ? `<span class="badge badge-warn">${row.noneCount}日 設定なし</span>`
           : '<span class="badge badge-ok">全日 設定あり</span>';
         
@@ -274,7 +255,7 @@ function updateView() {
         return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badge}</td>${cells}</tr>`;
       }).join('');
 
-      $res.innerHTML = renderTable(data.dates, rows, `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-green-50 border border-green-200">✅ <b>公式HPの最新データをリアルタイムで取得しました。</b></div>`);
+      $res.innerHTML = renderTable(data.dates, rows, `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-green-50 border border-green-200">✅ <b>公式APIの最新データをリアルタイム取得しました。</b></div>`);
     }).catch(e => {
       console.error(e);
       $res.innerHTML = `<div class="text-red-700 p-4 bg-red-50 rounded border border-red-200">
