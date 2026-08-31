@@ -31,6 +31,9 @@ function addDays(iso, n) {
 }
 
 const urlBuilders = {
+  official: (shop, ci) => {
+    return `https://www.anshinoyado.jp/`;
+  },
   rakuten: (shop, ci) => {
     const co = addDays(ci, 1);
     const [y1, m1, d1] = ci.split('-'); const [y2, m2, d2] = co.split('-');
@@ -56,6 +59,10 @@ const urlBuilders = {
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36';
 
 const SITE_RULES = {
+  official: {
+    soldOut: ['空室がありません', '満室です', 'ご指定の条件に一致するプラン', '販売終了', '受付終了'],
+    avail: ['空室あり', '予約する', '残り', '円', '選択する', 'プラン詳細']
+  },
   rakuten: {
     soldOut: [
       '空室が見つかりませんでした', '空室が見つかりません', 'ご指定の条件に一致する', '満室です', 
@@ -107,6 +114,8 @@ async function judgeOne(page, site, url) {
     await page.waitForTimeout(3000);
 
     const rule = SITE_RULES[site];
+    if (!rule) return { status: 'unknown', hit: null };
+
     const MAX_WAIT = 10000, STEP = 500;
     let elapsed = 0;
     
@@ -292,16 +301,15 @@ function salesTypeToSymbol(t) {
   return { sym: '△', cls: 'tri', text: '残りわずか' };
 }
 
-// 公式APIから1ヶ月分のデータを一括取得（num=5 で5週間＝35日分を1リクエストで高速取得）
-async function fetchOfficialMonth(year, month) {
+// 公式APIから1ヶ月分のデータを取得（API制限時はPlaywrightでの判定に自動フォールバック）
+async function fetchOfficialMonth(year, month, browser) {
   console.log(`[Scrape] 公式API (${year}年${month}月) を一括取得中...`);
   const daysInMonth = new Date(year, month, 0).getDate();
-  const fromDate = fmt(new Date(year, month - 1, 1)); // 月初日
+  const fromDate = fmt(new Date(year, month - 1, 1));
 
   const byShop = SHOPS.map(() => ({}));
   let shopNames = SHOPS.map(s => s.label);
 
-  // num=5 を指定すると 35日分（1ヶ月分）のデータを1回で取得可能
   const primaryUrl = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=5`;
   let j = await fetchJson(primaryUrl);
   
@@ -310,19 +318,49 @@ async function fetchOfficialMonth(year, month) {
     j = await fetchJson(backupUrl);
   }
 
-  if (j && j.res && j.res.facility_list) {
-    j.res.facility_list.forEach((f, idx) => {
-      if (idx >= SHOPS.length) return;
-      if (f.name) shopNames[idx] = f.name;
-      for (const x of (f.date_list || [])) {
-        if (x.date && x.date.startsWith(`${year}-${String(month).padStart(2, '0')}`)) {
-          byShop[idx][x.date] = { sales_type: x.sales_type, stock_num: x.stock_num };
-        }
+  // APIアクセス制限やエラーで取得できなかった場合のフォールバック処理（他サイトと同じPlaywright巡回）
+  if (!j || !j.res || !j.res.facility_list) {
+    console.warn(`[Official API] 制限または応答不全を検知したため、Playwrightによるブラウザ巡回判定へフォールバックします (${year}年${month}月)`);
+    const fallbackData = await checkSite('official', year, month, browser);
+    
+    const dates = [];
+    for (let d = 1; d <= daysInMonth; d++) dates.push(fmt(new Date(year, month - 1, d)));
+
+    const rows = SHOPS.map((s, idx) => {
+      const fbRow = fallbackData.results.find(r => r.shop.includes(s.label.replace(/店$/,'')) || s.label.includes(r.shop));
+      const samplesMap = {};
+      if (fbRow && fbRow.samples) {
+        fbRow.samples.forEach(sp => { samplesMap[sp.date] = sp.status; });
       }
+
+      const cells = dates.map(date => {
+        const st = samplesMap[date];
+        let sym = { sym: '－', cls: 'none', text: '設定なし' };
+        if (st === 'available') sym = { sym: '○', cls: 'circle', text: '空室あり' };
+        else if (st === 'soldout') sym = { sym: '×', cls: 'cross', text: '満室' };
+
+        return {
+          date, symbol: sym.sym, cls: sym.cls, text: sym.text,
+          isNone: (st === undefined || st === 'error' || st === 'unknown'), stock: null
+        };
+      });
+
+      const noneCount = cells.filter(c => c.isNone).length;
+      return { shop: s.label, kind: s.kind, cells, noneCount };
     });
-  } else {
-    console.warn(`[Official API] Data missing for ${year}年${month}月`);
+
+    return { year, month, dates, rows, isFallback: true };
   }
+
+  j.res.facility_list.forEach((f, idx) => {
+    if (idx >= SHOPS.length) return;
+    if (f.name) shopNames[idx] = f.name;
+    for (const x of (f.date_list || [])) {
+      if (x.date && x.date.startsWith(`${year}-${String(month).padStart(2, '0')}`)) {
+        byShop[idx][x.date] = { sales_type: x.sales_type, stock_num: x.stock_num };
+      }
+    }
+  });
 
   const dates = [];
   for (let d = 1; d <= daysInMonth; d++) dates.push(fmt(new Date(year, month - 1, d)));
@@ -366,7 +404,7 @@ async function main() {
       console.log(`\n-----------------------------------`);
       console.log(`📅 【${year}年${month}月】処理開始`);
       
-      const officialData = await fetchOfficialMonth(year, month);
+      const officialData = await fetchOfficialMonth(year, month, browser);
       const sitesData = {};
       
       for (const site of sites) {
