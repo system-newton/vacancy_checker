@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>安心お宿 空室情報 チェッカー</title>
+<title>安心お宿 空室チェッカー</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   :root { --bg:#f5f6f8; --card:#fff; --line:#e2e5ea; }
@@ -36,9 +36,12 @@
   <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
     <div>
       <h1 class="text-xl sm:text-2xl font-bold m-0">安心お宿 空室情報 チェッカー</h1>
-      <p class="text-slate-300 text-xs sm:text-sm mt-1">当月〜来年同月までの空室データを自動巡回・一括確認できます。</p>
+      <p class="text-slate-300 text-xs sm:text-sm mt-1">当月〜来年同月までの空室データを一括確認できます。</p>
     </div>
-    <div id="status" class="text-xs sm:text-sm bg-slate-700 px-3 py-1.5 rounded text-slate-200">データ読み込み中...</div>
+    <div class="text-right">
+      <div id="status-live" class="text-xs sm:text-sm bg-emerald-700 px-3 py-1 rounded text-emerald-100 mb-1 hidden">🟢 公式データ: リアルタイム取得中</div>
+      <div id="status" class="text-xs sm:text-sm bg-slate-700 px-3 py-1 rounded text-slate-200">OTAデータ読み込み中...</div>
+    </div>
   </div>
 </header>
 
@@ -54,7 +57,7 @@
 
 <main class="flex-1 p-4 sm:p-6 max-w-7xl mx-auto w-full">
   <div class="flex gap-1 border-b border-slate-200 mb-4 overflow-x-auto" id="tabs">
-    <div class="tab active" data-site="official">公式HP (全日表示)</div>
+    <div class="tab active" data-site="official">公式HP (リアルタイム表示)</div>
     <div class="tab" data-site="jalan">じゃらん</div>
     <div class="tab" data-site="rakuten">楽天</div>
     <div class="tab" data-site="yahoo">一休(Yahoo)</div>
@@ -65,8 +68,12 @@
   <div class="flex gap-4 flex-wrap text-sm mb-4 text-slate-700 bg-white p-3 rounded border border-slate-200">
     <span class="flex items-center"><i class="dot circle"></i>○ 空室あり</span>
     <span class="flex items-center"><i class="dot tri"></i>△ 残りわずか</span>
-    <span class="flex items-center"><i class="dot cross"></i>× 満室・受付終了</span>
-    <span class="flex items-center"><i class="dot none"></i>－ 設定なし / 判定不能</span>
+    <span class="flex items-center"><i class="dot cross"></i>× 満室</span>
+    <span class="flex items-center"><i class="dot none"></i>－ 設定なし / 判定中・未確認</span>
+  </div>
+
+  <div id="error-container" class="hidden mb-4 p-4 bg-red-50 border border-red-200 rounded text-red-700 text-sm">
+    <!-- エラーメッセージがここに表示されます -->
   </div>
 
   <div id="result">
@@ -100,7 +107,7 @@ function addDays(iso, n) {
 }
 
 const urlBuilders = {
-  official: (shopLabel, ci) => `https://www.anshin-oyado.jp/`,
+  official: (shopLabel, ci) => `https://www.anshinoyado.jp/`,
   rakuten: (shopLabel, ci) => {
     const s = SHOPS_MASTER.find(x => shopLabel.includes(x.label.replace(/店$/,'')) || x.label.includes(shopLabel));
     if (!s) return 'https://travel.rakuten.co.jp/';
@@ -136,28 +143,167 @@ const urlBuilders = {
 const WEEK = ['日','月','火','水','木','金','土'];
 let globalData = null, currentSite = 'official', selectedMonthIdx = 0;
 
-const getHeaderTh = (dStr, showMonth = false) => {
-  const d = new Date(dStr + (dStr.includes('T') ? '' : 'T00:00:00'));
-  const w = d.getDay();
-  const label = showMonth ? `${d.getMonth()+1}/${d.getDate()}` : `${d.getDate()}`;
-  return `<th class="min-w-[60px] ${w===0?'sun':(w===6?'sat':'')}">${label}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
-};
+// 公式APIデータのキャッシュ (key: YYYY-MM)
+const liveCache = {};
 
-function renderTable(dates, rowsHtml, subHeader = '', showMonth = false) {
-  return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(d => getHeaderTh(d, showMonth)).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
+function showError(msg) {
+  const container = document.getElementById('error-container');
+  container.innerHTML = `<strong>⚠️ 通信エラー:</strong> ${msg}`;
+  container.classList.remove('hidden');
 }
 
-function updateView() {
+function hideError() {
+  document.getElementById('error-container').classList.add('hidden');
+}
+
+function fmt(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+const getHeaderTh = dStr => {
+  const d = new Date(dStr + (dStr.includes('T') ? '' : 'T00:00:00'));
+  const w = d.getDay();
+  return `<th class="${w===0?'sun':(w===6?'sat':'')}">${d.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
+};
+
+function renderTable(dates, rowsHtml, subHeader = '') {
+  return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(getHeaderTh).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
+}
+
+function salesTypeToSymbol(t) {
+  if (t === null || t === undefined) return { sym: '－', cls: 'none', text: '設定なし' };
+  const n = Number(t);
+  if (n === 0 || n === 9) return { sym: '×', cls: 'cross', text: '満室' };
+  if (n === 1) return { sym: '○', cls: 'circle', text: '空室あり' };
+  return { sym: '△', cls: 'tri', text: '残りわずか' };
+}
+
+// リアルタイムで公式APIから取得する関数
+async function fetchOfficialLive(year, month) {
+  const cacheKey = `${year}-${month}`;
+  if (liveCache[cacheKey]) return liveCache[cacheKey];
+
+  hideError();
+  const daysInMonth = new Date(year, month, 0).getDate();
+  
+  // 選択された「year」と「month」の1日を開始日として設定する
+  const fromDate = fmt(new Date(year, month - 1, 1));
+  
+  // APIに1ヶ月分(最大31日分)リクエスト
+  const url = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=${daysInMonth}`;
+  console.log(`[API Request] Fetching official data from: ${url}`);
+  
+  try {
+    let res = await fetch(url);
+    if (!res.ok) {
+        console.error(`[API Error] Direct fetch failed with status: ${res.status} ${res.statusText}`);
+        throw new Error(`HTTP Error ${res.status}`);
+    }
+    let j = await res.json();
+    return processOfficialJson(j, year, month, daysInMonth, cacheKey, false);
+  } catch (e) {
+    console.warn(`[API Warning] Direct fetch failed. Attempting CORS proxy fallback... Details:`, e);
+    
+    try {
+      const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+      console.log(`[Proxy Request] Using AllOrigins proxy: ${proxyUrl}`);
+      let res = await fetch(proxyUrl);
+      
+      if (!res.ok) {
+          console.error(`[Proxy Error] Proxy fetch failed with status: ${res.status} ${res.statusText}`);
+          throw new Error(`Proxy HTTP Error ${res.status}`);
+      }
+      
+      let proxyData = await res.json();
+      
+      // AllOriginsはステータスをチェックする必要がある
+      if(!proxyData.contents) {
+          console.error(`[Proxy Error] Empty contents returned from proxy.`);
+          throw new Error('Empty response from proxy');
+      }
+      
+      let j = JSON.parse(proxyData.contents);
+      return processOfficialJson(j, year, month, daysInMonth, cacheKey, false);
+      
+    } catch (err) {
+      console.error(`[Critical Error] Live fetch completely failed after proxy attempt. Details:`, err);
+      showError(`公式システムからのリアルタイムデータ取得に失敗しました。一時的にキャッシュデータ（バッチ取得分）を表示します。 [${err.message}]`);
+      
+      // フォールバック: data.jsonに格納されている静的データを返す
+      if (globalData && globalData.months && globalData.months[selectedMonthIdx] && globalData.months[selectedMonthIdx].official) {
+        // フォールバックデータであることを明示するためのフラグを追加
+        const fallbackData = JSON.parse(JSON.stringify(globalData.months[selectedMonthIdx].official));
+        fallbackData.isFallback = true; 
+        return fallbackData;
+      }
+      return null;
+    }
+  }
+}
+
+function processOfficialJson(j, year, month, daysInMonth, cacheKey, isFallback) {
+  if (!j || !j.res || !j.res.facility_list) {
+      console.error(`[Data Error] Invalid JSON format returned from API.`, j);
+      return null;
+  }
+
+  const byShop = SHOPS_MASTER.map(() => ({}));
+  let shopNames = SHOPS_MASTER.map(s => s.label);
+
+  j.res.facility_list.forEach((f, idx) => {
+    if (idx >= SHOPS_MASTER.length) return;
+    if (f.name) shopNames[idx] = f.name;
+    for (const x of (f.date_list || [])) {
+      if (x.date && x.date.startsWith(`${year}-${String(month).padStart(2, '0')}`)) {
+        byShop[idx][x.date] = { sales_type: x.sales_type, stock_num: x.stock_num };
+      }
+    }
+  });
+
+  const dates = [];
+  for (let d = 1; d <= daysInMonth; d++) dates.push(fmt(new Date(year, month - 1, d)));
+
+  const rows = SHOPS_MASTER.map((s, idx) => {
+    const cells = dates.map(date => {
+      const rec = byShop[idx][date];
+      const sym = salesTypeToSymbol(rec ? rec.sales_type : null);
+      return {
+        date, symbol: sym.sym, cls: sym.cls, text: sym.text, 
+        isNone: (!rec || rec.sales_type == null), stock: rec ? rec.stock_num : null,
+      };
+    });
+    const noneCount = cells.filter(c => c.isNone).length;
+    return { shop: shopNames[idx] || s.label, kind: s.kind, cells, noneCount };
+  });
+
+  const resultData = { year, month, dates, rows, isFallback };
+  if(!isFallback) liveCache[cacheKey] = resultData; // 成功時のみキャッシュ
+  return resultData;
+}
+
+async function updateView() {
   if (!globalData?.months?.length) return;
   const mData = globalData.months[selectedMonthIdx];
   const $res = document.getElementById('result');
+  const $statusLive = document.getElementById('status-live');
+
+  // 表示前にローディング表示
+  $res.innerHTML = '<div class="animate-pulse flex space-x-4"><div class="flex-1 space-y-4 py-1"><div class="h-4 bg-slate-200 rounded w-3/4"></div><div class="h-4 bg-slate-200 rounded w-1/2"></div></div></div>';
 
   if (currentSite === 'official') {
-    const data = mData.official;
+    $statusLive.classList.remove('hidden');
+    // 選択中の年・月を取得してAPIに渡す
+    const targetYear = mData.year;
+    const targetMonth = mData.month;
+    
+    const data = await fetchOfficialLive(targetYear, targetMonth);
     if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">この月のデータはありません。</p>';
     
     const rows = data.rows.map(row => {
-      const badge = row.noneCount === row.cells.length ? '<span class="badge badge-bad">全日 設定なし/未取得</span>'
+      const badge = row.noneCount === row.cells.length ? '<span class="badge badge-bad">全日 設定なし</span>'
         : row.noneCount > 0 ? `<span class="badge badge-warn">${row.noneCount}日 設定なし</span>`
         : '<span class="badge badge-ok">全日 設定あり</span>';
       
@@ -170,16 +316,34 @@ function updateView() {
       return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badge}</td>${cells}</tr>`;
     }).join('');
 
-    $res.innerHTML = renderTable(data.dates, rows);
+    let subHeaderHtml = '';
+    if (data.isFallback) {
+        $statusLive.classList.add('hidden');
+        subHeaderHtml = `<div class="text-xs text-slate-600 mb-2 flex items-center justify-between flex-wrap gap-2 bg-amber-50 p-2.5 rounded border border-amber-200">
+          <span class="text-amber-700">⚠️ <b>公式APIにアクセスできませんでした。</b> 代わりにスクレイピングで取得した過去のキャッシュデータを表示しています。</span>
+        </div>`;
+    } else {
+        subHeaderHtml = `<div class="text-xs text-slate-600 mb-2 flex items-center justify-between flex-wrap gap-2 bg-emerald-50 p-2.5 rounded border border-emerald-100">
+          <span>🟢 <b>安心お宿 公式API</b> からリアルタイムの空室情報を取得して表示しています。</span>
+        </div>`;
+    }
+
+    $res.innerHTML = renderTable(data.dates, rows, subHeaderHtml);
+
   } else {
+    $statusLive.classList.add('hidden');
+    hideError(); // OTAタブに切り替えたときはエラーを隠す
+    
+    if (!globalData?.months?.length) return;
+    const mData = globalData.months[selectedMonthIdx];
     const data = mData.sites?.[currentSite];
     if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">このサイトのデータはありません。</p>';
 
     const OVERALL = {
       available: '<span class="badge badge-ok">予約可能日あり</span>',
-      mostlysoldout: '<span class="badge badge-warn">満室/受付終了</span>',
-      nosetting: '<span class="badge badge-bad">設定なし/満室</span>',
-      allsoldout: '<span class="badge badge-bad">設定なし/満室</span>',
+      mostlysoldout: '<span class="badge badge-warn">満室扱い</span>',
+      nosetting: '<span class="badge badge-bad">設定なし</span>',
+      allsoldout: '<span class="badge badge-bad">設定なし</span>',
       unknown: '<span class="badge badge-warn">判定できず</span>'
     };
 
@@ -197,43 +361,51 @@ function updateView() {
 
     const siteLabelMap = { jalan:'じゃらん', rakuten:'楽天', yahoo:'一休(Yahoo)', rurubu:'るるぶ', booking:'Booking' };
     const siteTitle = siteLabelMap[currentSite] || currentSite;
-    
-    // 日付フォーマットを見やすく成形（例: 8/31(月)）
-    const formattedDates = data.dates.map(dStr => {
-      const d = new Date(dStr + 'T00:00:00');
-      return `${d.getMonth()+1}/${d.getDate()}(${WEEK[d.getDay()]})`;
-    });
-
     const subHeaderHtml = `<div class="text-xs text-slate-600 mb-2 flex items-center justify-between flex-wrap gap-2 bg-blue-50 p-2.5 rounded border border-blue-100">
-      <span>🔍 <b>${siteTitle}</b> 判定サンプル日: ${formattedDates.join(', ')}</span>
+      <span>🔍 <b>${siteTitle}</b> 判定サンプル日: ${data.dates.join(', ')}</span>
       <span class="text-blue-600 font-semibold">💡 セルをクリックすると${siteTitle}の指定日検索ページが直通で開きます</span>
     </div>`;
 
-    $res.innerHTML = renderTable(data.dates, rows, subHeaderHtml, true);
+    $res.innerHTML = renderTable(data.dates, rows, subHeaderHtml);
   }
 }
+
+// セレクトボックスの初期化
+function initSelectBox() {
+    const selectEl = document.getElementById('month-select');
+    const now = new Date();
+    let options = '';
+    for(let i=0; i<=12; i++){
+        const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+        options += `<option value="${i}">${d.getFullYear()}年${d.getMonth()+1}月${i === 0 ? '（当月）' : ''}</option>`;
+    }
+    selectEl.innerHTML = options;
+    selectEl.addEventListener('change', e => { selectedMonthIdx = +e.target.value; updateView(); });
+}
+
+initSelectBox();
 
 fetch('data.json?v=' + Date.now())
   .then(r => r.json())
   .then(data => {
     globalData = data;
     const ud = new Date(data.updatedAt);
-    document.getElementById('status').innerHTML = `🔄 最終更新: <span class="text-blue-300 font-bold">${ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}</span>`;
+    const statusEl = document.getElementById('status');
+    if (statusEl) {
+        statusEl.innerHTML = `🔄 OTA最終更新: <span class="text-blue-300 font-bold">${ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}</span>`;
+    }
     
-    const selectEl = document.getElementById('month-select');
-    selectEl.innerHTML = data.months.map((m, i) => `<option value="${i}">${m.year}年${m.month}月${i === 0 ? '（当月）' : ''}</option>`).join('');
-    selectEl.addEventListener('change', e => { selectedMonthIdx = +e.target.value; updateView(); });
-
-    updateView();
+    updateView(); // データ取得後にViewを更新
   })
-  .catch(() => {
-    document.getElementById('result').innerHTML = '<div class="text-red-500 p-4 bg-red-50 rounded border border-red-200">データの読み込みに失敗しました。自動巡回バッチの実行状況をご確認ください。</div>';
-    document.getElementById('status').textContent = 'エラー';
+  .catch((e) => {
+    const statusEl = document.getElementById('status');
+    if (statusEl) statusEl.textContent = 'データ読み込み失敗';
+    showError(`初期データの読み込みに失敗しました (${e.message})`);
   });
 
 document.getElementById('tabs').addEventListener('click', e => {
   const tab = e.target.closest('.tab');
-  if (!tab || !globalData) return;
+  if (!tab) return;
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   tab.classList.add('active');
   currentSite = tab.dataset.site;
