@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>安心お宿 空室チェッカー</title>
+<title>安心お宿 空室情報 チェッカー</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   :root { --bg:#f5f6f8; --card:#fff; --line:#e2e5ea; }
@@ -135,7 +135,6 @@ const urlBuilders = {
 
 const WEEK = ['日','月','火','水','木','金','土'];
 let globalData = null, currentSite = 'official', selectedMonthIdx = 0;
-const liveCache = {}; // 公式APIのリアルタイム取得結果を保持するキャッシュ
 
 const getHeaderTh = dStr => {
   const d = new Date(dStr + (dStr.includes('T') ? '' : 'T00:00:00'));
@@ -147,119 +146,13 @@ function renderTable(dates, rowsHtml, subHeader = '') {
   return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(getHeaderTh).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
 }
 
-function salesTypeToSymbol(t) {
-  if (t === null || t === undefined) return { sym: '－', cls: 'none', text: '設定なし' };
-  const n = Number(t);
-  if (n === 0 || n === 9) return { sym: '×', cls: 'cross', text: '満室' };
-  if (n === 1) return { sym: '○', cls: 'circle', text: '空室あり' };
-  return { sym: '△', cls: 'tri', text: '残りわずか' };
-}
-
-function fmt(d) {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${y}-${m}-${day}`;
-}
-
-async function fetchOfficialLive(year, month) {
-  const cacheKey = `${year}-${month}`;
-  if (liveCache[cacheKey]) return liveCache[cacheKey];
-
-  const daysInMonth = new Date(year, month, 0).getDate();
-  const fromDate = fmt(new Date(year, month - 1, 1));
-  const url = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=${daysInMonth}`;
-  
-  console.log(`[Fetch API] Attempting direct fetch: ${url}`);
-
-  try {
-    let res = await fetch(url);
-    if (!res.ok) {
-        console.error(`[API Error] Direct fetch failed with status: ${res.status}`);
-        throw new Error(`HTTP Error ${res.status}`);
-    }
-    let j = await res.json();
-    return processOfficialJson(j, year, month, daysInMonth, cacheKey, false);
-  } catch (e) {
-    console.warn(`[API Warning] Direct fetch failed. Attempting Proxy fallback... Details: ${e.message}`);
-    try {
-      const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-      let res = await fetch(proxyUrl);
-      if (!res.ok) throw new Error(`Proxy HTTP Error ${res.status}`);
-      
-      let proxyData = await res.json();
-      if(!proxyData.contents) throw new Error('Empty proxy response');
-      
-      let j = JSON.parse(proxyData.contents);
-      return processOfficialJson(j, year, month, daysInMonth, cacheKey, false);
-    } catch (err) {
-      console.error(`[API Critical Error] All fetch attempts failed. Falling back to data.json cache. Details:`, err);
-      // フォールバック: data.jsonに格納されている静的データを返す
-      if (globalData && globalData.months && globalData.months[selectedMonthIdx] && globalData.months[selectedMonthIdx].official) {
-        const fallbackData = JSON.parse(JSON.stringify(globalData.months[selectedMonthIdx].official));
-        fallbackData.isFallback = true; 
-        return fallbackData;
-      }
-      return null;
-    }
-  }
-}
-
-function processOfficialJson(j, year, month, daysInMonth, cacheKey, isFallback) {
-  if (!j || !j.res || !j.res.facility_list) {
-      console.error(`[Data Error] Invalid JSON format returned.`, j);
-      return null;
-  }
-
-  const byShop = SHOPS_MASTER.map(() => ({}));
-  let shopNames = SHOPS_MASTER.map(s => s.label);
-
-  j.res.facility_list.forEach((f, idx) => {
-    if (idx >= SHOPS_MASTER.length) return;
-    if (f.name) shopNames[idx] = f.name;
-    for (const x of (f.date_list || [])) {
-      if (x.date && x.date.startsWith(`${year}-${String(month).padStart(2, '0')}`)) {
-        byShop[idx][x.date] = { sales_type: x.sales_type, stock_num: x.stock_num };
-      }
-    }
-  });
-
-  const dates = [];
-  for (let d = 1; d <= daysInMonth; d++) dates.push(fmt(new Date(year, month - 1, d)));
-
-  const rows = SHOPS_MASTER.map((s, idx) => {
-    const cells = dates.map(date => {
-      const rec = byShop[idx][date];
-      const sym = salesTypeToSymbol(rec ? rec.sales_type : null);
-      return {
-        date, symbol: sym.sym, cls: sym.cls, text: sym.text, 
-        isNone: (!rec || rec.sales_type == null), stock: rec ? rec.stock_num : null,
-      };
-    });
-    const noneCount = cells.filter(c => c.isNone).length;
-    return { shop: shopNames[idx] || s.label, kind: s.kind, cells, noneCount };
-  });
-
-  const resultData = { year, month, dates, rows, isFallback };
-  if(!isFallback) liveCache[cacheKey] = resultData; // キャッシュに保存
-  return resultData;
-}
-
-async function updateView() {
+function updateView() {
   if (!globalData?.months?.length) return;
   const mData = globalData.months[selectedMonthIdx];
   const $res = document.getElementById('result');
 
-  // Loading indicator
-  $res.innerHTML = '<div class="animate-pulse flex space-x-4"><div class="flex-1 space-y-4 py-1"><div class="h-4 bg-slate-200 rounded w-3/4"></div><div class="h-4 bg-slate-200 rounded w-1/2"></div></div></div>';
-
   if (currentSite === 'official') {
-    const targetYear = mData.year;
-    const targetMonth = mData.month;
-    
-    // リアルタイム取得を試みる（失敗時は自動でdata.jsonのフォールバックを使用する）
-    const data = await fetchOfficialLive(targetYear, targetMonth);
-    
+    const data = mData.official;
     if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">この月のデータはありません。</p>';
     
     const rows = data.rows.map(row => {
@@ -276,18 +169,7 @@ async function updateView() {
       return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badge}</td>${cells}</tr>`;
     }).join('');
 
-    let subHeaderHtml = '';
-    if (data.isFallback) {
-        subHeaderHtml = `<div class="text-xs text-slate-600 mb-2 flex items-center justify-between flex-wrap gap-2 bg-amber-50 p-2.5 rounded border border-amber-200">
-          <span class="text-amber-700">⚠️ <b>リアルタイム通信に失敗しました。</b> 最後にバッチ巡回した際のデータを表示しています。</span>
-        </div>`;
-    } else {
-        subHeaderHtml = `<div class="text-xs text-slate-600 mb-2 flex items-center justify-between flex-wrap gap-2 bg-emerald-50 p-2.5 rounded border border-emerald-100">
-          <span class="text-emerald-800">🟢 <b>安心お宿 公式API</b> からリアルタイムの空室情報を取得しました。</span>
-        </div>`;
-    }
-
-    $res.innerHTML = renderTable(data.dates, rows, subHeaderHtml);
+    $res.innerHTML = renderTable(data.dates, rows);
   } else {
     const data = mData.sites?.[currentSite];
     if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">このサイトのデータはありません。</p>';
