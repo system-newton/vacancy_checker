@@ -62,7 +62,14 @@ const SITE_RULES = {
   },
   jalan: {
     soldOut: ['0件の宿泊プラン', '宿泊プランがありませんでした', '条件に合う宿泊プランが見つかりません', '満室', '予約できるプランがありません', '空室がありません', '該当するプランがありません', 'ご指定の検索条件に該当する'],
-    avail: ['件の宿泊プランがありました', '空室わずか', '残室わずか', 'このプランを見ています', '部屋タイプ・詳細', 'プランを見る', '予約へ進む', '部屋', 'プラン', '残り', '残室', '空室', '予約', '円', 'プラン詳細', '▲', '○', '◯', '〇', '◎', '空きあり', '空室あり']
+    avail: [
+      '件の宿泊プランがありました', '空室わずか', '残室わずか', 'このプランを見ています', '部屋タイプ・詳細', 'プランを見る', '予約へ進む', '部屋', 'プラン', '残り', '残室', '空室', '予約', '円', 'プラン詳細',
+      '▲', '△', '○', '◯', '〇', '⭕', '◎', '空きあり', '空室あり',
+      '3', '2', '1', '3室', '2室', '1室', '残3', '残2', '残1',
+      /残[り室数]*[：:\s]*[1-9][0-9]*/,
+      /[1-9][0-9]*\s*件/,
+      /[1-9][0-9]*\s*室/
+    ]
   },
   yahoo: {
     soldOut: ['空室が見つかりませんでした', '空室が見つかりません', '満室', 'ご希望の条件に合う', '予約できるプランがありません', '別の日程', '該当するプランがありません', 'お探しの条件に該当する'],
@@ -73,7 +80,7 @@ const SITE_RULES = {
     avail: ['この料金を見る', '予約できる料金プラン', '最安値', '種類のルームタイプ', 'るるぶトラベルでの最安値', '選択する', '円', 'プラン']
   },
   booking: {
-    soldOut: ['选择された日程に空室がありません', '空室がありません', '満室です', 'この宿泊施設は現在ご利用いただけません', '別の日程で検索', '空室状況を検索してください', '予約できません'],
+    soldOut: ['選択された日程に空室がありません', '空室がありません', '満室です', 'この宿泊施設は現在ご利用いただけません', '別の日程で検索', '空室状況を検索してください', '予約できません'],
     avail: ['予約可能なお部屋', '残り', '空室を確認', 'この料金で予約', '1泊あたり', '合計金額', '予約する', '空室状況を表示', '部屋']
   },
 };
@@ -90,11 +97,19 @@ async function judgeOne(page, site, url) {
     while (true) {
       text = await page.evaluate(() => document.body ? document.body.innerText || '' : '');
       
-      const availHit = rule.avail.find(p => text.includes(p));
-      if (availHit) return { status: 'available', hit: availHit };
+      const availHit = rule.avail.find(p => {
+        if (typeof p === 'string') return text.includes(p);
+        if (p instanceof RegExp) return p.test(text);
+        return false;
+      });
+      if (availHit) return { status: 'available', hit: String(availHit) };
 
-      const soldHit = rule.soldOut.find(p => text.includes(p));
-      if (soldHit) return { status: 'soldout', hit: soldHit };
+      const soldHit = rule.soldOut.find(p => {
+        if (typeof p === 'string') return text.includes(p);
+        if (p instanceof RegExp) return p.test(text);
+        return false;
+      });
+      if (soldHit) return { status: 'soldout', hit: String(soldHit) };
 
       if (elapsed >= MAX_WAIT) break;
       await page.waitForTimeout(STEP);
