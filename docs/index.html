@@ -174,17 +174,11 @@ async function fetchOfficialLive(year, month) {
 
   const daysInMonth = new Date(year, month, 0).getDate();
   
-  // 今日より前の日付からリクエストするとエラーになる可能性があるため、開始日を調整
-  const today = new Date();
-  let startDay = 1;
-  if (year === today.getFullYear() && month === today.getMonth() + 1) {
-    startDay = today.getDate();
-  }
-  const fromDate = fmt(new Date(year, month - 1, startDay));
+  // 選択された「year」と「month」の1日を開始日として設定する
+  const fromDate = fmt(new Date(year, month - 1, 1));
   
-  // APIに1ヶ月分(最大31日分)リクエスト。numパラメータで日数を指定する仕様と推測
-  const fetchDays = daysInMonth - startDay + 1;
-  const url = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=${fetchDays}`;
+  // APIに1ヶ月分(最大31日分)リクエスト
+  const url = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${fromDate}&num=${daysInMonth}`;
   
   try {
     let res = await fetch(url);
@@ -249,31 +243,20 @@ function processOfficialJson(j, year, month, daysInMonth, cacheKey) {
 }
 
 async function updateView() {
+  if (!globalData?.months?.length) return;
+  const mData = globalData.months[selectedMonthIdx];
   const $res = document.getElementById('result');
-  const $statusLive = document.getElementById('status-live') || document.createElement('div'); // 要素が無ければダミー
 
   // 表示前にローディング表示
   $res.innerHTML = '<div class="animate-pulse flex space-x-4"><div class="flex-1 space-y-4 py-1"><div class="h-4 bg-slate-200 rounded w-3/4"></div><div class="h-4 bg-slate-200 rounded w-1/2"></div></div></div>';
 
   if (currentSite === 'official') {
-    $statusLive.classList.remove('hidden'); 
+    // 選択中の年・月を取得してAPIに渡す
+    const targetYear = mData.year;
+    const targetMonth = mData.month;
     
-    // 現在の選択月を取得
-    let targetYear = new Date().getFullYear();
-    let targetMonth = new Date().getMonth() + 1;
-    if (globalData && globalData.months && globalData.months[selectedMonthIdx]) {
-      targetYear = globalData.months[selectedMonthIdx].year;
-      targetMonth = globalData.months[selectedMonthIdx].month;
-    } else {
-        const d = new Date();
-        d.setMonth(d.getMonth() + selectedMonthIdx);
-        targetYear = d.getFullYear();
-        targetMonth = d.getMonth() + 1;
-    }
-
     const data = await fetchOfficialLive(targetYear, targetMonth);
-    
-    if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">この月のデータは取得できませんでした。</p>';
+    if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">この月のデータはありません。</p>';
     
     const rows = data.rows.map(row => {
       const badge = row.noneCount === row.cells.length ? '<span class="badge badge-bad">全日 設定なし</span>'
