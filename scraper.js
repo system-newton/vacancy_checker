@@ -53,28 +53,49 @@ const urlBuilders = {
   }
 };
 
-const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36';
 
 const SITE_RULES = {
-  rakuten: { soldOut: ['空室が見つかりませんでした', '空室が見つかりません', 'ご指定の条件に一致する', '満室です'], avail: ['このプランの詳細', '予約する', 'を選択', '詳細・予約', '残り'] },
-  jalan: { soldOut: ['0件の宿泊プラン', '宿泊プランがありませんでした', '条件に合う宿泊プランが見つかりません', '満室', '予約できるプランがありません'], avail: ['件の宿泊プランがありました', '空室わずか', 'このプランを見ています', '部屋タイプ・詳細'] },
-  yahoo: { soldOut: ['空室が見つかりませんでした', '空室が見つかりません', '満室', 'ご希望の条件に合う', '予約できるプランがありません', '別の日程'], avail: ['予約する', 'このプラン', '残り', 'ポイント', 'プランを見る', '部屋・プランを見る'] },
-  rurubu: { soldOut: ['空室は見つかりませんでした', '空室は見つかりませんでした', '選択された日付で空室', '別の日付で検索', 'この宿泊施設は満室です', '現在予約を受け付けていません'], avail: ['この料金を見る', '予約できる料金プラン', '最安値', '種類のルームタイプ', 'るるぶトラベルでの最安値'] },
-  booking: { soldOut: ['選択された日程に空室がありません', '空室がありません', '満室です', 'この宿泊施設は現在ご利用いただけません', '別の日程で検索', '空室状況を検索してください'], avail: ['予約可能なお部屋', '残り', '空室を確認', 'この料金で予約', '1泊あたり', '合計金額', '予約する'] },
+  rakuten: {
+    soldOut: ['空室が見つかりませんでした', '空室が見つかりません', 'ご指定の条件に一致する', '満室です', '該当するプランがありません', '予約可能なプランがありません'],
+    avail: ['このプランの詳細', '予約する', 'を選択', '詳細・予約', '残り', '空室あり', 'プラン一覧', '空室カレンダー']
+  },
+  jalan: {
+    soldOut: ['0件の宿泊プラン', '宿泊プランがありませんでした', '条件に合う宿泊プランが見つかりません', '満室', '予約できるプランがありません', '空室がありません'],
+    avail: ['件の宿泊プランがありました', '空室わずか', 'このプランを見ています', '部屋タイプ・詳細', 'プランを見る', '予約へ進む']
+  },
+  yahoo: {
+    soldOut: ['空室が見つかりませんでした', '空室が見つかりません', '満室', 'ご希望の条件に合う', '予約できるプランがありません', '別の日程', '該当するプランがありません', 'お探しの条件に該当する'],
+    avail: ['予約する', 'このプラン', '残り', 'ポイント', 'プランを見る', '部屋・プランを見る', '選択する', '料金プラン', 'PayPay', '予約手続きへ']
+  },
+  rurubu: {
+    soldOut: ['空室は見つかりませんでした', '選択された日付で空室', '別の日付で検索', 'この宿泊施設は満室です', '現在予約を受け付けていません', 'お探しの条件に該当するプラン'],
+    avail: ['この料金を見る', '予約できる料金プラン', '最安値', '種類のルームタイプ', 'るるぶトラベルでの最安値', '選択する']
+  },
+  booking: {
+    soldOut: ['選択された日程に空室がありません', '空室がありません', '満室です', 'この宿泊施設は現在ご利用いただけません', '別の日程で検索', '空室状況を検索してください', '予約できません'],
+    avail: ['予約可能なお部屋', '残り', '空室を確認', 'この料金で予約', '1泊あたり', '合計金額', '予約する', '空室状況を表示']
+  },
 };
 
 async function judgeOne(page, site, url) {
   try {
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 35000 });
+    await page.goto(url, { waitUntil: 'load', timeout: 35000 });
+    await page.waitForTimeout(1500);
+
     const rule = SITE_RULES[site];
-    const MAX_WAIT = 4000, STEP = 400;
+    const MAX_WAIT = 6000, STEP = 500;
     let text = '', elapsed = 0;
+    
     while (true) {
-      text = await page.evaluate(() => document.body.innerText || '');
-      const soldHit = rule.soldOut.find(p => text.includes(p));
-      if (soldHit) return { status: 'soldout', hit: soldHit };
+      text = await page.evaluate(() => document.body ? document.body.innerText || '' : '');
+      
       const availHit = rule.avail.find(p => text.includes(p));
       if (availHit) return { status: 'available', hit: availHit };
+
+      const soldHit = rule.soldOut.find(p => text.includes(p));
+      if (soldHit) return { status: 'soldout', hit: soldHit };
+
       if (elapsed >= MAX_WAIT) break;
       await page.waitForTimeout(STEP);
       elapsed += STEP;
@@ -103,7 +124,11 @@ function sampleDates(year, month, count = 3) {
 async function checkSite(site, year, month, browser) {
   console.log(`[Scrape] ${site} (${year}年${month}月) を巡回中...`);
   const dates = sampleDates(year, month, 3);
-  const ctx = await browser.newContext({ userAgent: UA, locale: 'ja-JP' });
+  const ctx = await browser.newContext({
+    userAgent: UA,
+    locale: 'ja-JP',
+    viewport: { width: 1280, height: 800 }
+  });
   const page = await ctx.newPage();
   const results = [];
 
@@ -113,7 +138,7 @@ async function checkSite(site, year, month, browser) {
       const url = urlBuilders[site](shop, ci);
       const r = await judgeOne(page, site, url);
       perDay.push({ date: ci, status: r.status, hit: r.hit, url });
-      await page.waitForTimeout(600); 
+      await page.waitForTimeout(400); 
     }
     const availCount = perDay.filter(x => x.status === 'available').length;
     const soldCount = perDay.filter(x => x.status === 'soldout').length;
@@ -130,16 +155,51 @@ async function checkSite(site, year, month, browser) {
   return { site, year, month, dates, results };
 }
 
-function fetchJson(url) {
+function fetchJson(url, redirectCount = 0) {
+  if (redirectCount > 5) return Promise.resolve(null);
   return new Promise((resolve) => {
-    const req = https.get(url, { headers: { 'User-Agent': UA } }, (res) => {
+    const req = https.get(url, {
+      headers: {
+        'User-Agent': UA,
+        'Accept': 'application/json, text/plain, */*',
+        'Referer': 'https://www.anshinoyado.jp/'
+      }
+    }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        let nextUrl = res.headers.location;
+        if (!nextUrl.startsWith('http')) {
+          const u = new URL(url);
+          nextUrl = `${u.protocol}//${u.host}${nextUrl}`;
+        }
+        return fetchJson(nextUrl, redirectCount + 1).then(resolve);
+      }
+
+      if (res.statusCode !== 200) {
+        console.warn(`[HTTP Error ${res.statusCode}] ${url}`);
+        return resolve(null);
+      }
+
       let data = '';
       res.on('data', (c) => data += c);
       res.on('end', () => {
-        try { resolve(JSON.parse(data)); } catch (e) { resolve(null); }
+        try {
+          resolve(JSON.parse(data));
+        } catch (e) {
+          console.warn(`[JSON Parse Fail] ${url}: ${e.message}`);
+          resolve(null);
+        }
       });
     });
-    req.on('error', () => resolve(null));
+
+    req.on('error', (e) => {
+      console.warn(`[Network Fail] ${url}: ${e.message}`);
+      resolve(null);
+    });
+
+    req.setTimeout(10000, () => {
+      req.destroy();
+      resolve(null);
+    });
   });
 }
 
@@ -168,9 +228,18 @@ async function fetchOfficialMonth(year, month) {
   let shopNames = SHOPS.map(s => s.label);
 
   for (const from of froms) {
-    const url = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${from}&num=1`;
-    const j = await fetchJson(url);
-    if (!j || !j.res || !j.res.facility_list) continue;
+    const primaryUrl = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${from}&num=1`;
+    let j = await fetchJson(primaryUrl);
+    
+    if (!j || !j.res || !j.res.facility_list) {
+      const backupUrl = `https://api.489pro.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${from}&num=1`;
+      j = await fetchJson(backupUrl);
+    }
+
+    if (!j || !j.res || !j.res.facility_list) {
+      console.warn(`[Official API] Data missing for ${from}`);
+      continue;
+    }
     
     j.res.facility_list.forEach((f, idx) => {
       if (idx >= SHOPS.length) return;
@@ -181,7 +250,7 @@ async function fetchOfficialMonth(year, month) {
         }
       }
     });
-    await new Promise(r => setTimeout(r, 200));
+    await new Promise(r => setTimeout(r, 150));
   }
 
   const dates = [];
@@ -203,7 +272,6 @@ async function fetchOfficialMonth(year, month) {
   return { year, month, dates, rows };
 }
 
-// 当月から来年の同月までの年月リストを取得（13ヶ月分）
 function getTargetMonths() {
   const now = new Date();
   const targetMonths = [];
