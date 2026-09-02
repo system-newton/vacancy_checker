@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T04:56:44.081Z",
+  "updatedAt": "2026-09-02T11:11:38.352Z",
   "months": [
     {
       "year": 2026,
@@ -41,8 +41,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-09-01",
@@ -285,11 +285,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-09-01",
@@ -532,11 +533,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-09-01",
@@ -779,11 +781,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2026-09-01",
@@ -1026,11 +1029,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2026-09-01",
@@ -1273,11 +1277,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2026-09-01",
@@ -1520,7 +1525,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           }
         ]
       },
@@ -1538,8 +1544,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1577,8 +1583,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1616,8 +1622,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1655,8 +1661,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1694,8 +1700,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1733,8 +1739,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1786,8 +1792,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1825,8 +1831,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1864,8 +1870,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1903,8 +1909,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1942,8 +1948,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -1981,8 +1987,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2034,8 +2040,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -2073,8 +2079,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -2112,8 +2118,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -2151,8 +2157,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -2190,8 +2196,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -2229,8 +2235,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -2282,8 +2288,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2321,8 +2327,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2360,8 +2366,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2399,8 +2405,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 4,
               "soldCount": 0,
@@ -2438,8 +2444,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2477,8 +2483,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2530,8 +2536,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2569,8 +2575,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2608,8 +2614,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2647,8 +2653,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2686,8 +2692,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2695,7 +2701,7 @@
                 {
                   "date": "2026-09-02",
                   "status": "available",
-                  "hit": "残り",
+                  "hit": "1泊あたり",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-09-02&checkout=2026-09-03&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -2725,8 +2731,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -2808,8 +2814,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-10-01",
@@ -3060,11 +3066,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-10-01",
@@ -3315,11 +3322,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-10-01",
@@ -3570,11 +3578,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2026-10-01",
@@ -3825,11 +3834,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2026-10-01",
@@ -4080,11 +4090,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2026-10-01",
@@ -4335,7 +4346,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           }
         ]
       },
@@ -4353,8 +4365,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4392,8 +4404,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4431,8 +4443,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4470,8 +4482,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4509,8 +4521,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4548,8 +4560,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4601,8 +4613,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4640,8 +4652,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4679,8 +4691,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4718,8 +4730,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4757,8 +4769,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4796,8 +4808,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -4849,8 +4861,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -4888,8 +4900,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -4927,8 +4939,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -4966,8 +4978,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -5005,8 +5017,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -5044,8 +5056,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -5097,8 +5109,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5136,8 +5148,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5175,8 +5187,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5214,8 +5226,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5253,8 +5265,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5292,8 +5304,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5345,8 +5357,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5384,8 +5396,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5423,10 +5435,10 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
-              "availCount": 5,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -5443,8 +5455,8 @@
                 },
                 {
                   "date": "2026-10-15",
-                  "status": "available",
-                  "hit": "残り",
+                  "status": "unknown",
+                  "hit": null,
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-15&checkout=2026-10-16&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -5462,8 +5474,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5501,8 +5513,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5540,8 +5552,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -5622,8 +5634,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-11-01",
@@ -5866,11 +5878,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-11-01",
@@ -6113,11 +6126,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-11-01",
@@ -6360,11 +6374,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2026-11-01",
@@ -6607,11 +6622,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2026-11-01",
@@ -6854,11 +6870,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2026-11-01",
@@ -7101,7 +7118,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           }
         ]
       },
@@ -7119,8 +7137,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7158,8 +7176,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7197,8 +7215,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7236,8 +7254,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7275,8 +7293,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7314,8 +7332,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7367,8 +7385,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7406,8 +7424,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7445,8 +7463,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7484,8 +7502,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7523,8 +7541,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7562,8 +7580,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7615,8 +7633,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -7654,8 +7672,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -7693,8 +7711,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -7732,8 +7750,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -7771,8 +7789,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -7810,8 +7828,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -7863,8 +7881,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7902,8 +7920,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7941,8 +7959,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -7980,8 +7998,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8019,8 +8037,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8058,8 +8076,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8111,8 +8129,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8150,8 +8168,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8189,8 +8207,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8228,8 +8246,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8267,8 +8285,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8306,8 +8324,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -8389,8 +8407,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-12-01",
@@ -8641,11 +8659,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-12-01",
@@ -8896,11 +8915,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2026-12-01",
@@ -9151,11 +9171,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2026-12-01",
@@ -9406,11 +9427,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2026-12-01",
@@ -9661,11 +9683,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2026-12-01",
@@ -9916,7 +9939,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           }
         ]
       },
@@ -9934,8 +9958,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -9973,8 +9997,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10012,8 +10036,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10051,8 +10075,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10090,8 +10114,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10129,8 +10153,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10182,8 +10206,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10221,8 +10245,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10260,8 +10284,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10299,8 +10323,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10338,8 +10362,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10377,8 +10401,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10430,8 +10454,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -10469,8 +10493,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -10508,8 +10532,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -10547,8 +10571,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -10586,8 +10610,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -10625,8 +10649,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -10678,8 +10702,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10717,8 +10741,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 4,
               "soldCount": 0,
@@ -10756,8 +10780,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10795,8 +10819,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10834,8 +10858,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10873,8 +10897,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10926,8 +10950,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -10965,8 +10989,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -11004,8 +11028,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -11043,8 +11067,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -11082,8 +11106,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -11121,8 +11145,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -11204,8 +11228,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-01-01",
@@ -11456,11 +11480,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-01-01",
@@ -11711,11 +11736,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-01-01",
@@ -11966,11 +11992,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-01-01",
@@ -12221,11 +12248,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-01-01",
@@ -12476,11 +12504,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-01-01",
@@ -12731,7 +12760,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           }
         ]
       },
@@ -12749,8 +12779,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -12788,8 +12818,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -12827,8 +12857,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -12866,8 +12896,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -12905,8 +12935,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -12944,8 +12974,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -12997,8 +13027,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13036,8 +13066,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13075,8 +13105,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13114,8 +13144,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13153,8 +13183,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13192,8 +13222,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13245,8 +13275,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -13284,8 +13314,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -13323,8 +13353,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -13362,8 +13392,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -13401,8 +13431,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -13440,8 +13470,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -13493,8 +13523,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13532,8 +13562,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13571,8 +13601,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13610,8 +13640,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13649,8 +13679,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13688,8 +13718,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13741,8 +13771,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13780,8 +13810,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13819,8 +13849,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13858,8 +13888,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13897,8 +13927,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -13936,8 +13966,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -14016,8 +14046,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-02-01",
@@ -14244,11 +14274,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 28
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-02-01",
@@ -14475,11 +14506,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 28
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-02-01",
@@ -14706,11 +14738,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 28
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-02-01",
@@ -14937,11 +14970,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 28
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-02-01",
@@ -15168,11 +15202,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 28
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-02-01",
@@ -15399,7 +15434,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 28
           }
         ]
       },
@@ -15417,8 +15453,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15456,8 +15492,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15495,8 +15531,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15534,8 +15570,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15573,8 +15609,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15612,8 +15648,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15665,8 +15701,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15704,8 +15740,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15743,8 +15779,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15782,8 +15818,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15821,8 +15857,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15860,8 +15896,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -15913,8 +15949,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -15952,8 +15988,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -15991,8 +16027,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -16030,8 +16066,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -16069,8 +16105,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -16108,8 +16144,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -16161,8 +16197,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16200,8 +16236,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16239,8 +16275,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16278,8 +16314,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16317,8 +16353,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16356,8 +16392,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16409,8 +16445,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16448,8 +16484,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16487,8 +16523,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16526,8 +16562,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16565,8 +16601,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16604,8 +16640,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -16687,8 +16723,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-03-01",
@@ -16939,11 +16975,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-03-01",
@@ -17194,11 +17231,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-03-01",
@@ -17449,11 +17487,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-03-01",
@@ -17704,11 +17743,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-03-01",
@@ -17959,11 +17999,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-03-01",
@@ -18214,7 +18255,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           }
         ]
       },
@@ -18232,8 +18274,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18271,8 +18313,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18310,8 +18352,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18349,8 +18391,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18388,8 +18430,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18427,8 +18469,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18480,8 +18522,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18519,8 +18561,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18558,8 +18600,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18597,8 +18639,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18636,8 +18678,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18675,8 +18717,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -18728,8 +18770,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -18767,8 +18809,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -18806,8 +18848,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -18845,8 +18887,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -18884,8 +18926,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -18923,8 +18965,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -18976,8 +19018,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19015,8 +19057,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19054,8 +19096,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19093,8 +19135,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19132,8 +19174,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19171,8 +19213,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19224,8 +19266,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19263,8 +19305,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19302,10 +19344,10 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
-              "availCount": 5,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -19316,8 +19358,8 @@
                 },
                 {
                   "date": "2027-03-08",
-                  "status": "available",
-                  "hit": "残り",
+                  "status": "unknown",
+                  "hit": null,
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2027-03-08&checkout=2027-03-09&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -19341,8 +19383,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19380,8 +19422,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19419,8 +19461,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -19501,8 +19543,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-04-01",
@@ -19745,11 +19787,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-04-01",
@@ -19992,11 +20035,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-04-01",
@@ -20239,11 +20283,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-04-01",
@@ -20486,11 +20531,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-04-01",
@@ -20733,11 +20779,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-04-01",
@@ -20980,7 +21027,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           }
         ]
       },
@@ -20998,8 +21046,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21037,8 +21085,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21076,8 +21124,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21115,8 +21163,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21154,8 +21202,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21193,8 +21241,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21246,8 +21294,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21285,8 +21333,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21324,8 +21372,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21363,8 +21411,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21402,8 +21450,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21441,8 +21489,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21494,8 +21542,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -21533,8 +21581,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -21572,8 +21620,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -21611,8 +21659,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -21650,8 +21698,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -21689,8 +21737,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -21742,8 +21790,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21781,8 +21829,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21820,8 +21868,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21859,8 +21907,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21898,8 +21946,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21937,8 +21985,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -21990,8 +22038,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -22029,8 +22077,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -22068,8 +22116,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -22107,8 +22155,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -22146,8 +22194,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -22185,8 +22233,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -22268,8 +22316,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-05-01",
@@ -22520,11 +22568,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-05-01",
@@ -22775,11 +22824,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-05-01",
@@ -23030,11 +23080,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-05-01",
@@ -23285,11 +23336,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-05-01",
@@ -23540,11 +23592,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-05-01",
@@ -23795,7 +23848,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           }
         ]
       },
@@ -23813,8 +23867,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -23852,8 +23906,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -23891,8 +23945,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -23930,8 +23984,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -23969,8 +24023,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24008,8 +24062,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24061,8 +24115,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24100,8 +24154,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24139,8 +24193,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24178,8 +24232,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24217,8 +24271,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24256,8 +24310,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24309,8 +24363,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -24348,8 +24402,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -24387,8 +24441,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -24426,8 +24480,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -24465,8 +24519,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -24504,8 +24558,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -24557,8 +24611,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24596,8 +24650,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24635,8 +24689,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24674,8 +24728,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24713,8 +24767,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24752,8 +24806,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24805,8 +24859,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24844,8 +24898,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24883,8 +24937,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24922,8 +24976,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -24961,8 +25015,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -25000,8 +25054,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -25082,8 +25136,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-06-01",
@@ -25326,11 +25380,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-06-01",
@@ -25573,11 +25628,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-06-01",
@@ -25820,11 +25876,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-06-01",
@@ -26067,11 +26124,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-06-01",
@@ -26314,11 +26372,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-06-01",
@@ -26561,7 +26620,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           }
         ]
       },
@@ -26579,8 +26639,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26618,8 +26678,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26657,8 +26717,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26696,8 +26756,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26735,8 +26795,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26774,8 +26834,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26827,8 +26887,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26866,8 +26926,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26905,8 +26965,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26944,8 +27004,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -26983,8 +27043,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27022,8 +27082,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27075,8 +27135,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -27114,8 +27174,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -27153,8 +27213,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -27192,8 +27252,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -27231,8 +27291,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -27270,8 +27330,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -27323,8 +27383,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27362,8 +27422,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27401,8 +27461,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27440,8 +27500,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27479,8 +27539,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27518,8 +27578,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27571,8 +27631,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27610,8 +27670,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27649,8 +27709,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27688,8 +27748,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27727,8 +27787,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -27766,10 +27826,10 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
-              "availCount": 5,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -27780,8 +27840,8 @@
                 },
                 {
                   "date": "2027-06-08",
-                  "status": "available",
-                  "hit": "残り",
+                  "status": "unknown",
+                  "hit": null,
                   "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2027-06-08&checkout=2027-06-09&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -27849,8 +27909,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-07-01",
@@ -28101,11 +28161,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-07-01",
@@ -28356,11 +28417,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-07-01",
@@ -28611,11 +28673,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-07-01",
@@ -28866,11 +28929,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-07-01",
@@ -29121,11 +29185,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-07-01",
@@ -29376,7 +29441,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           }
         ]
       },
@@ -29394,8 +29460,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29433,8 +29499,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29472,8 +29538,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29511,8 +29577,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29550,8 +29616,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29589,8 +29655,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29642,8 +29708,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29681,8 +29747,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29720,8 +29786,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29759,8 +29825,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29798,8 +29864,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29837,8 +29903,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -29890,8 +29956,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -29929,8 +29995,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -29968,8 +30034,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -30007,8 +30073,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -30046,8 +30112,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -30085,8 +30151,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -30138,8 +30204,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30177,8 +30243,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30216,8 +30282,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30255,8 +30321,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30294,8 +30360,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30333,8 +30399,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30386,8 +30452,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30425,8 +30491,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30464,8 +30530,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30503,8 +30569,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30542,8 +30608,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30581,8 +30647,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -30664,8 +30730,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-08-01",
@@ -30916,11 +30982,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-08-01",
@@ -31171,11 +31238,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-08-01",
@@ -31426,11 +31494,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-08-01",
@@ -31681,11 +31750,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-08-01",
@@ -31936,11 +32006,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-08-01",
@@ -32191,7 +32262,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 31
           }
         ]
       },
@@ -32209,8 +32281,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32248,8 +32320,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32287,8 +32359,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32326,8 +32398,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32365,8 +32437,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32404,8 +32476,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32457,8 +32529,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32496,8 +32568,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32535,8 +32607,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32574,8 +32646,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32613,8 +32685,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32652,8 +32724,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -32705,8 +32777,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -32744,8 +32816,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -32783,8 +32855,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -32822,8 +32894,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -32861,8 +32933,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -32900,8 +32972,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -32953,8 +33025,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -32992,8 +33064,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -33031,8 +33103,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -33070,8 +33142,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -33109,8 +33181,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -33148,8 +33220,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -33201,8 +33273,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -33240,8 +33312,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -33279,8 +33351,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -33318,8 +33390,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -33357,8 +33429,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -33396,8 +33468,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -33478,8 +33550,8 @@
         ],
         "rows": [
           {
-            "shop": "新橋駅前店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新橋駅前店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-09-01",
@@ -33722,11 +33794,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "秋葉原電気街店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-09-01",
@@ -33969,11 +34042,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿駅南口店",
-            "kind": "男性専用",
+            "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+            "kind": "Man",
             "cells": [
               {
                 "date": "2027-09-01",
@@ -34216,11 +34290,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "新宿荻窪店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-09-01",
@@ -34463,11 +34538,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "銀座汐留店",
-            "kind": "女性専用",
+            "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+            "kind": "Woman",
             "cells": [
               {
                 "date": "2027-09-01",
@@ -34710,11 +34786,12 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           },
           {
-            "shop": "名古屋栄店",
-            "kind": "男女別専用",
+            "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+            "kind": "Man&Woman",
             "cells": [
               {
                 "date": "2027-09-01",
@@ -34957,7 +35034,8 @@
                 "stock": null
               }
             ],
-            "overall": "nosetting"
+            "overall": "nosetting",
+            "noneCount": 30
           }
         ]
       },
@@ -34975,8 +35053,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -35014,8 +35092,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -35053,8 +35131,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -35092,8 +35170,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -35131,8 +35209,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -35170,8 +35248,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -35223,8 +35301,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 1,
               "soldCount": 0,
@@ -35262,8 +35340,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 1,
               "soldCount": 0,
@@ -35301,8 +35379,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 1,
               "soldCount": 0,
@@ -35340,8 +35418,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 1,
               "soldCount": 0,
@@ -35379,8 +35457,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 1,
               "soldCount": 0,
@@ -35418,8 +35496,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 1,
               "soldCount": 0,
@@ -35471,8 +35549,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -35510,8 +35588,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -35549,8 +35627,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -35588,8 +35666,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -35627,8 +35705,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -35666,8 +35744,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "unknown",
               "availCount": 0,
               "soldCount": 0,
@@ -35719,8 +35797,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 4,
               "soldCount": 0,
@@ -35758,8 +35836,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 4,
               "soldCount": 0,
@@ -35797,8 +35875,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 4,
               "soldCount": 0,
@@ -35836,8 +35914,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 4,
               "soldCount": 0,
@@ -35875,8 +35953,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 4,
               "soldCount": 0,
@@ -35914,8 +35992,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 4,
               "soldCount": 0,
@@ -35967,8 +36045,8 @@
           ],
           "results": [
             {
-              "shop": "新橋駅前店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新橋駅前店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -36006,8 +36084,8 @@
               ]
             },
             {
-              "shop": "秋葉原電気街店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -36045,8 +36123,8 @@
               ]
             },
             {
-              "shop": "新宿駅南口店",
-              "kind": "男性専用",
+              "shop": "安心お宿 Tokyo Man 新宿駅南口店",
+              "kind": "Man",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -36084,8 +36162,8 @@
               ]
             },
             {
-              "shop": "新宿荻窪店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -36123,8 +36201,8 @@
               ]
             },
             {
-              "shop": "銀座汐留店",
-              "kind": "女性専用",
+              "shop": "安心お宿 Tokyo Woman 銀座汐留店",
+              "kind": "Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
@@ -36162,8 +36240,8 @@
               ]
             },
             {
-              "shop": "名古屋栄店",
-              "kind": "男女別専用",
+              "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
+              "kind": "Man&Woman",
               "overall": "available",
               "availCount": 5,
               "soldCount": 0,
