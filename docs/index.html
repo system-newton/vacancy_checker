@@ -15,8 +15,6 @@
   tbody th { position: sticky; left: 0; background: #f7f8fa; text-align: left; z-index: 1; min-width: 150px; font-size: 12px; }
   
   .sat { color: #2b6cff; } .sun { color: #e0554e; }
-  
-  /* 判定セルの背景色 */
   .circle { background: #e7f8ee; }
   .tri { background: #fff8e8; }
   .cross { background: #fceaea; color: #b33; }
@@ -24,13 +22,11 @@
   
   .stock { font-size: 10px; color: #789; display: block; margin-top: 2px; }
   
-  /* バッジ用スタイル */
   .badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 11px; font-weight: bold; }
   .badge-ok { background: #d6f5df; color: #256b45; }
   .badge-warn { background: #fff3d6; color: #8a6414; }
   .badge-bad { background: #f9dcdc; color: #a33; }
   
-  /* 凡例用ドット */
   .dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
   .dot.circle{background:#d6f5df;border:1px solid #4caf7d}
   .dot.tri{background:#fff3d6;border:1px solid #e0a53a}
@@ -51,9 +47,7 @@
   <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
     <div>
       <h1 class="text-xl sm:text-2xl font-bold m-0">安心お宿 空室情報 チェッカー</h1>
-      <p class="text-slate-300 text-xs sm:text-sm mt-1">
-        公式HPはリアルタイム取得、その他サイトは自動巡回バッチの結果を表示します。
-      </p>
+      <p class="text-slate-300 text-xs sm:text-sm mt-1">バッチ処理（自動巡回）の結果を表示しています。</p>
     </div>
     <div id="status" class="text-xs sm:text-sm bg-slate-700 px-3 py-1.5 rounded text-slate-200">データ読み込み中...</div>
   </div>
@@ -64,9 +58,6 @@
     <label for="month-select" class="text-sm font-bold text-slate-700">対象月:</label>
     <select id="month-select" class="bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-lg p-2 font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
   </div>
-  <button id="refresh-btn" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-md transition-colors hidden">
-    🔄 最新データを取得
-  </button>
   <div class="text-xs text-slate-500 ml-auto hidden sm:block">
     💡 各セルをクリックすると、該当サイトの予約・検索ページへ直接移動できます。
   </div>
@@ -74,7 +65,7 @@
 
 <main class="flex-1 p-4 sm:p-6 max-w-7xl mx-auto w-full">
   <div class="flex gap-1 border-b border-slate-200 mb-4 overflow-x-auto" id="tabs">
-    <div class="tab active" data-site="official">公式HP (都度取得)</div>
+    <div class="tab active" data-site="official">公式HP</div>
     <div class="tab" data-site="jalan">じゃらん</div>
     <div class="tab" data-site="rakuten">楽天</div>
     <div class="tab" data-site="yahoo">一休(Yahoo)</div>
@@ -95,9 +86,6 @@
 </main>
 
 <script>
-// =========================================================================
-// 設定・マスタデータ
-// =========================================================================
 const SHOPS = [
   { key: 'shimbashi', label: '新橋駅前店',     kind: '男性専用',
     rakuten: '128267', jalan: '368296', yahoo: '00901085', rurubu: 'tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station', booking: 'capsule-anshin-oyado-shinbashi' },
@@ -116,10 +104,7 @@ const SHOPS = [
 function addDays(iso, n) {
   const d = new Date(iso + 'T00:00:00');
   d.setDate(d.getDate() + n);
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const dd = String(d.getDate()).padStart(2, '0');
-  return `${y}-${m}-${dd}`;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
 const urlBuilders = {
@@ -149,179 +134,47 @@ const urlBuilders = {
 const WEEK = ['日','月','火','水','木','金','土'];
 const SITE_LABEL = { official: '公式HP', jalan:'じゃらん', rakuten:'楽天', yahoo:'一休(Yahoo)', rurubu:'るるぶ', booking:'Booking' };
 
-// =========================================================================
-// 状態管理
-// =========================================================================
-let globalData = null;       // OTA用のバッチデータ
-let officialCache = {};      // 公式APIの取得結果キャッシュ (キー: "YYYY-MM")
+let globalData = null;
 let currentSite = 'official';
-let selectedMonthIdx = 0;
+let selectedYearMonth = ''; // YYYY-M 形式で保持
 
-// プロキシのURL
-const MY_PROXY_URL = 'https://dry-bush-4840.system-f87.workers.dev/?url=';
-
-// =========================================================================
-// 共通ユーティリティ関数
-// =========================================================================
-function fmt(d) {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${y}-${m}-${day}`;
-}
-
-// sales_type → 表示記号 / 意味 (共通仕様)
-function salesTypeToSymbol(t) {
-  if (t === null || t === undefined) return { sym: '－', cls: 'none',  text: '設定なし' };
-  const n = Number(t);
-  if (n === 0 || n === 9)            return { sym: '×', cls: 'cross', text: '満室' };
-  if (n === 1)                        return { sym: '○', cls: 'circle', text: '空室あり' };
-  return { sym: '△', cls: 'tri', text: '残りわずか' };
-}
-
-const getHeaderTh = (dStr, showMonth = false) => {
+const getHeaderTh = (dStr) => {
   const d = new Date(dStr + (dStr.includes('T') ? '' : 'T00:00:00'));
   const w = d.getDay();
-  const label = showMonth ? `${d.getMonth()+1}/${d.getDate()}` : `${d.getDate()}`;
-  return `<th class="min-w-[60px] ${w===0?'sun':(w===6?'sat':'')}">${label}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
+  return `<th class="min-w-[60px] ${w===0?'sun':(w===6?'sat':'')}">${d.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
 };
 
 function renderTable(dates, rowsHtml, subHeader = '') {
   return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(d => getHeaderTh(d)).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
 }
 
-// =========================================================================
-// 公式API データ取得処理 (ローカル版と同じ「5回に分けて取得する」ロジック)
-// =========================================================================
-async function fetchWithMyProxy(targetUrl) {
-  const fetchUrl = MY_PROXY_URL + encodeURIComponent(targetUrl);
-  const controller = new AbortController();
-  const id = setTimeout(() => controller.abort(), 15000);
-
-  try {
-    const res = await fetch(fetchUrl, { signal: controller.signal });
-    clearTimeout(id);
-    if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
-    const data = await res.json();
-    return data;
-  } catch (e) {
-    clearTimeout(id);
-    throw new Error(`プロキシ通信エラー: ${e.message}`);
-  }
-}
-
-async function fetchOfficialMonth(year, month) {
-  const cacheKey = `${year}-${String(month).padStart(2,'0')}`;
-  if (officialCache[cacheKey]) return officialCache[cacheKey];
-
-  const first = new Date(year, month - 1, 1);
-  const last = new Date(year, month, 0); 
-  const daysInMonth = last.getDate();
-
-  // 7日ずつ from をずらして呼ぶ (ローカル版仕様)
-  const froms = [];
-  for (let d = 1; d <= daysInMonth; d += 7) {
-    froms.push(fmt(new Date(year, month - 1, d)));
-  }
-
-  const byShop = SHOPS.map(() => ({}));
-  let shopNames = SHOPS.map(s => s.label);
-
-  // 7日ごとのAPI呼び出しを並列化（直列forループ→Promise.all）
-  const responses = await Promise.all(
-    froms.map(from => {
-      const url = `https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${from}&num=1`;
-      return fetchWithMyProxy(url).catch(e => { console.warn('Fetch Error:', e); return null; });
-    })
-  );
-
-  const ym = `${year}-${String(month).padStart(2, '0')}`;
-  
-  // マージ処理
-  for (const j of responses) {
-    if (!j || !j.res || !j.res.facility_list) continue;
-    j.res.facility_list.forEach((f, idx) => {
-      if (idx >= SHOPS.length) return;
-      if (f.name) shopNames[idx] = f.name;
-      for (const x of (f.date_list || [])) {
-        if (x.date && x.date.startsWith(ym)) {
-          byShop[idx][x.date] = { sales_type: x.sales_type, stock_num: x.stock_num, url: x.url };
-        }
-      }
-    });
-  }
-
-  const dates = [];
-  for (let d = 1; d <= daysInMonth; d++) dates.push(fmt(new Date(year, month - 1, d)));
-
-  // 行データ組み立て
-  const rows = SHOPS.map((s, idx) => {
-    const cells = dates.map(date => {
-      const rec = byShop[idx][date];
-      const sym = salesTypeToSymbol(rec ? rec.sales_type : null);
-      const isNone = !rec || rec.sales_type === null || rec.sales_type === undefined;
-      return {
-        date, symbol: sym.sym, cls: sym.cls, text: sym.text, 
-        isNone, stock: rec ? rec.stock_num : null, url: rec ? rec.url : null,
-      };
-    });
-    
-    const noneCount = cells.filter(c => c.isNone).length;
-    let overall = 'unknown';
-    if (noneCount === cells.length) overall = 'nosetting';
-    else if (noneCount > 0) overall = 'mostlysoldout'; // "一部設定なし"扱い
-    else overall = 'available';
-
-    return { shop: shopNames[idx] || s.label, kind: s.kind, cells, overall };
-  });
-
-  const result = { year, month, dates, rows };
-  officialCache[cacheKey] = result;
-  return result;
-}
-
-// =========================================================================
-// ビューの更新 (公式 / OTA 切り替え処理)
-// =========================================================================
-async function updateView(forceRefreshOfficial = false) {
+function updateView() {
   const $res = document.getElementById('result');
-  const $status = document.getElementById('status');
-  const $refreshBtn = document.getElementById('refresh-btn');
-  
-  // 選択された年月を特定
-  let targetYear, targetMonth;
-  if (globalData && globalData.months && globalData.months[selectedMonthIdx]) {
-      targetYear = globalData.months[selectedMonthIdx].year;
-      targetMonth = globalData.months[selectedMonthIdx].month;
-  } else {
-      // JSONロード前や失敗時のフェールセーフ
-      const val = document.getElementById('month-select').value;
-      if (val) {
-          const mData = globalData.months[parseInt(val)];
-          targetYear = mData.year; targetMonth = mData.month;
-      } else {
-         const d = new Date(); targetYear = d.getFullYear(); targetMonth = d.getMonth() + 1;
-      }
+  if (!globalData || !globalData.months) return $res.innerHTML = '<p class="text-slate-500 p-4">データの読み込みに失敗しました。</p>';
+
+  // YYYY-M キーで対象月のデータを探す（インデックスのズレを回避）
+  const [targetYear, targetMonth] = selectedYearMonth.split('-').map(Number);
+  const mData = globalData.months.find(m => m.year === targetYear && m.month === targetMonth);
+
+  if (!mData) {
+      return $res.innerHTML = `<div class="p-4 text-red-600 bg-red-50 border border-red-200 rounded">
+        選択された月（${targetYear}年${targetMonth}月）のデータが存在しません。<br>
+        バッチの最終実行日時をご確認ください。（古いdata.jsonを読み込んでいる可能性があります）
+      </div>`;
   }
+
+  const data = currentSite === 'official' ? mData.official : mData.sites?.[currentSite];
+  if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">このサイトのデータはありません。</p>';
+
+  const OVERALL = {
+    available: '<span class="badge badge-ok">予約可能な日あり</span>',
+    mostlysoldout: '<span class="badge badge-warn">大半が満室/一部設定なし</span>',
+    nosetting: '<span class="badge badge-bad">全日 設定なし</span>',
+    allsoldout: '<span class="badge badge-bad">全日満室(疑)</span>',
+    unknown: '<span class="badge badge-warn">判定できず</span>'
+  };
 
   if (currentSite === 'official') {
-    // -----------------------------------------------------
-    // 公式HP (リアルタイム取得・キャッシュあり)
-    // -----------------------------------------------------
-    $refreshBtn.classList.remove('hidden');
-    
-    if (forceRefreshOfficial) {
-        delete officialCache[`${targetYear}-${String(targetMonth).padStart(2,'0')}`];
-    }
-
-    $status.innerHTML = `<span class="text-blue-300">公式データを取得中...</span>`;
-    if (!$res.innerHTML.includes('tblwrap')) {
-        $res.innerHTML = '<div class="text-blue-600 p-4 bg-blue-50 rounded border border-blue-200 animate-pulse">📡 専用プロキシを経由して公式APIから最新データを取得中...</div>';
-    }
-    
-    try {
-      const data = await fetchOfficialMonth(targetYear, targetMonth);
-      
       const rowsHtml = data.rows.map(row => {
         let badgeHtml = '';
         if (row.overall === 'nosetting') badgeHtml = '<span class="badge badge-bad">全日 設定なし</span>';
@@ -330,100 +183,54 @@ async function updateView(forceRefreshOfficial = false) {
         
         const cellsHtml = row.cells.map(c => {
           const stockHtml = (c.stock != null && c.cls !== 'none' && c.cls !== 'cross') ? `<span class="stock">${c.stock}室</span>` : '';
-          const jumpUrl = urlBuilders.official(row.shop, c.date); // 公式へのリンク
+          const jumpUrl = urlBuilders.official();
           return `<td class="${c.cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${c.date} : ${c.text}${c.stock!=null?` (残${c.stock}室)`:''}">${c.symbol}${stockHtml}</td>`;
         }).join('');
-
         return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badgeHtml}</td>${cellsHtml}</tr>`;
       }).join('');
 
-      const subHeader = `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-green-50 border border-green-200">✅ <b>公式APIの最新データをリアルタイム取得しました。</b></div>`;
+      const subHeader = `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-blue-50 border border-blue-200">ℹ️ <b>公式HP</b> の空室情報 (バッチによる取得結果)</div>`;
       $res.innerHTML = renderTable(data.dates, rowsHtml, subHeader);
-      $status.innerHTML = `✅ 公式取得完了: <span class="text-slate-200">${new Date().toLocaleTimeString('ja-JP')}</span>`;
-      
-    } catch (e) {
-      console.error(e);
-      $res.innerHTML = `<div class="text-red-700 p-4 bg-red-50 rounded border border-red-200"><strong class="block mb-2">公式データの取得に失敗しました。</strong>${e.message}</div>`;
-      $status.innerHTML = `<span class="text-red-400">エラー発生</span>`;
-    }
 
   } else {
-    // -----------------------------------------------------
-    // OTAサイト (data.jsonからの静的データ表示)
-    // -----------------------------------------------------
-    $refreshBtn.classList.add('hidden');
-    if (!globalData) return $res.innerHTML = '<p class="text-slate-500 p-4">バッチデータを読み込み中...</p>';
-
-    const mData = globalData.months[selectedMonthIdx];
-    const data = mData.sites?.[currentSite];
-    
-    if (!data) return $res.innerHTML = '<p class="text-slate-500 p-4">このサイトのデータはありません。</p>';
-
-    // OTA用のバッジ定義（ローカル版仕様準拠）
-    const OVERALL = {
-      available: '<span class="badge badge-ok">予約可能な日あり</span>',
-      mostlysoldout: '<span class="badge badge-warn">大半が満室</span>',
-      allsoldout: '<span class="badge badge-bad">全日満室(疑)</span>',
-      unknown: '<span class="badge badge-warn">判定できず</span>'
-    };
-
-    const rowsHtml = data.results.map(row => {
-      // SHOPSマスタから該当店舗を探して予約リンク生成用に使用
-      const shopMaster = SHOPS.find(x => row.shop.includes(x.label.replace(/店$/,'')) || x.label.includes(row.shop));
-      
-      const badgeHtml = OVERALL[row.overall] || OVERALL.unknown;
-      const cellsHtml = row.samples.map(s => {
-        let sym='?', cls='none';
-        if (s.status==='available'){ sym='○'; cls='circle'; }
-        else if (s.status==='soldout'){ sym='×'; cls='cross'; }
-        else if (s.status==='error'){ sym='！'; cls='none'; }
-        else { sym='－'; cls='none'; }
-        
-        // リンク生成
-        const jumpUrl = (shopMaster) ? urlBuilders[currentSite](shopMaster, s.date) : (s.url || '#');
-        
-        return `<td class="${cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${s.date} : ${s.status}">${sym}</td>`;
+      const rowsHtml = data.results.map(row => {
+        const shopMaster = SHOPS.find(x => row.shop.includes(x.label.replace(/店$/,'')) || x.label.includes(row.shop));
+        const badgeHtml = OVERALL[row.overall] || OVERALL.unknown;
+        const cellsHtml = row.samples.map(s => {
+          let sym='?', cls='none';
+          if (s.status==='available'){ sym='○'; cls='circle'; }
+          else if (s.status==='soldout'){ sym='×'; cls='cross'; }
+          else if (s.status==='error'){ sym='！'; cls='none'; }
+          else { sym='－'; cls='none'; }
+          const jumpUrl = (shopMaster) ? urlBuilders[currentSite](shopMaster, s.date) : (s.url || '#');
+          return `<td class="${cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${s.date} : ${s.status}">${sym}</td>`;
+        }).join('');
+        return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badgeHtml}</td>${cellsHtml}</tr>`;
       }).join('');
 
-      return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badgeHtml}</td>${cellsHtml}</tr>`;
-    }).join('');
-
-    const subHeader = `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-blue-50 border border-blue-100">
-      ℹ️ <b>${SITE_LABEL[currentSite]}</b> 判定サンプル日: ${data.dates.join(', ')} (バッチ最終更新: ${new Date(globalData.updatedAt).toLocaleString('ja-JP')})
-    </div>`;
-
-    $res.innerHTML = renderTable(data.dates, rowsHtml, subHeader);
-    
-    const ud = new Date(globalData.updatedAt);
-    $status.innerHTML = `🔄 OTA最終取得: <span class="text-blue-300 font-bold">${ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}</span>`;
+      const subHeader = `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-blue-50 border border-blue-100">
+        ℹ️ <b>${SITE_LABEL[currentSite]}</b> 判定サンプル日: ${data.dates.join(', ')}
+      </div>`;
+      $res.innerHTML = renderTable(data.dates, rowsHtml, subHeader);
   }
 }
 
-// =========================================================================
-// 初期化・イベントリスナー
-// =========================================================================
-
-// 月セレクトボックスの初期化
+// 初期化
 const selectEl = document.getElementById('month-select');
 const now = new Date();
 for (let off = 0; off <= 12; off++) {
   const d = new Date(now.getFullYear(), now.getMonth() + off, 1);
-  const val = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2,'0')}`;
+  const val = `${d.getFullYear()}-${d.getMonth() + 1}`; // YYYY-M 形式
+  if (off === 0) selectedYearMonth = val;
   const opt = document.createElement('option');
-  opt.value = off; // index
+  opt.value = val;
   opt.textContent = `${d.getFullYear()}年${d.getMonth() + 1}月${off === 0 ? '（当月）' : ''}`;
   selectEl.appendChild(opt);
 }
 
 selectEl.addEventListener('change', e => { 
-    selectedMonthIdx = +e.target.value; 
+    selectedYearMonth = e.target.value; 
     updateView(); 
-});
-
-document.getElementById('refresh-btn').addEventListener('click', () => {
-    if (currentSite === 'official') {
-        updateView(true); // キャッシュを無視して強制更新
-    }
 });
 
 document.getElementById('tabs').addEventListener('click', e => {
@@ -435,20 +242,17 @@ document.getElementById('tabs').addEventListener('click', e => {
   updateView();
 });
 
-// バッチデータの読み込み開始
 fetch('data.json?v=' + Date.now())
   .then(r => r.json())
   .then(data => {
     globalData = data;
-    // 最初の描画
+    const ud = new Date(data.updatedAt);
+    document.getElementById('status').innerHTML = `🔄 最終取得日時: <span class="text-blue-300 font-bold">${ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}</span>`;
     updateView();
   })
   .catch((e) => {
-    console.error("data.json Load error", e);
-    // data.jsonが無くても公式タブは動くようにする
-    updateView();
+    document.getElementById('result').innerHTML = '<div class="text-red-500 p-4 bg-red-50 rounded border border-red-200">基本データの読み込みに失敗しました。</div>';
   });
-
 </script>
 </body>
 </html>
