@@ -1,21 +1,21 @@
-// GitHub Actions等で定期実行されるスクレイピング処理
+// GitHub Actions等で定期実行されるスクレイピング処理 (公式API & OTA)
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
 const SHOPS = [
-  { key: 'shimbashi', label: '新橋駅前店',     kind: '男性専用',
+  { key: 'shimbashi', label: '安心お宿 Tokyo Man 新橋駅前店',     kind: 'Man',
     rakuten: '128267', jalan: '368296', yahoo: '00901085', rurubu: 'tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station', booking: 'capsule-anshin-oyado-shinbashi' },
-  { key: 'akihabara', label: '秋葉原電気街店', kind: '男性専用',
+  { key: 'akihabara', label: '安心お宿 Tokyo Man 秋葉原電気街店', kind: 'Man',
     rakuten: '142653', jalan: '386755', yahoo: '00901086', rurubu: 'tokyo/anshin-oyado-tokyo-man-akihabara', booking: 'capsule-anshin-oyado-akihabara' },
-  { key: 'shinjuku',  label: '新宿駅南口店',   kind: '男性専用',
+  { key: 'shinjuku',  label: '安心お宿 Tokyo Man 新宿駅南口店',   kind: 'Man',
     rakuten: '147662', jalan: '319308', yahoo: '00901087', rurubu: 'tokyo/anshin-oyado-tokyo-man-shinjuku', booking: 'capsule-anshin-oyado-shinjuku-tokyo' },
-  { key: 'ogikubo',   label: '新宿荻窪店',     kind: '女性専用',
+  { key: 'ogikubo',   label: '安心お宿 Tokyo Woman 新宿荻窪店',     kind: 'Woman',
     rakuten: '153603', jalan: '345855', yahoo: '00901088', rurubu: 'musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo', booking: 'capsule-anshin-oyado-ogikubo' },
-  { key: 'shiodome',  label: '銀座汐留店',     kind: '女性専用',
+  { key: 'shiodome',  label: '安心お宿 Tokyo Woman 銀座汐留店',     kind: 'Woman',
     rakuten: '158890', jalan: '301118', yahoo: '00901089', rurubu: 'tokyo/anshin-oyado-tokyo-woman-ginza-shiodome', booking: 'capsule-anshin-oyado-shinbashi-shiodome' },
-  { key: 'nagoya',    label: '名古屋栄店',     kind: '男女別専用',
+  { key: 'nagoya',    label: '安心お宿 Nagoya Man＆Woman 栄駅前店', kind: 'Man&Woman',
     rakuten: '178541', jalan: '378358', yahoo: '00910525', rurubu: 'nagoya/anshin-oyado-nagoya-man-woman-nagoya', booking: 'capsule-hotel-anshin-oyado-premium-nagoya-sakae' },
 ];
 
@@ -113,18 +113,24 @@ async function fetchOfficialMonth(year, month) {
   const rows = SHOPS.map((s, idx) => {
     const cells = dates.map(date => {
       const rec = byShop[idx][date];
+      // 厳密な null/undefined チェック
+      const isNone = !rec || rec.sales_type === null || rec.sales_type === undefined;
       const sym = salesTypeToSymbol(rec ? rec.sales_type : null);
-      const isNone = !rec || rec.sales_type == null;
-      return { date, symbol: sym.sym, cls: sym.cls, text: sym.text, isNone, stock: rec ? rec.stock_num : null };
+      return { date, symbol: sym.sym, cls: sym.cls, text: sym.text, isNone: isNone, stock: rec ? rec.stock_num : null };
     });
     
     const noneCount = cells.filter(c => c.isNone).length;
     let overall = 'unknown';
-    if (noneCount === cells.length) overall = 'nosetting';
-    else if (noneCount > 0) overall = 'mostlysoldout';
-    else overall = 'available';
+    // 判定ロジックの修正: 厳密に個数を比較
+    if (noneCount === cells.length) {
+      overall = 'nosetting';
+    } else if (noneCount > 0) {
+      overall = 'mostlysoldout';
+    } else {
+      overall = 'available';
+    }
 
-    return { shop: shopNames[idx] || s.label, kind: s.kind, cells, overall };
+    return { shop: shopNames[idx] || s.label, kind: s.kind, cells, overall, noneCount };
   });
 
   return { year, month, dates, rows };
