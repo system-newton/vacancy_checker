@@ -1,6 +1,8 @@
+// GitHub Actions等で定期実行されるスクレイピング処理
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
 const SHOPS = [
   { key: 'shimbashi', label: '新橋駅前店',     kind: '男性専用',
@@ -20,10 +22,7 @@ const SHOPS = [
 function addDays(iso, n) {
   const d = new Date(iso + 'T00:00:00');
   d.setDate(d.getDate() + n);
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const dd = String(d.getDate()).padStart(2, '0');
-  return `${y}-${m}-${dd}`;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
 const urlBuilders = {
@@ -52,68 +51,107 @@ const urlBuilders = {
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36';
 
 const SITE_RULES = {
-  rakuten: {
-    soldOut: ['空室が見つかりませんでした', '空室が見つかりません', 'ご指定の条件に一致する', '満室です', '販売終了', '受付終了', 'プランがありません'],
-    avail: ['このプランの詳細', '予約する', 'を選択', '詳細・予約', '残り', '空室あり', 'プラン一覧', '円', 'プラン']
-  },
-  jalan: {
-    soldOut: ['0件の宿泊プラン', '宿泊プランがありませんでした', '条件に合う宿泊プランが見つかりません', '満室', '予約できるプランがありません', '空室がありません', '該当するプランがありません', '受付を終了'],
-    avail: [
-      '件の宿泊プランがありました', '空室わずか', '残室わずか', 'このプランを見ています', '部屋タイプ・詳細', 'プランを見る', '予約へ進む', '残り', '予約', '円',
-      '▲', '△', '○', '◯', '〇', '⭕', '◎', '空きあり', '空室あり',
-      '3', '2', '1', '3室', '2室', '1室', '残3', '残2', '残1',
-      /残[り室数]*[：:\s]*[1-9][0-9]*/, /[1-9][0-9]*\s*件/, /[1-9][0-9]*\s*室/
-    ]
-  },
-  yahoo: {
-    soldOut: ['空室が見つかりませんでした', '空室が見つかりません', '満室', 'ご希望の条件に合う', '予約できるプランがありません', '別の日程', '該当するプランがありません', '販売終了'],
-    avail: ['予約する', 'このプラン', '残り', 'ポイント', 'プランを見る', '部屋・プランを見る', '選択する', '円', '空室']
-  },
-  rurubu: {
-    soldOut: ['空室は見つかりませんでした', '選択された日付で空室', '別の日付で検索', 'この宿泊施設は満室です', '現在予約を受け付けていません', '販売終了'],
-    avail: ['この料金を見る', '予約できる料金プラン', '最安値', '種類のルームタイプ', '円', 'プラン']
-  },
-  booking: {
-    soldOut: ['選択された日程に空室がありません', '空室がありません', '満室です', 'この宿泊施設は現在ご利用いただけません', '別の日程で検索', '空室状況を検索してください', '予約できません'],
-    avail: ['予約可能なお部屋', '残り', '空室を確認', 'この料金で予約', '1泊あたり', '合計金額', '予約する', '部屋']
-  }
+  rakuten: { soldOut: ['空室が見つかりません', 'ご指定の条件に一致する', '満室です', '販売終了'], avail: ['このプランの詳細', '予約する', 'を選択', '残り', '空室あり', '円'] },
+  jalan: { soldOut: ['0件の宿泊プラン', '条件に合う宿泊プランが見つかりません', '満室', '予約できるプランがありません', '受付を終了'], avail: ['件の宿泊プラン', '空室わずか', 'プランを見る', '予約へ進む', '残り', '予約', '円', '○', '△', '室'] },
+  yahoo: { soldOut: ['空室が見つかりません', '満室', 'ご希望の条件に合う', '予約できるプランがありません', '販売終了'], avail: ['予約する', 'このプラン', '残り', 'プランを見る', '選択する', '円', '空室'] },
+  rurubu: { soldOut: ['空室は見つかりませんでした', '選択された日付で空室', 'この宿泊施設は満室です', '販売終了'], avail: ['この料金を見る', '予約できる料金プラン', '最安値', '種類のルームタイプ', '円'] },
+  booking: { soldOut: ['選択された日程に空室がありません', '空室がありません', '満室です', '予約できません'], avail: ['予約可能なお部屋', '残り', '空室を確認', 'この料金で予約', '1泊あたり', '予約する'] }
 };
 
+// =========================================================
+// 公式APIデータの取得 (7日ごと5回呼び出し)
+// =========================================================
+function fetchJson(url) {
+  return new Promise((resolve) => {
+    const req = https.get(url, { headers: { 'User-Agent': UA, 'Accept': 'application/json' } }, (res) => {
+      let data = '';
+      res.on('data', (c) => data += c);
+      res.on('end', () => resolve(data ? JSON.parse(data) : null));
+    });
+    req.on('error', () => resolve(null));
+    req.setTimeout(10000, () => { req.destroy(); resolve(null); });
+  });
+}
+
+function salesTypeToSymbol(t) {
+  if (t === null || t === undefined) return { sym: '－', cls: 'none', text: '設定なし' };
+  const n = Number(t);
+  if (n === 0 || n === 9) return { sym: '×', cls: 'cross', text: '満室' };
+  if (n === 1) return { sym: '○', cls: 'circle', text: '空室あり' };
+  return { sym: '△', cls: 'tri', text: '残りわずか' };
+}
+
+async function fetchOfficialMonth(year, month) {
+  const daysInMonth = new Date(year, month, 0).getDate();
+  const froms = [];
+  for (let d = 1; d <= daysInMonth; d += 7) {
+    froms.push(`${year}-${String(month).padStart(2, '0')}-${String(d).padStart(2, '0')}`);
+  }
+
+  const byShop = SHOPS.map(() => ({}));
+  let shopNames = SHOPS.map(s => s.label);
+
+  const responses = await Promise.all(
+    froms.map(from => fetchJson(`https://api.489pro-x.com/api_public/anshinoyado/group/facility/calendar?lang=1&from=${from}&num=1`))
+  );
+
+  const ym = `${year}-${String(month).padStart(2, '0')}`;
+  for (const j of responses) {
+    if (!j || !j.res || !j.res.facility_list) continue;
+    j.res.facility_list.forEach((f, idx) => {
+      if (idx >= SHOPS.length) return;
+      if (f.name) shopNames[idx] = f.name;
+      for (const x of (f.date_list || [])) {
+        if (x.date && x.date.startsWith(ym)) byShop[idx][x.date] = { sales_type: x.sales_type, stock_num: x.stock_num };
+      }
+    });
+  }
+
+  const dates = [];
+  for (let d = 1; d <= daysInMonth; d++) dates.push(`${ym}-${String(d).padStart(2, '0')}`);
+
+  const rows = SHOPS.map((s, idx) => {
+    const cells = dates.map(date => {
+      const rec = byShop[idx][date];
+      const sym = salesTypeToSymbol(rec ? rec.sales_type : null);
+      const isNone = !rec || rec.sales_type == null;
+      return { date, symbol: sym.sym, cls: sym.cls, text: sym.text, isNone, stock: rec ? rec.stock_num : null };
+    });
+    
+    const noneCount = cells.filter(c => c.isNone).length;
+    let overall = 'unknown';
+    if (noneCount === cells.length) overall = 'nosetting';
+    else if (noneCount > 0) overall = 'mostlysoldout';
+    else overall = 'available';
+
+    return { shop: shopNames[idx] || s.label, kind: s.kind, cells, overall };
+  });
+
+  return { year, month, dates, rows };
+}
+
+// =========================================================
+// OTAデータの取得 (Playwright)
+// =========================================================
 async function judgeOne(page, site, url) {
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 35000 });
     await page.waitForTimeout(3000);
-
     const rule = SITE_RULES[site];
-    const MAX_WAIT = 8000, STEP = 400;
     let elapsed = 0;
-    
     while (true) {
       if (site === 'jalan') {
-        const domAvail = await page.evaluate(() => {
-          const hasStockCell = document.querySelector('.calendar-cell.has-stock, .calendar-stock.in-stock');
-          if (hasStockCell) return 'dom:has-stock';
-          const icons = Array.from(document.querySelectorAll('em.calendar-icon'));
-          for (const icon of icons) {
-            const txt = (icon.innerText || '').trim();
-            if (['◯', '○', '▲', '△', '〇', '⭕', '◎'].includes(txt) || /^[1-9][0-9]*$/.test(txt)) return `dom:icon-${txt}`;
-          }
-          return null;
-        });
+        const domAvail = await page.evaluate(() => document.querySelector('.calendar-cell.has-stock, .calendar-stock.in-stock') ? 'dom:has-stock' : null);
         if (domAvail) return { status: 'available', hit: domAvail };
       }
-
       const text = await page.evaluate(() => document.body ? document.body.innerText || '' : '');
-      
-      const availHit = rule.avail.find(p => typeof p === 'string' ? text.includes(p) : p.test(text));
-      if (availHit) return { status: 'available', hit: String(availHit) };
-
-      const soldHit = rule.soldOut.find(p => typeof p === 'string' ? text.includes(p) : p.test(text));
-      if (soldHit) return { status: 'soldout', hit: String(soldHit) };
-
-      if (elapsed >= MAX_WAIT) break;
-      await page.waitForTimeout(STEP);
-      elapsed += STEP;
+      const availHit = rule.avail.find(p => text.includes(p));
+      if (availHit) return { status: 'available', hit: availHit };
+      const soldHit = rule.soldOut.find(p => text.includes(p));
+      if (soldHit) return { status: 'soldout', hit: soldHit };
+      if (elapsed >= 8000) break;
+      await page.waitForTimeout(400);
+      elapsed += 400;
     }
     return { status: 'unknown', hit: null };
   } catch (e) {
@@ -121,7 +159,6 @@ async function judgeOne(page, site, url) {
   }
 }
 
-// 当月の代表サンプル日を選ぶ (平日・週末を混ぜる)
 function sampleDates(year, month, count = 5) {
   const last = new Date(year, month, 0).getDate();
   const today = new Date();
@@ -130,19 +167,17 @@ function sampleDates(year, month, count = 5) {
   const pool = [];
   for (let d = startDay; d <= last; d++) pool.push(d);
   if (pool.length === 0) return [];
-  
   const picks = [];
   const step = Math.max(1, Math.floor(pool.length / count));
   for (let i = 0; i < pool.length && picks.length < count; i += step) picks.push(pool[i]);
-  
   if (!picks.includes(pool[pool.length-1])) picks.push(pool[pool.length-1]);
   return picks.map(d => `${year}-${String(month).padStart(2,'0')}-${String(d).padStart(2,'0')}`);
 }
 
 async function checkSite(site, year, month, browser) {
-  console.log(`[Scrape] ${site} (${year}年${month}月) を巡回中...`);
+  console.log(`[Scrape] ${site} (${year}/${month})`);
   const dates = sampleDates(year, month, 4);
-  const ctx = await browser.newContext({ userAgent: UA, locale: 'ja-JP', viewport: { width: 1280, height: 800 } });
+  const ctx = await browser.newContext({ userAgent: UA, locale: 'ja-JP' });
   const page = await ctx.newPage();
   const results = [];
 
@@ -168,51 +203,34 @@ async function checkSite(site, year, month, browser) {
   return { site, year, month, dates, results };
 }
 
-function getTargetMonths() {
+async function main() {
   const now = new Date();
   const targetMonths = [];
   for (let i = 0; i <= 12; i++) {
     const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
     targetMonths.push({ year: d.getFullYear(), month: d.getMonth() + 1 });
   }
-  return targetMonths;
-}
-
-async function main() {
-  const targetMonths = getTargetMonths();
-  console.log(`🚀 合計 ${targetMonths.length} ヶ月分のOTAデータを取得します。`);
 
   const browser = await chromium.launch({ headless: true });
   const monthsData = [];
-  const sites = ['rakuten', 'jalan', 'yahoo', 'rurubu', 'booking'];
 
   try {
     for (const { year, month } of targetMonths) {
       console.log(`\n📅 【${year}年${month}月】処理開始`);
-      const sitesData = {};
-      
-      for (const site of sites) {
-        sitesData[site] = await checkSite(site, year, month, browser);
+      const official = await fetchOfficialMonth(year, month);
+      const sites = {};
+      for (const site of ['rakuten', 'jalan', 'yahoo', 'rurubu', 'booking']) {
+        sites[site] = await checkSite(site, year, month, browser);
       }
-
-      monthsData.push({
-        year, month,
-        sites: sitesData
-        // official データは含めない (クライアント側で直接取得するため)
-      });
+      monthsData.push({ year, month, official, sites });
     }
 
-    const finalData = {
-      updatedAt: new Date().toISOString(),
-      months: monthsData
-    };
-
+    const finalData = { updatedAt: new Date().toISOString(), months: monthsData };
     if (!fs.existsSync('docs')) fs.mkdirSync('docs');
     fs.writeFileSync(path.join('docs', 'data.json'), JSON.stringify(finalData, null, 2));
-    
-    console.log('\n✅ 全月データの取得・保存が完了しました: docs/data.json');
+    console.log('\n✅ 完了');
   } catch(e) {
-    console.error('❌ エラー発生:', e);
+    console.error('❌ エラー:', e);
     process.exit(1);
   } finally {
     await browser.close();
