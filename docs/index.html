@@ -8,6 +8,32 @@
 <style>
   :root { --bg:#f5f6f8; --card:#fff; --line:#e2e5ea; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); }
+  
+  /* プログレスバー用スタイル */
+  #progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 9999;
+    background-color: transparent;
+    overflow: hidden;
+    display: none;
+  }
+  #progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #3b82f6;
+    animation: indeterminate 1.5s infinite linear;
+    transform-origin: 0% 50%;
+  }
+  @keyframes indeterminate {
+    0% { transform: translateX(-100%) scaleX(0.2); }
+    50% { transform: translateX(0%) scaleX(0.5); }
+    100% { transform: translateX(100%) scaleX(0.2); }
+  }
+
   .tblwrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 0.5rem; }
   table { border-collapse: collapse; width: 100%; font-size: 13px; }
   th, td { border: 1px solid var(--line); padding: 8px; text-align: center; white-space: nowrap; }
@@ -15,18 +41,26 @@
   tbody th { position: sticky; left: 0; background: #f7f8fa; text-align: left; z-index: 1; min-width: 150px; font-size: 12px; }
   
   .sat { color: #2b6cff; } .sun { color: #e0554e; }
+  
+  /* 判定セルの背景色 */
   .circle { background: #e7f8ee; }
   .tri { background: #fff8e8; }
-  .cross { background: #fceaea; color: #b33; }
+  
+  /* 画像に合わせて×の背景色を消し、文字色を赤にする */
+  .cross { background: transparent; color: #e0554e; }
+  
   .none { background: #eef0f3; color: #aab; }
   
-  .stock { font-size: 10px; color: #789; display: block; margin-top: 2px; }
+  /* 残室数の表示調整 */
+  .stock { font-size: 10px; color: #889; display: block; margin-top: 1px; }
   
+  /* バッジ用スタイル */
   .badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 11px; font-weight: bold; }
   .badge-ok { background: #d6f5df; color: #256b45; }
   .badge-warn { background: #fff3d6; color: #8a6414; }
   .badge-bad { background: #f9dcdc; color: #a33; }
   
+  /* 凡例用ドット */
   .dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
   .dot.circle{background:#d6f5df;border:1px solid #4caf7d}
   .dot.tri{background:#fff3d6;border:1px solid #e0a53a}
@@ -42,6 +76,9 @@
 </style>
 </head>
 <body class="flex flex-col min-h-screen">
+
+<!-- プログレスバー要素 -->
+<div id="progress-container"><div id="progress-bar"></div></div>
 
 <header class="bg-slate-800 text-white p-4 sm:p-6 shadow-md">
   <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
@@ -86,18 +123,21 @@
 </main>
 
 <script>
+function showProgress() { document.getElementById('progress-container').style.display = 'block'; }
+function hideProgress() { document.getElementById('progress-container').style.display = 'none'; }
+
 const SHOPS = [
-  { key: 'shimbashi', label: '新橋駅前店',     kind: '男性専用',
+  { key: 'shimbashi', label: '安心お宿 Tokyo Man 新橋駅前店',     kind: 'Man',
     rakuten: '128267', jalan: '368296', yahoo: '00901085', rurubu: 'tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station', booking: 'capsule-anshin-oyado-shinbashi' },
-  { key: 'akihabara', label: '秋葉原電気街店', kind: '男性専用',
+  { key: 'akihabara', label: '安心お宿 Tokyo Man 秋葉原電気街店', kind: 'Man',
     rakuten: '142653', jalan: '386755', yahoo: '00901086', rurubu: 'tokyo/anshin-oyado-tokyo-man-akihabara', booking: 'capsule-anshin-oyado-akihabara' },
-  { key: 'shinjuku',  label: '新宿駅南口店',   kind: '男性専用',
+  { key: 'shinjuku',  label: '安心お宿 Tokyo Man 新宿駅南口店',   kind: 'Man',
     rakuten: '147662', jalan: '319308', yahoo: '00901087', rurubu: 'tokyo/anshin-oyado-tokyo-man-shinjuku', booking: 'capsule-anshin-oyado-shinjuku-tokyo' },
-  { key: 'ogikubo',   label: '新宿荻窪店',     kind: '女性専用',
+  { key: 'ogikubo',   label: '安心お宿 Tokyo Woman 新宿荻窪店',     kind: 'Woman',
     rakuten: '153603', jalan: '345855', yahoo: '00901088', rurubu: 'musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo', booking: 'capsule-anshin-oyado-ogikubo' },
-  { key: 'shiodome',  label: '銀座汐留店',     kind: '女性専用',
+  { key: 'shiodome',  label: '安心お宿 Tokyo Woman 銀座汐留店',     kind: 'Woman',
     rakuten: '158890', jalan: '301118', yahoo: '00901089', rurubu: 'tokyo/anshin-oyado-tokyo-woman-ginza-shiodome', booking: 'capsule-anshin-oyado-shinbashi-shiodome' },
-  { key: 'nagoya',    label: '名古屋栄店',     kind: '男女別専用',
+  { key: 'nagoya',    label: '安心お宿 Nagoya Man＆Woman 栄駅前店', kind: 'Man&Woman',
     rakuten: '178541', jalan: '378358', yahoo: '00910525', rurubu: 'nagoya/anshin-oyado-nagoya-man-woman-nagoya', booking: 'capsule-hotel-anshin-oyado-premium-nagoya-sakae' },
 ];
 
@@ -136,7 +176,7 @@ const SITE_LABEL = { official: '公式HP', jalan:'じゃらん', rakuten:'楽天
 
 let globalData = null;
 let currentSite = 'official';
-let selectedYearMonth = ''; // YYYY-M 形式で保持
+let selectedYearMonth = ''; 
 
 const getHeaderTh = (dStr) => {
   const d = new Date(dStr + (dStr.includes('T') ? '' : 'T00:00:00'));
@@ -144,22 +184,22 @@ const getHeaderTh = (dStr) => {
   return `<th class="min-w-[60px] ${w===0?'sun':(w===6?'sat':'')}">${d.getDate()}<br><small class="text-[10px] text-slate-500">${WEEK[w]}</small></th>`;
 };
 
+// ヘッダーを「店舗＼日付」に変更
 function renderTable(dates, rowsHtml, subHeader = '') {
-  return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗</th><th class="min-w-[100px]">判定</th>${dates.map(d => getHeaderTh(d)).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
+  return `${subHeader}<div class="tblwrap"><table><thead><tr><th>店舗＼日付</th><th class="min-w-[100px]">判定</th>${dates.map(d => getHeaderTh(d)).join('')}</tr></thead><tbody>${rowsHtml}</tbody></table></div>`;
 }
 
 function updateView() {
   const $res = document.getElementById('result');
   if (!globalData || !globalData.months) return $res.innerHTML = '<p class="text-slate-500 p-4">データの読み込みに失敗しました。</p>';
 
-  // YYYY-M キーで対象月のデータを探す（インデックスのズレを回避）
   const [targetYear, targetMonth] = selectedYearMonth.split('-').map(Number);
   const mData = globalData.months.find(m => m.year === targetYear && m.month === targetMonth);
 
   if (!mData) {
       return $res.innerHTML = `<div class="p-4 text-red-600 bg-red-50 border border-red-200 rounded">
         選択された月（${targetYear}年${targetMonth}月）のデータが存在しません。<br>
-        バッチの最終実行日時をご確認ください。（古いdata.jsonを読み込んでいる可能性があります）
+        バッチの最終実行日時をご確認ください。
       </div>`;
   }
 
@@ -177,16 +217,22 @@ function updateView() {
   if (currentSite === 'official') {
       const rowsHtml = data.rows.map(row => {
         let badgeHtml = '';
-        if (row.overall === 'nosetting') badgeHtml = '<span class="badge badge-bad">全日 設定なし</span>';
-        else if (row.overall === 'mostlysoldout') badgeHtml = '<span class="badge badge-warn">一部設定なし</span>';
-        else badgeHtml = '<span class="badge badge-ok">全日 設定あり</span>';
+        if (row.overall === 'nosetting' || row.noneCount === row.cells.length) {
+            badgeHtml = '<span class="badge badge-bad">全日 設定なし</span>';
+        } else if (row.overall === 'mostlysoldout' || row.noneCount > 0) {
+            badgeHtml = '<span class="badge badge-warn">一部設定なし</span>';
+        } else {
+            badgeHtml = '<span class="badge badge-ok">全日 設定あり</span>';
+        }
         
         const cellsHtml = row.cells.map(c => {
+          // ×の時は残室数を表示しない
           const stockHtml = (c.stock != null && c.cls !== 'none' && c.cls !== 'cross') ? `<span class="stock">${c.stock}室</span>` : '';
           const jumpUrl = urlBuilders.official();
           return `<td class="${c.cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${c.date} : ${c.text}${c.stock!=null?` (残${c.stock}室)`:''}">${c.symbol}${stockHtml}</td>`;
         }).join('');
-        return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badgeHtml}</td>${cellsHtml}</tr>`;
+        // 店舗種別(kind)の文字色を薄くする
+        return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-400 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badgeHtml}</td>${cellsHtml}</tr>`;
       }).join('');
 
       const subHeader = `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-blue-50 border border-blue-200">ℹ️ <b>公式HP</b> の空室情報 (バッチによる取得結果)</div>`;
@@ -205,7 +251,7 @@ function updateView() {
           const jumpUrl = (shopMaster) ? urlBuilders[currentSite](shopMaster, s.date) : (s.url || '#');
           return `<td class="${cls} clickable-cell" onclick="window.open('${jumpUrl}','_blank')" title="${s.date} : ${s.status}">${sym}</td>`;
         }).join('');
-        return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-500 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badgeHtml}</td>${cellsHtml}</tr>`;
+        return `<tr><th><div class="font-bold">${row.shop}</div><div class="text-[10px] text-slate-400 mt-1">${row.kind}</div></th><td class="text-xs text-left">${badgeHtml}</td>${cellsHtml}</tr>`;
       }).join('');
 
       const subHeader = `<div class="text-xs text-slate-600 mb-2 p-2 rounded bg-blue-50 border border-blue-100">
@@ -216,11 +262,12 @@ function updateView() {
 }
 
 // 初期化
+showProgress();
 const selectEl = document.getElementById('month-select');
 const now = new Date();
 for (let off = 0; off <= 12; off++) {
   const d = new Date(now.getFullYear(), now.getMonth() + off, 1);
-  const val = `${d.getFullYear()}-${d.getMonth() + 1}`; // YYYY-M 形式
+  const val = `${d.getFullYear()}-${d.getMonth() + 1}`; 
   if (off === 0) selectedYearMonth = val;
   const opt = document.createElement('option');
   opt.value = val;
@@ -249,9 +296,11 @@ fetch('data.json?v=' + Date.now())
     const ud = new Date(data.updatedAt);
     document.getElementById('status').innerHTML = `🔄 最終取得日時: <span class="text-blue-300 font-bold">${ud.toLocaleString('ja-JP', { month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit' })}</span>`;
     updateView();
+    hideProgress();
   })
   .catch((e) => {
     document.getElementById('result').innerHTML = '<div class="text-red-500 p-4 bg-red-50 rounded border border-red-200">基本データの読み込みに失敗しました。</div>';
+    hideProgress();
   });
 </script>
 </body>
