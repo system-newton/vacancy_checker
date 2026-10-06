@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T13:32:23.479Z",
+  "updatedAt": "2026-10-06T06:11:53.974Z",
   "months": [
     {
       "year": 2026,
@@ -1585,10 +1585,10 @@
           "year": 2026,
           "month": 10,
           "dates": [
-            "2026-10-05",
-            "2026-10-11",
-            "2026-10-17",
-            "2026-10-23",
+            "2026-10-06",
+            "2026-10-12",
+            "2026-10-18",
+            "2026-10-24",
             "2026-10-31"
           ],
           "results": [
@@ -1600,28 +1600,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/128267?f_nen1=2026&f_tuki1=10&f_hi1=5&f_nen2=2026&f_tuki2=10&f_hi2=6&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/128267?f_nen1=2026&f_tuki1=10&f_hi1=6&f_nen2=2026&f_tuki2=10&f_hi2=7&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/128267?f_nen1=2026&f_tuki1=10&f_hi1=11&f_nen2=2026&f_tuki2=10&f_hi2=12&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/128267?f_nen1=2026&f_tuki1=10&f_hi1=12&f_nen2=2026&f_tuki2=10&f_hi2=13&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/128267?f_nen1=2026&f_tuki1=10&f_hi1=17&f_nen2=2026&f_tuki2=10&f_hi2=18&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/128267?f_nen1=2026&f_tuki1=10&f_hi1=18&f_nen2=2026&f_tuki2=10&f_hi2=19&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/128267?f_nen1=2026&f_tuki1=10&f_hi1=23&f_nen2=2026&f_tuki2=10&f_hi2=24&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/128267?f_nen1=2026&f_tuki1=10&f_hi1=24&f_nen2=2026&f_tuki2=10&f_hi2=25&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1639,28 +1639,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/142653?f_nen1=2026&f_tuki1=10&f_hi1=5&f_nen2=2026&f_tuki2=10&f_hi2=6&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/142653?f_nen1=2026&f_tuki1=10&f_hi1=6&f_nen2=2026&f_tuki2=10&f_hi2=7&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/142653?f_nen1=2026&f_tuki1=10&f_hi1=11&f_nen2=2026&f_tuki2=10&f_hi2=12&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/142653?f_nen1=2026&f_tuki1=10&f_hi1=12&f_nen2=2026&f_tuki2=10&f_hi2=13&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/142653?f_nen1=2026&f_tuki1=10&f_hi1=17&f_nen2=2026&f_tuki2=10&f_hi2=18&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/142653?f_nen1=2026&f_tuki1=10&f_hi1=18&f_nen2=2026&f_tuki2=10&f_hi2=19&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/142653?f_nen1=2026&f_tuki1=10&f_hi1=23&f_nen2=2026&f_tuki2=10&f_hi2=24&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/142653?f_nen1=2026&f_tuki1=10&f_hi1=24&f_nen2=2026&f_tuki2=10&f_hi2=25&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1678,28 +1678,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147662?f_nen1=2026&f_tuki1=10&f_hi1=5&f_nen2=2026&f_tuki2=10&f_hi2=6&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147662?f_nen1=2026&f_tuki1=10&f_hi1=6&f_nen2=2026&f_tuki2=10&f_hi2=7&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147662?f_nen1=2026&f_tuki1=10&f_hi1=11&f_nen2=2026&f_tuki2=10&f_hi2=12&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147662?f_nen1=2026&f_tuki1=10&f_hi1=12&f_nen2=2026&f_tuki2=10&f_hi2=13&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147662?f_nen1=2026&f_tuki1=10&f_hi1=18&f_nen2=2026&f_tuki2=10&f_hi2=19&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                },
+                {
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "円",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147662?f_nen1=2026&f_tuki1=10&f_hi1=17&f_nen2=2026&f_tuki2=10&f_hi2=18&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
-                },
-                {
-                  "date": "2026-10-23",
-                  "status": "available",
-                  "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147662?f_nen1=2026&f_tuki1=10&f_hi1=23&f_nen2=2026&f_tuki2=10&f_hi2=24&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/147662?f_nen1=2026&f_tuki1=10&f_hi1=24&f_nen2=2026&f_tuki2=10&f_hi2=25&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1717,28 +1717,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153603?f_nen1=2026&f_tuki1=10&f_hi1=5&f_nen2=2026&f_tuki2=10&f_hi2=6&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153603?f_nen1=2026&f_tuki1=10&f_hi1=6&f_nen2=2026&f_tuki2=10&f_hi2=7&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153603?f_nen1=2026&f_tuki1=10&f_hi1=11&f_nen2=2026&f_tuki2=10&f_hi2=12&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153603?f_nen1=2026&f_tuki1=10&f_hi1=12&f_nen2=2026&f_tuki2=10&f_hi2=13&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153603?f_nen1=2026&f_tuki1=10&f_hi1=17&f_nen2=2026&f_tuki2=10&f_hi2=18&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153603?f_nen1=2026&f_tuki1=10&f_hi1=18&f_nen2=2026&f_tuki2=10&f_hi2=19&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153603?f_nen1=2026&f_tuki1=10&f_hi1=23&f_nen2=2026&f_tuki2=10&f_hi2=24&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/153603?f_nen1=2026&f_tuki1=10&f_hi1=24&f_nen2=2026&f_tuki2=10&f_hi2=25&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1756,28 +1756,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
-                  "status": "available",
-                  "hit": "円",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158890?f_nen1=2026&f_tuki1=10&f_hi1=5&f_nen2=2026&f_tuki2=10&f_hi2=6&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
-                },
-                {
-                  "date": "2026-10-11",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158890?f_nen1=2026&f_tuki1=10&f_hi1=11&f_nen2=2026&f_tuki2=10&f_hi2=12&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158890?f_nen1=2026&f_tuki1=10&f_hi1=6&f_nen2=2026&f_tuki2=10&f_hi2=7&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-17",
-                  "status": "available",
-                  "hit": "円",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158890?f_nen1=2026&f_tuki1=10&f_hi1=17&f_nen2=2026&f_tuki2=10&f_hi2=18&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
-                },
-                {
-                  "date": "2026-10-23",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158890?f_nen1=2026&f_tuki1=10&f_hi1=23&f_nen2=2026&f_tuki2=10&f_hi2=24&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158890?f_nen1=2026&f_tuki1=10&f_hi1=12&f_nen2=2026&f_tuki2=10&f_hi2=13&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                },
+                {
+                  "date": "2026-10-18",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158890?f_nen1=2026&f_tuki1=10&f_hi1=18&f_nen2=2026&f_tuki2=10&f_hi2=19&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                },
+                {
+                  "date": "2026-10-24",
+                  "status": "available",
+                  "hit": "円",
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/158890?f_nen1=2026&f_tuki1=10&f_hi1=24&f_nen2=2026&f_tuki2=10&f_hi2=25&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1795,28 +1795,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2026&f_tuki1=10&f_hi1=5&f_nen2=2026&f_tuki2=10&f_hi2=6&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2026&f_tuki1=10&f_hi1=6&f_nen2=2026&f_tuki2=10&f_hi2=7&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2026&f_tuki1=10&f_hi1=11&f_nen2=2026&f_tuki2=10&f_hi2=12&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2026&f_tuki1=10&f_hi1=12&f_nen2=2026&f_tuki2=10&f_hi2=13&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
-                  "date": "2026-10-17",
-                  "status": "available",
-                  "hit": "円",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2026&f_tuki1=10&f_hi1=17&f_nen2=2026&f_tuki2=10&f_hi2=18&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
-                },
-                {
-                  "date": "2026-10-23",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2026&f_tuki1=10&f_hi1=23&f_nen2=2026&f_tuki2=10&f_hi2=24&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2026&f_tuki1=10&f_hi1=18&f_nen2=2026&f_tuki2=10&f_hi2=19&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
+                },
+                {
+                  "date": "2026-10-24",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2026&f_tuki1=10&f_hi1=24&f_nen2=2026&f_tuki2=10&f_hi2=25&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1833,10 +1833,10 @@
           "year": 2026,
           "month": 10,
           "dates": [
-            "2026-10-05",
-            "2026-10-11",
-            "2026-10-17",
-            "2026-10-23",
+            "2026-10-06",
+            "2026-10-12",
+            "2026-10-18",
+            "2026-10-24",
             "2026-10-31"
           ],
           "results": [
@@ -1848,28 +1848,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=10&stayDay=5&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=10&stayDay=6&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=10&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=10&stayDay=12&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=10&stayDay=17&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=10&stayDay=18&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=10&stayDay=23&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=10&stayDay=24&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1887,28 +1887,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=10&stayDay=5&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=10&stayDay=6&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=10&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=10&stayDay=12&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=10&stayDay=17&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=10&stayDay=18&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=10&stayDay=23&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=10&stayDay=24&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1926,28 +1926,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=10&stayDay=5&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=10&stayDay=6&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=10&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=10&stayDay=12&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=10&stayDay=17&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=10&stayDay=18&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=10&stayDay=23&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=10&stayDay=24&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -1965,28 +1965,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=10&stayDay=5&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=10&stayDay=6&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=10&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=10&stayDay=12&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=10&stayDay=17&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=10&stayDay=18&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=10&stayDay=23&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=10&stayDay=24&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -2004,28 +2004,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=10&stayDay=5&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=10&stayDay=6&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=10&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=10&stayDay=12&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=10&stayDay=17&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=10&stayDay=18&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=10&stayDay=23&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=10&stayDay=24&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -2043,28 +2043,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=5&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=6&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=11&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=12&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=17&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=18&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "dom:has-stock",
-                  "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=23&stayCount=1&roomCount=1&adultNum=1"
+                  "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=10&stayDay=24&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-10-31",
@@ -2081,10 +2081,10 @@
           "year": 2026,
           "month": 10,
           "dates": [
-            "2026-10-05",
-            "2026-10-11",
-            "2026-10-17",
-            "2026-10-23",
+            "2026-10-06",
+            "2026-10-12",
+            "2026-10-18",
+            "2026-10-24",
             "2026-10-31"
           ],
           "results": [
@@ -2096,28 +2096,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261005&checkoutDate=20261006"
+                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261006&checkoutDate=20261007"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261011&checkoutDate=20261012"
+                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261012&checkoutDate=20261013"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261017&checkoutDate=20261018"
+                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261018&checkoutDate=20261019"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261023&checkoutDate=20261024"
+                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261024&checkoutDate=20261025"
                 },
                 {
                   "date": "2026-10-31",
@@ -2135,28 +2135,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261005&checkoutDate=20261006"
+                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261006&checkoutDate=20261007"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261011&checkoutDate=20261012"
+                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261012&checkoutDate=20261013"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261017&checkoutDate=20261018"
+                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261018&checkoutDate=20261019"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261023&checkoutDate=20261024"
+                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261024&checkoutDate=20261025"
                 },
                 {
                   "date": "2026-10-31",
@@ -2174,28 +2174,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261005&checkoutDate=20261006"
+                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261006&checkoutDate=20261007"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261011&checkoutDate=20261012"
+                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261012&checkoutDate=20261013"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261017&checkoutDate=20261018"
+                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261018&checkoutDate=20261019"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261023&checkoutDate=20261024"
+                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261024&checkoutDate=20261025"
                 },
                 {
                   "date": "2026-10-31",
@@ -2213,28 +2213,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261005&checkoutDate=20261006"
+                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261006&checkoutDate=20261007"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261011&checkoutDate=20261012"
+                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261012&checkoutDate=20261013"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261017&checkoutDate=20261018"
+                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261018&checkoutDate=20261019"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261023&checkoutDate=20261024"
+                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261024&checkoutDate=20261025"
                 },
                 {
                   "date": "2026-10-31",
@@ -2252,28 +2252,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261005&checkoutDate=20261006"
+                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261006&checkoutDate=20261007"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261011&checkoutDate=20261012"
+                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261012&checkoutDate=20261013"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261017&checkoutDate=20261018"
+                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261018&checkoutDate=20261019"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261023&checkoutDate=20261024"
+                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261024&checkoutDate=20261025"
                 },
                 {
                   "date": "2026-10-31",
@@ -2291,28 +2291,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261005&checkoutDate=20261006"
+                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261006&checkoutDate=20261007"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261011&checkoutDate=20261012"
+                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261012&checkoutDate=20261013"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261017&checkoutDate=20261018"
+                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261018&checkoutDate=20261019"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261023&checkoutDate=20261024"
+                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261024&checkoutDate=20261025"
                 },
                 {
                   "date": "2026-10-31",
@@ -2329,10 +2329,10 @@
           "year": 2026,
           "month": 10,
           "dates": [
-            "2026-10-05",
-            "2026-10-11",
-            "2026-10-17",
-            "2026-10-23",
+            "2026-10-06",
+            "2026-10-12",
+            "2026-10-18",
+            "2026-10-24",
             "2026-10-31"
           ],
           "results": [
@@ -2344,28 +2344,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-10-05&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-10-06&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-10-11&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-10-12&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-10-17&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-10-18&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-10-23&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-10-24&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-10-31",
@@ -2383,28 +2383,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-10-05&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-10-06&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-10-11&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-10-12&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-10-17&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-10-18&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-10-23&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-10-24&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-10-31",
@@ -2422,28 +2422,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-10-05&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-10-06&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-10-11&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-10-12&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-10-18&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-10-24",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-10-17&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-10-23",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-10-23&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-10-24&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-10-31",
@@ -2461,28 +2461,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-10-05&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-10-06&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-10-11&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-10-12&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-10-17&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-10-18&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-10-23&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-10-24&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-10-31",
@@ -2500,28 +2500,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-10-05&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-10-06&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-10-11&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-10-12&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-10-18&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-10-24",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-10-17&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-10-23",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-10-23&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-10-24&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-10-31",
@@ -2535,32 +2535,32 @@
               "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
               "kind": "Man&Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-10-05&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-10-06&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-10-11&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-10-12&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-10-17",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-10-17&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-10-23",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-10-23&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-10-18&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-10-24",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-10-24&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-10-31",
@@ -2577,10 +2577,10 @@
           "year": 2026,
           "month": 10,
           "dates": [
-            "2026-10-05",
-            "2026-10-11",
-            "2026-10-17",
-            "2026-10-23",
+            "2026-10-06",
+            "2026-10-12",
+            "2026-10-18",
+            "2026-10-24",
             "2026-10-31"
           ],
           "results": [
@@ -2592,28 +2592,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-10-05&checkout=2026-10-06&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-10-06&checkout=2026-10-07&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-10-11&checkout=2026-10-12&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-10-12&checkout=2026-10-13&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-10-23&checkout=2026-10-24&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-10-24&checkout=2026-10-25&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-10-31",
@@ -2631,28 +2631,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-10-05&checkout=2026-10-06&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-10-06&checkout=2026-10-07&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-10-11&checkout=2026-10-12&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-10-12&checkout=2026-10-13&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-10-23&checkout=2026-10-24&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-10-24&checkout=2026-10-25&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-10-31",
@@ -2670,28 +2670,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-05&checkout=2026-10-06&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-06&checkout=2026-10-07&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-11&checkout=2026-10-12&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-12&checkout=2026-10-13&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-23&checkout=2026-10-24&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-10-24&checkout=2026-10-25&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-10-31",
@@ -2709,28 +2709,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-10-05&checkout=2026-10-06&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-10-06&checkout=2026-10-07&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-10-11&checkout=2026-10-12&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-10-12&checkout=2026-10-13&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-10-23&checkout=2026-10-24&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-10-24&checkout=2026-10-25&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-10-31",
@@ -2748,28 +2748,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
-                  "status": "available",
-                  "hit": "1泊あたり",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-10-05&checkout=2026-10-06&group_adults=1&no_rooms=1&group_children=0"
-                },
-                {
-                  "date": "2026-10-11",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-10-11&checkout=2026-10-12&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-10-06&checkout=2026-10-07&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-10-12&checkout=2026-10-13&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-10-23&checkout=2026-10-24&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=1&no_rooms=1&group_children=0"
+                },
+                {
+                  "date": "2026-10-24",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-10-24&checkout=2026-10-25&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-10-31",
@@ -2787,28 +2787,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-10-05",
+                  "date": "2026-10-06",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-10-05&checkout=2026-10-06&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-10-06&checkout=2026-10-07&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-11",
+                  "date": "2026-10-12",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-10-11&checkout=2026-10-12&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-10-12&checkout=2026-10-13&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-17",
+                  "date": "2026-10-18",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-10-23",
+                  "date": "2026-10-24",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-10-23&checkout=2026-10-24&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-10-24&checkout=2026-10-25&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-10-31",
@@ -10760,31 +10760,31 @@
                 {
                   "date": "2027-01-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-01-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-01-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-01-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-01-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-01-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -10799,31 +10799,31 @@
                 {
                   "date": "2027-01-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-01-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-01-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-01-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-01-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-01-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -10838,31 +10838,31 @@
                 {
                   "date": "2027-01-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-01-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-01-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-01-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-01-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-01-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -10877,31 +10877,31 @@
                 {
                   "date": "2027-01-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-01-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-01-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-01-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-01-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-01-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -10916,31 +10916,31 @@
                 {
                   "date": "2027-01-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-01-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-01-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-01-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-01-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-01-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -10955,31 +10955,31 @@
                 {
                   "date": "2027-01-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-01-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-01-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-01-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-01-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-01-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-01-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -11002,7 +11002,7 @@
               "shop": "安心お宿 Tokyo Man 新橋駅前店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 2,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -11019,20 +11019,20 @@
                 },
                 {
                   "date": "2027-01-15",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2027-01-15&checkout=2027-01-16&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2027-01-22",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2027-01-22&checkout=2027-01-23&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2027-01-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2027-01-31&checkout=2027-02-01&group_adults=1&no_rooms=1&group_children=0"
                 }
               ]
@@ -11041,7 +11041,7 @@
               "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -11064,14 +11064,14 @@
                 },
                 {
                   "date": "2027-01-22",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2027-01-22&checkout=2027-01-23&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2027-01-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2027-01-31&checkout=2027-02-01&group_adults=1&no_rooms=1&group_children=0"
                 }
               ]
@@ -11119,7 +11119,7 @@
               "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -11142,8 +11142,8 @@
                 },
                 {
                   "date": "2027-01-22",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2027-01-22&checkout=2027-01-23&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -11197,7 +11197,7 @@
               "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
               "kind": "Man&Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -11226,8 +11226,8 @@
                 },
                 {
                   "date": "2027-01-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2027-01-31&checkout=2027-02-01&group_adults=1&no_rooms=1&group_children=0"
                 }
               ]
@@ -13434,31 +13434,31 @@
                 {
                   "date": "2027-02-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-02-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-02-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-02-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-02-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-28",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-02-28&los=1&currencyCode=JPY"
                 }
               ]
@@ -13473,31 +13473,31 @@
                 {
                   "date": "2027-02-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-02-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-02-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-02-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-02-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-28",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-02-28&los=1&currencyCode=JPY"
                 }
               ]
@@ -13512,31 +13512,31 @@
                 {
                   "date": "2027-02-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-02-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-02-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-02-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-02-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-28",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-02-28&los=1&currencyCode=JPY"
                 }
               ]
@@ -13551,31 +13551,31 @@
                 {
                   "date": "2027-02-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-02-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-02-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-02-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-02-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-28",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-02-28&los=1&currencyCode=JPY"
                 }
               ]
@@ -13590,31 +13590,31 @@
                 {
                   "date": "2027-02-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-02-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-02-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-02-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-02-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-28",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-02-28&los=1&currencyCode=JPY"
                 }
               ]
@@ -13629,31 +13629,31 @@
                 {
                   "date": "2027-02-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-02-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-02-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-02-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-02-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-02-28",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-02-28&los=1&currencyCode=JPY"
                 }
               ]
@@ -16255,31 +16255,31 @@
                 {
                   "date": "2027-03-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-03-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-03-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-03-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-03-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-03-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -16294,31 +16294,31 @@
                 {
                   "date": "2027-03-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-03-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-03-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-03-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-03-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-03-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -16333,31 +16333,31 @@
                 {
                   "date": "2027-03-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-03-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-03-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-03-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-03-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-03-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -16372,31 +16372,31 @@
                 {
                   "date": "2027-03-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-03-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-03-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-03-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-03-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-03-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -16411,31 +16411,31 @@
                 {
                   "date": "2027-03-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-03-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-03-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-03-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-03-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-03-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -16450,31 +16450,31 @@
                 {
                   "date": "2027-03-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-03-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-03-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-03-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-03-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-03-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-03-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -19027,31 +19027,31 @@
                 {
                   "date": "2027-04-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-04-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-04-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-04-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-04-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-30",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-04-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -19066,31 +19066,31 @@
                 {
                   "date": "2027-04-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-04-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-04-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-04-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-04-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-30",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-04-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -19105,31 +19105,31 @@
                 {
                   "date": "2027-04-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-04-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-04-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-04-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-04-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-30",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-04-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -19144,31 +19144,31 @@
                 {
                   "date": "2027-04-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-04-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-04-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-04-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-04-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-30",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-04-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -19183,31 +19183,31 @@
                 {
                   "date": "2027-04-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-04-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-04-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-04-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-04-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-30",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-04-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -19222,7 +19222,7 @@
                 {
                   "date": "2027-04-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-04-01&los=1&currencyCode=JPY"
                 },
                 {
@@ -19234,19 +19234,19 @@
                 {
                   "date": "2027-04-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-04-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-04-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-04-30",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-04-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -27441,31 +27441,31 @@
                 {
                   "date": "2027-07-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-07-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-07-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-07-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-07-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-07-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -27480,31 +27480,31 @@
                 {
                   "date": "2027-07-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-07-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-07-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-07-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-07-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-07-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -27519,31 +27519,31 @@
                 {
                   "date": "2027-07-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-07-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-07-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-07-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-07-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-07-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -27558,31 +27558,31 @@
                 {
                   "date": "2027-07-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-07-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-07-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-07-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-07-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-07-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -27597,31 +27597,31 @@
                 {
                   "date": "2027-07-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-07-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-07-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-07-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-07-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-07-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -27636,31 +27636,31 @@
                 {
                   "date": "2027-07-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-07-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-07-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-07-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-07-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-07-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-07-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -29838,7 +29838,7 @@
               "shop": "安心お宿 Tokyo Man 新宿駅南口店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -29855,8 +29855,8 @@
                 },
                 {
                   "date": "2027-08-15",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad319308/plan/?stayYear=2027&stayMonth=8&stayDay=15&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -29877,7 +29877,7 @@
               "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -29906,8 +29906,8 @@
                 },
                 {
                   "date": "2027-08-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad345855/plan/?stayYear=2027&stayMonth=8&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -29916,7 +29916,7 @@
               "shop": "安心お宿 Tokyo Woman 銀座汐留店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -29933,8 +29933,8 @@
                 },
                 {
                   "date": "2027-08-15",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad301118/plan/?stayYear=2027&stayMonth=8&stayDay=15&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -30262,31 +30262,31 @@
                 {
                   "date": "2027-08-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-08-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-08-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-08-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-08-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-08-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -30301,31 +30301,31 @@
                 {
                   "date": "2027-08-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-08-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-08-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-08-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-08-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-08-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -30340,31 +30340,31 @@
                 {
                   "date": "2027-08-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-08-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-08-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-08-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-08-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-08-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -30379,31 +30379,31 @@
                 {
                   "date": "2027-08-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-08-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-08-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-08-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-08-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-08-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -30418,31 +30418,31 @@
                 {
                   "date": "2027-08-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-08-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-08-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-08-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-08-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-08-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -30457,31 +30457,31 @@
                 {
                   "date": "2027-08-01",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-08-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-08",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-08-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-15",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-08-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-22",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-08-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-08-31",
                   "status": "available",
-                  "hit": "この料金を見る",
+                  "hit": "予約できる料金プラン",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-08-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -33034,31 +33034,31 @@
                 {
                   "date": "2027-09-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-09-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-09-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-09-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-09-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-30",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-09-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -33073,31 +33073,31 @@
                 {
                   "date": "2027-09-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-09-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-09-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-09-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-09-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-30",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-09-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -33112,31 +33112,31 @@
                 {
                   "date": "2027-09-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-09-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-09-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-09-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-09-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-30",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-09-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -33151,31 +33151,31 @@
                 {
                   "date": "2027-09-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-09-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-09-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-09-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-09-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-30",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-09-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -33190,31 +33190,31 @@
                 {
                   "date": "2027-09-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-09-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-09-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-09-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-09-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-30",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-09-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -33229,31 +33229,31 @@
                 {
                   "date": "2027-09-01",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-09-01&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-09-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-09-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-09-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-09-30",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-09-30&los=1&currencyCode=JPY"
                 }
               ]
@@ -35861,25 +35861,25 @@
                 {
                   "date": "2027-10-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-10-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-10-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-10-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2027-10-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -35900,25 +35900,25 @@
                 {
                   "date": "2027-10-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-10-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-10-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-10-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2027-10-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -35939,25 +35939,25 @@
                 {
                   "date": "2027-10-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-10-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-10-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-10-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2027-10-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -35978,25 +35978,25 @@
                 {
                   "date": "2027-10-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-10-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-10-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-10-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2027-10-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -36017,25 +36017,25 @@
                 {
                   "date": "2027-10-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-10-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-10-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-10-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2027-10-31&los=1&currencyCode=JPY"
                 }
               ]
@@ -36056,25 +36056,25 @@
                 {
                   "date": "2027-10-08",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-10-08&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-15",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-10-15&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-22",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-10-22&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2027-10-31",
                   "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "hit": "この料金を見る",
                   "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2027-10-31&los=1&currencyCode=JPY"
                 }
               ]
