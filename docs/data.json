@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T20:26:04.799Z",
+  "updatedAt": "2026-11-08T02:10:29.336Z",
   "months": [
     {
       "year": 2026,
@@ -2291,7 +2291,7 @@
               "shop": "安心お宿 Tokyo Man 新橋駅前店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 3,
               "soldCount": 0,
               "samples": [
                 {
@@ -2308,8 +2308,8 @@
                 },
                 {
                   "date": "2026-11-19",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
+                  "status": "unknown",
+                  "hit": null,
                   "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-19&los=1&currencyCode=JPY"
                 },
                 {
