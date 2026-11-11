@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T19:07:08.127Z",
+  "updatedAt": "2026-11-11T03:33:44.933Z",
   "months": [
     {
       "year": 2026,
@@ -1873,7 +1873,7 @@
               "shop": "安心お宿 Tokyo Man 新宿駅南口店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 2,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -1884,8 +1884,8 @@
                 },
                 {
                   "date": "2026-11-15",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=11&stayDay=15&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -1902,8 +1902,8 @@
                 },
                 {
                   "date": "2026-11-30",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=11&stayDay=30&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -1912,7 +1912,7 @@
               "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 2,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -1935,14 +1935,14 @@
                 },
                 {
                   "date": "2026-11-25",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=11&stayDay=25&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-11-30",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad345855/plan/?stayYear=2026&stayMonth=11&stayDay=30&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -1951,7 +1951,7 @@
               "shop": "安心お宿 Tokyo Woman 銀座汐留店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 2,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -1968,14 +1968,14 @@
                 },
                 {
                   "date": "2026-11-20",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=11&stayDay=20&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2026-11-25",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=11&stayDay=25&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -1990,7 +1990,7 @@
               "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
               "kind": "Man&Woman",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
@@ -2013,8 +2013,8 @@
                 },
                 {
                   "date": "2026-11-25",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=11&stayDay=25&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -2032,10 +2032,10 @@
           "year": 2026,
           "month": 11,
           "dates": [
-            "2026-11-10",
-            "2026-11-15",
-            "2026-11-20",
-            "2026-11-25",
+            "2026-11-11",
+            "2026-11-16",
+            "2026-11-21",
+            "2026-11-26",
             "2026-11-30"
           ],
           "results": [
@@ -2047,28 +2047,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261110&checkoutDate=20261111"
+                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261111&checkoutDate=20261112"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-16",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261115&checkoutDate=20261116"
+                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261116&checkoutDate=20261117"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261120&checkoutDate=20261121"
+                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261121&checkoutDate=20261122"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-26",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261125&checkoutDate=20261126"
+                  "url": "https://travel.yahoo.co.jp/00901085/?ppc=2&rc=1&checkinDate=20261126&checkoutDate=20261127"
                 },
                 {
                   "date": "2026-11-30",
@@ -2086,28 +2086,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261110&checkoutDate=20261111"
+                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261111&checkoutDate=20261112"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-16",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261115&checkoutDate=20261116"
+                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261116&checkoutDate=20261117"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261120&checkoutDate=20261121"
+                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261121&checkoutDate=20261122"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-26",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261125&checkoutDate=20261126"
+                  "url": "https://travel.yahoo.co.jp/00901086/?ppc=2&rc=1&checkinDate=20261126&checkoutDate=20261127"
                 },
                 {
                   "date": "2026-11-30",
@@ -2125,28 +2125,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261110&checkoutDate=20261111"
+                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261111&checkoutDate=20261112"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-16",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261115&checkoutDate=20261116"
+                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261116&checkoutDate=20261117"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261120&checkoutDate=20261121"
+                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261121&checkoutDate=20261122"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-26",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261125&checkoutDate=20261126"
+                  "url": "https://travel.yahoo.co.jp/00901087/?ppc=2&rc=1&checkinDate=20261126&checkoutDate=20261127"
                 },
                 {
                   "date": "2026-11-30",
@@ -2164,28 +2164,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261110&checkoutDate=20261111"
+                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261111&checkoutDate=20261112"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-16",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261115&checkoutDate=20261116"
+                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261116&checkoutDate=20261117"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261120&checkoutDate=20261121"
+                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261121&checkoutDate=20261122"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-26",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261125&checkoutDate=20261126"
+                  "url": "https://travel.yahoo.co.jp/00901088/?ppc=2&rc=1&checkinDate=20261126&checkoutDate=20261127"
                 },
                 {
                   "date": "2026-11-30",
@@ -2203,28 +2203,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261110&checkoutDate=20261111"
+                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261111&checkoutDate=20261112"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-16",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261115&checkoutDate=20261116"
+                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261116&checkoutDate=20261117"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261120&checkoutDate=20261121"
+                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261121&checkoutDate=20261122"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-26",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261125&checkoutDate=20261126"
+                  "url": "https://travel.yahoo.co.jp/00901089/?ppc=2&rc=1&checkinDate=20261126&checkoutDate=20261127"
                 },
                 {
                   "date": "2026-11-30",
@@ -2242,28 +2242,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261110&checkoutDate=20261111"
+                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261111&checkoutDate=20261112"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-16",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261115&checkoutDate=20261116"
+                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261116&checkoutDate=20261117"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261120&checkoutDate=20261121"
+                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261121&checkoutDate=20261122"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-26",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261125&checkoutDate=20261126"
+                  "url": "https://travel.yahoo.co.jp/00910525/?ppc=2&rc=1&checkinDate=20261126&checkoutDate=20261127"
                 },
                 {
                   "date": "2026-11-30",
@@ -2280,10 +2280,10 @@
           "year": 2026,
           "month": 11,
           "dates": [
-            "2026-11-10",
-            "2026-11-15",
-            "2026-11-20",
-            "2026-11-25",
+            "2026-11-11",
+            "2026-11-16",
+            "2026-11-21",
+            "2026-11-26",
             "2026-11-30"
           ],
           "results": [
@@ -2295,28 +2295,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-11&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-11-16",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-16&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-10&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-21&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-26",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-15&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-11-20",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-20&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-11-25",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-25&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-ginza-shimbashi-station?adults=1&children=0&rooms=1&checkin=2026-11-26&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-11-30",
@@ -2330,32 +2330,32 @@
               "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 3,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-11-10&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-11-11&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-11-15&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-11-16&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-20",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-11-20&los=1&currencyCode=JPY"
+                  "date": "2026-11-21",
+                  "status": "unknown",
+                  "hit": null,
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-11-21&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-26",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-11-25&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-akihabara?adults=1&children=0&rooms=1&checkin=2026-11-26&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-11-30",
@@ -2373,28 +2373,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-11-11&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-11-16",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-11-16&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-11-10&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-11-21&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-26",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-11-15&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-11-20",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-11-20&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-11-25",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-11-25&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-man-shinjuku?adults=1&children=0&rooms=1&checkin=2026-11-26&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-11-30",
@@ -2408,32 +2408,32 @@
               "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 3,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-11-10&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-11-11&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-11-15&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-11-16&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-20",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-11-20&los=1&currencyCode=JPY"
+                  "date": "2026-11-21",
+                  "status": "unknown",
+                  "hit": null,
+                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-11-21&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-26",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-11-25&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/musashino/anshin-oyado-tokyo-woman-shinjuku-ogikubo?adults=1&children=0&rooms=1&checkin=2026-11-26&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-11-30",
@@ -2447,32 +2447,32 @@
               "shop": "安心お宿 Tokyo Woman 銀座汐留店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 4,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-11-10&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-11-15",
+                  "date": "2026-11-11",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-11-15&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-11-11&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-20",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-11-20&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-11-25",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-11-25&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-11-16&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-11-21",
+                  "status": "unknown",
+                  "hit": null,
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-11-21&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-11-26",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/tokyo/anshin-oyado-tokyo-woman-ginza-shiodome?adults=1&children=0&rooms=1&checkin=2026-11-26&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-11-30",
@@ -2490,28 +2490,28 @@
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
+                  "date": "2026-11-11",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-11-11&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-11-16",
+                  "status": "available",
+                  "hit": "予約できる料金プラン",
+                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-11-16&los=1&currencyCode=JPY"
+                },
+                {
+                  "date": "2026-11-21",
                   "status": "unknown",
                   "hit": null,
-                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-11-10&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-11-21&los=1&currencyCode=JPY"
                 },
                 {
-                  "date": "2026-11-15",
+                  "date": "2026-11-26",
                   "status": "available",
                   "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-11-15&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-11-20",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-11-20&los=1&currencyCode=JPY"
-                },
-                {
-                  "date": "2026-11-25",
-                  "status": "available",
-                  "hit": "予約できる料金プラン",
-                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-11-25&los=1&currencyCode=JPY"
+                  "url": "https://www.rurubu.travel/hotel/japan/nagoya/anshin-oyado-nagoya-man-woman-nagoya?adults=1&children=0&rooms=1&checkin=2026-11-26&los=1&currencyCode=JPY"
                 },
                 {
                   "date": "2026-11-30",
@@ -2528,10 +2528,10 @@
           "year": 2026,
           "month": 11,
           "dates": [
-            "2026-11-10",
-            "2026-11-15",
-            "2026-11-20",
-            "2026-11-25",
+            "2026-11-11",
+            "2026-11-16",
+            "2026-11-21",
+            "2026-11-26",
             "2026-11-30"
           ],
           "results": [
@@ -2539,32 +2539,32 @@
               "shop": "安心お宿 Tokyo Man 新橋駅前店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-10&checkout=2026-11-11&group_adults=1&no_rooms=1&group_children=0"
-                },
-                {
-                  "date": "2026-11-15",
+                  "date": "2026-11-11",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-15&checkout=2026-11-16&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-11&checkout=2026-11-12&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-16&checkout=2026-11-17&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-21",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-25&checkout=2026-11-26&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-21&checkout=2026-11-22&group_adults=1&no_rooms=1&group_children=0"
+                },
+                {
+                  "date": "2026-11-26",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi.ja.html?checkin=2026-11-26&checkout=2026-11-27&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-11-30",
@@ -2578,32 +2578,32 @@
               "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-11-10&checkout=2026-11-11&group_adults=1&no_rooms=1&group_children=0"
-                },
-                {
-                  "date": "2026-11-15",
+                  "date": "2026-11-11",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-11-15&checkout=2026-11-16&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-11-11&checkout=2026-11-12&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-11-16&checkout=2026-11-17&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-21",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-11-25&checkout=2026-11-26&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-11-21&checkout=2026-11-22&group_adults=1&no_rooms=1&group_children=0"
+                },
+                {
+                  "date": "2026-11-26",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-akihabara.ja.html?checkin=2026-11-26&checkout=2026-11-27&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-11-30",
@@ -2617,32 +2617,32 @@
               "shop": "安心お宿 Tokyo Man 新宿駅南口店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-10&checkout=2026-11-11&group_adults=1&no_rooms=1&group_children=0"
-                },
-                {
-                  "date": "2026-11-15",
+                  "date": "2026-11-11",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-15&checkout=2026-11-16&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-11&checkout=2026-11-12&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-16&checkout=2026-11-17&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-21",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-25&checkout=2026-11-26&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-21&checkout=2026-11-22&group_adults=1&no_rooms=1&group_children=0"
+                },
+                {
+                  "date": "2026-11-26",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinjuku-tokyo.ja.html?checkin=2026-11-26&checkout=2026-11-27&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-11-30",
@@ -2656,32 +2656,32 @@
               "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-11-10&checkout=2026-11-11&group_adults=1&no_rooms=1&group_children=0"
-                },
-                {
-                  "date": "2026-11-15",
+                  "date": "2026-11-11",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-11-15&checkout=2026-11-16&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-11-11&checkout=2026-11-12&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-11-16&checkout=2026-11-17&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-21",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-11-25&checkout=2026-11-26&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-11-21&checkout=2026-11-22&group_adults=1&no_rooms=1&group_children=0"
+                },
+                {
+                  "date": "2026-11-26",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-ogikubo.ja.html?checkin=2026-11-26&checkout=2026-11-27&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-11-30",
@@ -2695,32 +2695,32 @@
               "shop": "安心お宿 Tokyo Woman 銀座汐留店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-10&checkout=2026-11-11&group_adults=1&no_rooms=1&group_children=0"
-                },
-                {
-                  "date": "2026-11-15",
-                  "status": "available",
-                  "hit": "1泊あたり",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-15&checkout=2026-11-16&group_adults=1&no_rooms=1&group_children=0"
-                },
-                {
-                  "date": "2026-11-20",
+                  "date": "2026-11-11",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-11&checkout=2026-11-12&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-25&checkout=2026-11-26&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-16&checkout=2026-11-17&group_adults=1&no_rooms=1&group_children=0"
+                },
+                {
+                  "date": "2026-11-21",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-21&checkout=2026-11-22&group_adults=1&no_rooms=1&group_children=0"
+                },
+                {
+                  "date": "2026-11-26",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-11-26&checkout=2026-11-27&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-11-30",
@@ -2734,32 +2734,32 @@
               "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
               "kind": "Man&Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
-                  "date": "2026-11-10",
-                  "status": "unknown",
-                  "hit": null,
-                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-11-10&checkout=2026-11-11&group_adults=1&no_rooms=1&group_children=0"
-                },
-                {
-                  "date": "2026-11-15",
+                  "date": "2026-11-11",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-11-15&checkout=2026-11-16&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-11-11&checkout=2026-11-12&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-20",
+                  "date": "2026-11-16",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-11-16&checkout=2026-11-17&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
-                  "date": "2026-11-25",
+                  "date": "2026-11-21",
                   "status": "available",
                   "hit": "残り",
-                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-11-25&checkout=2026-11-26&group_adults=1&no_rooms=1&group_children=0"
+                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-11-21&checkout=2026-11-22&group_adults=1&no_rooms=1&group_children=0"
+                },
+                {
+                  "date": "2026-11-26",
+                  "status": "available",
+                  "hit": "残り",
+                  "url": "https://www.booking.com/hotel/jp/capsule-hotel-anshin-oyado-premium-nagoya-sakae.ja.html?checkin=2026-11-26&checkout=2026-11-27&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
                   "date": "2026-11-30",
@@ -4616,7 +4616,7 @@
               "shop": "安心お宿 Tokyo Man 新橋駅前店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -4645,8 +4645,8 @@
                 },
                 {
                   "date": "2026-12-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad368296/plan/?stayYear=2026&stayMonth=12&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -4655,7 +4655,7 @@
               "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -4684,8 +4684,8 @@
                 },
                 {
                   "date": "2026-12-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2026&stayMonth=12&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -4694,7 +4694,7 @@
               "shop": "安心お宿 Tokyo Man 新宿駅南口店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -4717,8 +4717,8 @@
                 },
                 {
                   "date": "2026-12-22",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad319308/plan/?stayYear=2026&stayMonth=12&stayDay=22&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -4772,7 +4772,7 @@
               "shop": "安心お宿 Tokyo Woman 銀座汐留店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -4801,8 +4801,8 @@
                 },
                 {
                   "date": "2026-12-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad301118/plan/?stayYear=2026&stayMonth=12&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -4811,7 +4811,7 @@
               "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
               "kind": "Man&Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -4840,8 +4840,8 @@
                 },
                 {
                   "date": "2026-12-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad378358/plan/?stayYear=2026&stayMonth=12&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -5522,7 +5522,7 @@
                 {
                   "date": "2026-12-01",
                   "status": "available",
-                  "hit": "残り",
+                  "hit": "1泊あたり",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-12-01&checkout=2026-12-02&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -5534,7 +5534,7 @@
                 {
                   "date": "2026-12-15",
                   "status": "available",
-                  "hit": "残り",
+                  "hit": "1泊あたり",
                   "url": "https://www.booking.com/hotel/jp/capsule-anshin-oyado-shinbashi-shiodome.ja.html?checkin=2026-12-15&checkout=2026-12-16&group_adults=1&no_rooms=1&group_children=0"
                 },
                 {
@@ -7437,7 +7437,7 @@
               "shop": "安心お宿 Tokyo Man 新橋駅前店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -7448,8 +7448,8 @@
                 },
                 {
                   "date": "2027-01-08",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad368296/plan/?stayYear=2027&stayMonth=1&stayDay=8&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -7466,8 +7466,8 @@
                 },
                 {
                   "date": "2027-01-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad368296/plan/?stayYear=2027&stayMonth=1&stayDay=31&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -7476,7 +7476,7 @@
               "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -7493,14 +7493,14 @@
                 },
                 {
                   "date": "2027-01-15",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=1&stayDay=15&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
                   "date": "2027-01-22",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=1&stayDay=22&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -7554,7 +7554,7 @@
               "shop": "安心お宿 Tokyo Woman 新宿荻窪店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -7565,8 +7565,8 @@
                 },
                 {
                   "date": "2027-01-08",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad345855/plan/?stayYear=2027&stayMonth=1&stayDay=8&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -7593,7 +7593,7 @@
               "shop": "安心お宿 Tokyo Woman 銀座汐留店",
               "kind": "Woman",
               "overall": "available",
-              "availCount": 4,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -7610,8 +7610,8 @@
                 },
                 {
                   "date": "2027-01-15",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad301118/plan/?stayYear=2027&stayMonth=1&stayDay=15&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -10150,13 +10150,13 @@
               "shop": "安心お宿 Tokyo Man 秋葉原電気街店",
               "kind": "Man",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
                   "date": "2027-02-01",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=2&stayDay=1&stayCount=1&roomCount=1&adultNum=1"
                 },
                 {
@@ -10179,8 +10179,8 @@
                 },
                 {
                   "date": "2027-02-28",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "dom:has-stock",
                   "url": "https://www.jalan.net/yad386755/plan/?stayYear=2027&stayMonth=2&stayDay=28&stayCount=1&roomCount=1&adultNum=1"
                 }
               ]
@@ -26886,7 +26886,7 @@
               "shop": "安心お宿 Nagoya Man＆Woman 栄駅前店",
               "kind": "Man&Woman",
               "overall": "available",
-              "availCount": 3,
+              "availCount": 5,
               "soldCount": 0,
               "samples": [
                 {
@@ -26909,14 +26909,14 @@
                 },
                 {
                   "date": "2027-08-22",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2027&f_tuki1=8&f_hi1=22&f_nen2=2027&f_tuki2=8&f_hi2=23&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 },
                 {
                   "date": "2027-08-31",
-                  "status": "unknown",
-                  "hit": null,
+                  "status": "available",
+                  "hit": "残り",
                   "url": "https://hotel.travel.rakuten.co.jp/hotelinfo/plan/178541?f_nen1=2027&f_tuki1=8&f_hi1=31&f_nen2=2027&f_tuki2=9&f_hi2=1&f_heya_su=1&f_otona_su=1&f_flg=PLAN&f_static=1"
                 }
               ]
